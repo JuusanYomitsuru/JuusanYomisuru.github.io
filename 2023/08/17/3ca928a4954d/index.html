@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="JuusanYomitsuru">
+
+
+
+
+
+<title>天街如水（其十一） | Hexo</title>
+
+
+
+    <link rel="icon" href="/yumaobi.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">JuusanYomitsuru&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">JuusanYomitsuru&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6; // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function() {
+            tocbot.refresh(obj_merge(tocbot_default_config, {
+                hasInnerContainers: true
+            }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function() {
+        tocbot.init(obj_merge(tocbot_default_config, {
+            collapseDepth: 1
+        }));
+    });
+
+    function expand_toc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, {
+            collapseDepth: expanded ? 1 : DEPTH_MAX
+        }));
+        b.innerText = expanded ? 'Expand all' : 'Collapse all';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">天街如水（其十一）</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">JuusanYomitsuru</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">August 17, 2023&nbsp;&nbsp;20:57:03</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E5%A4%A9%E8%A1%97%E5%A6%82%E6%B0%B4/">天街如水</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h4 id="阅读之前……">阅读之前……</h4>
+<ul>
+<li>系列前文请点击右上角<a href="https://juusanyomitsuru.github.io/category/">Categories</a> 。</li>
+<li>例行超长预警：
+<ul>
+<li>非常感谢您点进这篇文章。</li>
+<li>这篇文章主角为军贼头子（军师）海X大学老师卡，内含R18内容。大概是被海哥竞争对手盯上的卡与海哥假扮情人，最后渐生爱意的故事。</li>
+<li>其中有卡女装要素，是旗袍和舞女装，请注意。</li>
+<li>因为民国pa的背景限制，除了海维赛提等出现的须弥角色外，其他统统为璃月名。如感觉不适也可退出。</li>
+<li>文笔小白，逻辑天真，希望看客愉快。</li>
+</ul>
+</li>
+</ul>
+<h4 id="正文">正文</h4>
+<p>  拉赫曼隐于巷尾。</p>
+<p>  他的手下已经悄悄地潜入这条街道。在宝城的夜晚，唯有这条街道灯火通明，尽头拐角处是本城最大最时兴的影院，而从影院的门廊拐出来向前走，左右是邮局、照相馆、成衣铺、小商店，还有琳琅满目、叫人目不暇接的一条食街，日入时分，满街都是烧烤、涮肉、炒菜的香气，镬气满溢在街头，随着饕客的脚步如云流动。叫菜、招客的声音此起彼伏，高亢的劳动小调如鱼得水，喧闹的笑声划拳声不绝于耳，好不热闹。</p>
+<p>  熙来攘往，浑水摸鱼的好地方。</p>
+<p>  他凝神听。</p>
+<p>  “……上次王存芳没从日本人手里讨到好处，是他目光短浅，能力不足。但王，咱们也说句公道话，现在确实兵强马壮，是不得不防。白先生那边的意思呢，是希望能和您合作，互通有无一下，日后要是有什么变动，好互相照应。”</p>
+<p>  “……居然找到我们孙将军这里来了，难道你不知道我们家将军和王将军是拜把子兄弟？”</p>
+<p>  “……树大分枝，人大分家，你们孙将军讲义气，也指不定王是白眼狼呢。他靠着宝城商业，贩卖枪械赚得盆满钵满，可有分过你们孙将军一点肉汤？再说了，所谓人不犯我我不犯人，你说王要增兵，那点小九九谁看不清？左是我，右便是你，唇亡齿寒，没了我自然你也危险了。蜗角纷争唯利是务，强敌在伺还不快点警觉起来，等到王一翻脸，就晚了！”</p>
+<p>  “……我们将军说过，拜了把子的都叫内，你们白先生怎么都是‘外’，亲疏有别。用些花言巧语便想离间我们，也没那么简单！”</p>
+<p>  “……我们当然也是诚心诚意，准备了一份厚礼……”</p>
+<p>  拉赫曼和手下对视一眼，手指一勾，做了个“准备”的手势。手下点点头，默默把弹夹扣进枪中。</p>
+<p>  “这是我们的一份人员清单……”</p>
+<p>  行动。</p>
+<p>  那个人反应很快，就地翻滚几圈，身后留下一排弹迹。孙家人则神色惶恐，拉赫曼朝他皮笑肉不笑，道，“不要紧的董先生，你们将军是我们将军的没血缘兄弟，咱们怕您一时糊涂，赶来支援您的。”</p>
+<p>  姓董的显然已经魂飞天外，只会呆呆点头。拉赫曼指了一个人守着，便同其他手下一起去追人。</p>
+<p>  来参与谈判的人姓陈，全名陈路光，如其名道路颇风光，是留洋过的高材生，说是隶属于白先生，其实效命于与白颇不对付的人。恒城白将军，从其父老白将军手上继了一片广袤的辖地，是一位名副其实的少年英才，但年纪太轻难以服众，光是处理骚动不断的父亲旧部已然颇费心神。陈祖光所效忠的上司，便是老白先生手下总管情报侦察的一把手，手中捏着无数机密情报的这么一位要臣。这位要臣想要在王存芳处进一步拓展情报网络，以至于辐射化城孙将军的关系网，便提前侦察联系了孙部署于此的代理人，孙的女婿董其巽，打算抛砖引玉，下饵钓鱼，结成紧密的战略合作关系。而这块抛出来的砖，弃出来的车，据消息所言，就是小白先生安插于王存芳处的暗线。</p>
+<p>  那份名单，就是拉赫曼此行的目的。</p>
+<p>  他们挑选的地方不可谓不隐蔽。离食街稍远的步行街的二楼，一连排的小户，左右贯通，但这一层全叫这一家包揽，改作算命铺。一进门便是偌大的一幅钟馗像，墙角位列招魂幡，八卦葫芦桃木剑一应俱全，厚厚的一本黄历摆在桌面，算筹笔砚横陈，入夜晚风一卷，满墙的神像呼啦啦地翻飞，怒瞪的白眼似有若无地朝来路人觑，叫人脊背一寒。楼下的援兵已经让拉赫曼派人无声无息地掩了口，但楼上的守兵还在，听到响动从旁边涌出来，掩护陈路光往另一头的楼梯撤退。算命铺里堆积了不少杂物，摞起的纸箱、堆叠的签木、横七竖八的版画、方向怪异的桌柜，为房间创造出了无数个视觉死角，藏匿了不怕死的放冷枪。拉赫曼这边虽然人多，一时间居然也被拖缓了脚步。</p>
+<p>  陈路光不敢开灯，手掌摩着粗糙的扶手，在狭窄的通道里狂逃。前面开路的特务还时不时转头催他快一点，他已经满头是汗，又怒又急，道，“我当然知道要快！再快也要有个度！……”</p>
+<p>  砰地一声，他脖子一缩，刚刚站着的位置便落下一块弹壳，与瓷砖相碰叮哐一声，居然十分清脆。那子弹朝他的脑袋来，他浑身血液像已经被爆了头似的往天灵盖上冲，只觉那清脆的金属是死亡的笑声，腿一软差点跪在地上。刚刚闪去拉赫曼的扫射纯粹是福至心灵，他从兵场入官场已经数年，酒肉只让他残留一丝对危险的嗅觉，此刻灭顶的恐惧感把他的五脏六腑攥满，他说不出话，只能发出嗬嗬的气音。</p>
+<p>  特务一边趁着窗户的缝隙向对门发弹，让对方不得不给他们留出喘息的时间，一边还得抓住旁边这个不成器的酒囊袋，加紧步伐往下啪嗒啪嗒地赶，争取在引起注意前融进食街。那里人多，谁也不敢拿出枪械，甩掉追兵最为方便，来谈判之前他们也已经安排好接应，只要跑到那里——</p>
+<p>  砰——咻——子弹从耳边飞过。一楼商铺门后，居然还有伏兵。</p>
+<p>  这回真是天罗地网。王存芳的人，没打算留一个活命。</p>
+<p>  他一时情急，猛推了陈路光一把。对方茫茫然回头，他道，“我在背后掩护你，你快跑！再跑一百米就安全了！”</p>
+<p>  “那，那再遇到人追杀我怎么办？”</p>
+<p>  能怎么办？只能赌一把！他咬咬牙，“来不及了！管不了这么多了，快走！”</p>
+<p>  话音未落，隔壁二楼窗台的狙手、一楼商铺的暗影，又朝这边射了子弹。紧随着噗呲一声血脉穿断的声音，剧痛啃咬神经，他喊了一声“快”，强撑着举起手臂，朝子弹声的来源反击。</p>
+<p>  看到特务受了伤，陈路光脑子嗡地一声，什么也没法想，连滚带爬地向远处的光源狂奔。100米跑完只需要数秒，他的心扑通扑通地倒数，活下来、活下来、活下来，二十米、四十米、五十米……</p>
+<p>  七十米。</p>
+<p>  他噗通一声倒地。</p>
+<p>  鹤唳消散，一个男人在他身边蹲下，从他的后腰处抽出一张白纸。</p>
+<p>  所幸还未被血沾湿。</p>
+<p>  他手指一挑，那张纸便在他面前铺开；眼神一扫，便好像丧失兴趣般，把那份密密麻麻的名单又塞回陈路光的口袋。</p>
+<p>  远处拉赫曼的身影风尘仆仆地来。他抬眼一觑，闪身进了暗巷。</p>
+<br>
+<br>
+<p>  “你！”金发美人的手转了一圈，慢悠悠地点在他身上，“你去哪儿了？嘣一声……唔嗯……就消失不见了……我还给你！打包了烤肉……”一拎荷叶，“还有、唔……酒……你还不陪我喝……”</p>
+<p>  “……”艾尔海森转头问，“他喝了多少？”</p>
+<p>  司机顶着背后“我没喝多少！别诬赖我！”的控诉，语气也有些无奈，“将军。……刚刚去问店家，说也没喝多少。最多两杯吧，就不行了，还继续追酒喝。我看这也不是办法，就先自作主张地带回车上了。您看看？……”</p>
+<p>  艾尔海森瞧着对方已经满面酡红地往他身上贴，点了点头，说做的不错，先回府，就沿着今天说的路线走。卡维迷迷糊糊地瞪着眼，说不错？什么不错？我设计的房子当然不错！没想到你还、还算有一点艺术细胞，懂得欣赏美是一种、良好的品质！艾尔海森啧了一声，把酒鬼往另一个方向按，但卡维扒着他的手喊什么是艺术！艺术是灵感，是恩与，是天才的想象力，是狄俄倪索斯的全部及更高的一切！是拱顶，石柱，卯榫和堂皇的穹幕！是、唔嗯、是微笑、幸福还有超越凡朽的永恒性！司机！我们、我们去租界！去看那个我设计的房子……屋主说已经在培育植物了……呜……明年春天、明年春天就会全部长满，长成宝城最漂亮的花园！</p>
+<p>  司机“呃”了一声。艾尔海森压着四仰八叉胡说八道的酒鬼，“别管他。按照原计划。”</p>
+<p>  “什么原计划？你有什么计划？有计划不告诉我？把我蒙在鼓里？”金灿灿的脑袋倒在他的黑袖子上，漂亮的、带细茧的手指一戳，“你这个……浑身肌肉的……呜！别以为我打不过你……我就会、任你宰割，告诉你，我有正义！我有……美的品德……”</p>
+<p>  忍无可忍无须再忍，为老不尊下艾尔海森的伶牙俐齿也开始加油压，“……希望你美的品德等会儿能够帮助你走直线回房间。”</p>
+<p>  本意只是呛他一句，没想到醉鬼神情一凝，忽然直起身子。艾尔海森闪过不好的预感，果然看到红彤彤的卡维老师一仰头，道，“谁说我不行？我走给你看！”</p>
+<p>  于是真的噌一声提腰。幸好拦得快，不然卡维真的要一头撞上车顶；以他刚刚那个架势，嗑个拳头大的包都算轻的。任是小将军见多识广也没见过这种疯法，忍不住骂了一句荒谬。醉鬼疼得龇牙咧嘴眼泛泪花，只会扒着身边人的大衣呜哼呜哼地嘟囔，喝了酒的声音黏软，像冒失的狸奴用毛茸茸的剐蹭求欢，揉着脑袋的样子又像足了一只受了委屈的兔子。好在终于老实了，一动也不敢动，生怕车顶的钢铁记仇，追过来撞他。艾尔海森被他揪着，揉着眉头，侧脸看越来越沉静的宝城的夜，深呼吸，把自己下车吸烟的欲望克制回去。</p>
+<p>  “将军，你看……卡维老师醉得似乎太厉害了。按照原定计划是不是不太方便？……”</p>
+<p>  “什么不方便！我没醉！”疯兔子又炸毛了，“我清醒得很！唔……”</p>
+<p>  又被按了下去。艾尔海森复述，虽然后面跟了一个轻蔑的鼻音：“他说他很清醒。”</p>
+<p>  司机瞄一眼将军的表情，仍然冷淡而晦暗不明，便知道他有自己的算计。</p>
+<p>  他的雇主虽然年轻，但也是出了名的聪明，心眼比蜂巢多一窍，绿宝石一般的眼睛一挑，任天下如云疑窦都去七分。更重要的是，他和其他许多被骄纵腐化了的老爷、那类要求别人无底线地为他的行为兜底的那一类人并不一样，在他身边，无论是路人、仆人还是客人，都应该明白一个道理：保持适当距离，双方都会更加自在。这一点作为扈从的首要条例，明确地写在了一开始的入职手册之中，也很自然地成为了公馆上下心照的守则。因此自己也不必多言，只说将军标示的目的地就在前面。</p>
+<p>  艾尔海森嗯了一声，推了推身上软绵绵的一滩。一滩懵懵懂懂地应了一声，他出门的时候还喷了点香水，喝的那点酒还不足以熏过花精，被身体的热气一激，橙花味裹在围巾里蹭得满满当当，在公共场合里还好，密闭的环境里气味尤其鲜明，整个人闷成了暖洋洋香喷喷的一个手炉，在艾尔海森的手里懒懒地倚着，眼睛半搭不搭的，一派已经半会周公的神色。任谁来也看得出，这个状态下还记得自己姓甚名谁已属万幸，不能指望更多。艾尔海森道，“卡维。你只有一个任务。……当然，如果连这一点也做不到的话，那恐怕连做生物的资格也不需要有了。记得呼吸，听到了？”</p>
+<p>  卡维慢悠悠地吐息，半天才轻轻嗯了一声，不知是回应还是梦呓。他啧了一声，指节一弯，毫不留情地给酒鬼来了一个爆栗。仿佛给敲出了一个感叹号，卡维鲜亮的眼睛雾气蒙蒙地睁开，愣愣地瞧着面前的人。艾尔海森掐住他的肩膀，“听清楚了？”</p>
+<p>  “唔……嗯……听、什么？”</p>
+<p>  “记得呼吸。”</p>
+<p>  “记得……呼……记得呼吸……唔！唔……”</p>
+<p>  那日未吻，现在便吻了。</p>
+<p>  围巾被取下来垫在一边，被艾尔海森掐着腰，先落的是锁骨。毛衣扯得有些歪松，露出一截清瘦的弯凹，嘴唇贴上去的时候，大概喘息太热，卡维拧着眉头。而后是脖子，是耳垂，是嘴角，再到舌根。</p>
+<p>  他被抵在侧面，后脑隔着一双手，顶着车窗。后背刮擦着粗糙的车身，突起的把手顶着脊沟，让他不得不向前拱起身来。露出来的缝隙则拥过一只手；因为太用力，他一颤一颤地撞着车门，手抓着底下真皮的车座，努力让自己不往下滑。艾尔海森松开他的一瞬，两人唇齿间拉出一条细细的银弧，在空气里透明地颤动。卡维因为憋气脸色通红，正大口大口地喘着气。两人的脸仍然很近，艾尔海森身上的气味和克制的呼吸就在卡维的鼻尖。他皱着眉，“不是说要记得喘气？”</p>
+<p>  卡维本来就刚脱睡梦，叫他这么不明不白的一亲密更不清醒，胳膊环着身上人的脖子揪着衣领，他吐着舌头，“哈、哈、哈……啊？”</p>
+<p>  “算了……往你十点钟的方向看一眼。”</p>
+<p>  “十点……是几点……”</p>
+<p>  看起来真的喝糊涂了。艾尔海森不耐烦地啧了一声，“左边。”</p>
+<p>  “左、左边……”</p>
+<p>  幸好还知道留有基本的方位感。卡维迷蒙着眼，依言转动脑袋。“什么？那里有什么……没、没有啊……”</p>
+<p>  “看够了？”</p>
+<p>  他只来得及看到那里有一盏路灯，下巴就被捏住，强硬地转了回去，面对艾尔海森直勾勾的眼神，对方呼吸均匀，上挑的眼尾颇有挑衅的意味，道，“好了。做得不错。现在看我。”</p>
+<p>  为什么这双冷淡的、睥睨的、审视的眼睛，眼角一挑便会调情？</p>
+<p>  卡维心跳得很快，呼吸剧烈，脑袋阵阵发晕。神只会偶尔给酒鬼降下答案，现在的他显然没有那种幸运。</p>
+<p>  他又压了上来。舌头搅动出暧昧粘稠的水沫，唇吸吮又贴合厮磨，断断续续的“啾”“啵”声从他们交叠的缝隙中逸出。卡维实在是醉得厉害，脑子里一片空白，只记得刚刚艾尔海森重复了几遍的叮嘱。迷糊里听到的重复的口令，总是容易被当成金科玉律——但他光记得在缠绵中夺呼吸，却无暇去松搭在对方后脑的手，于是等到艾尔海森亲够了指标，要把他放下来的时候，才知道这个世界上醉鬼不仅会追酒，原来还会追吻。</p>
+<p>  “好了，卡……”</p>
+<p>  “啾……唔……啾……”</p>
+<p>  “你……”</p>
+<p>  “啵啾……哼……啾……”</p>
+<p>  “卡维！已经结束了！”</p>
+<p>  酒不仅能壮人胆，显然对人的体能也有增强作用，不然很难解释为什么看着轻飘飘纤细修长的卡维，在艾尔海森身上半天才扒下来。落在车座上他呆呆地看着车顶，似乎在疑惑它为什么换了角度，艾尔海森用制伏的姿势压住他，生怕他下一秒又跳起来，或者继续粘着他缠吻。</p>
+<p>  他是没什么所谓，但不打算凌晨回家。</p>
+<p>  ……司机蹲在外面的路灯底下吸烟。两人从后窗消失，车身还摇晃两下，让他不太摸得准该不该回驾驶位置。等到艾尔海森顶着一头被手指揉得蓬乱的、颇能说明战况的头发，从车窗处叫他回去，他才敢踩灭烟头，撑着膝盖起身。</p>
+<p>  上车的时候卡维老师已经睡熟了，躺在将军的腿上，发出均匀的呼吸声。看起来岁月静好，仿佛一切都没有发生过。深吸一口气，跨进车门，发动汽车前，又从在后视镜中偷偷望了艾尔海森一眼。</p>
+<p>  他眼中都是夜色，沉谧、无垠的城市的荒野，那点熠熠的天秤般的灵识，于晚风中闪着明亮的橘光。眉毛不知怎么的，轻轻弯了下来。</p>
+<p>  月亮似的。昏黄的、安定的神色。</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>JuusanYomitsuru</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="https://juusanyomitsuru.github.io/2023/08/17/3ca928a4954d/">https://juusanyomitsuru.github.io/2023/08/17/3ca928a4954d/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2023/08/17/f7d77660756f/">天街如水（其十二）</a>
+            
+            
+            <a class="next" rel="next" href="/2023/08/17/d611054e904c/">天街如水（其十）</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<span class="site-uv">
+    总访客量:
+    <i class="busuanzi-value" id="busuanzi_value_site_uv"></i>
+</span>&nbsp;
+
+
+<span class="site-pv">
+    总访问量:
+    <i class="busuanzi-value" id="busuanzi_value_site_pv"></i>
+</span>
+
+
+
+    <div class="copyright">
+        <span>© JuusanYomitsuru | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>

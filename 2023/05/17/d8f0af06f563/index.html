@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="JuusanYomitsuru">
+
+
+
+
+
+<title>性启蒙（其一） | Hexo</title>
+
+
+
+    <link rel="icon" href="/yumaobi.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">JuusanYomitsuru&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">JuusanYomitsuru&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6; // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function() {
+            tocbot.refresh(obj_merge(tocbot_default_config, {
+                hasInnerContainers: true
+            }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function() {
+        tocbot.init(obj_merge(tocbot_default_config, {
+            collapseDepth: 1
+        }));
+    });
+
+    function expand_toc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, {
+            collapseDepth: expanded ? 1 : DEPTH_MAX
+        }));
+        b.innerText = expanded ? 'Expand all' : 'Collapse all';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">性启蒙（其一）</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">JuusanYomitsuru</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">May 17, 2023&nbsp;&nbsp;22:09:12</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E6%80%A7%E5%90%AF%E8%92%99/">性启蒙</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h4 id="阅读之前……">阅读之前……</h4>
+<ul>
+<li>来一场永远慌乱、永不落幕的青春电影</li>
+<li>现代ABO，时间线可推溯类上世纪九十年代末。</li>
+</ul>
+<br>
+<h4 id="正文">正文</h4>
+<p>  “艾尔海森。”他垂着眼，看着那片无垠的海面。</p>
+<p>  “你有设想过……你的一生吗？”</p>
+<h5 id="1">1.</h5>
+<p>  他们都说，新来的同学是一个怪人。</p>
+<p>  他们说他的头发很奇特，是蒙蒙的灰，里面又有几片绿色，像于雾都眺望平野。他们说他皮肤很白，像没有被太阳晒过一样白，嘴唇习惯抿紧，挺拔的鼻梁有一个精巧的尖，看书的时候神色很安定。他们说他有一双特别漂亮的眼睛，好像一片升上太阳的潮热雨林，浩瀚的葱郁中有一点辉煌的光明。一个女生的日记里记，说他颤动的睫毛上好像悬浮着一个不为人知的宇宙，在他的呼吸间沉默而浩大地运行。</p>
+<p>  他的俊秀、内敛和神秘的、藏在他丰润脑门底下的小小世界，也引诱着同学们的好奇心。但所有试图和他拉进关系的人，无一不折戟沉沙、铩羽而归。因为如果你和他闲聊家长里短，他会说：“抱歉，我们没有熟悉到可以交流生活细节。”邀请他一起活动，“我需要珍贵的阅读时间。”哪怕是道谢，也多半会被他回复：“我不喜欢你来我往的人情关系。你有要求可以直接提。”</p>
+<p>  简单、直接、高效，没有半点插科打诨、装疯卖傻的空间。</p>
+<p>  在其他人看来，他总是一个人呆在角落，捧着一本书，一言不发地经营他的小世界，有老师试图用自闭理解他，但又惊讶于他的聪慧——毕竟一个人的思维方式能够从语言中泄漏，更何况他并不打算掩饰——最后只能承认，他是一个天才。</p>
+<p>  新来的同学就是这么一个人。一个不好接近的邻座，一个难以理解的对手，或者是一个韬光养晦的刺头；但对他自己来说，他只是排除一切不必要的因素，践行自己的生活方式而已。</p>
+<p>  他从不在乎别人认不认得他的名字。</p>
+<br>
+<br>
+<p>  但一切苦心谋划的规程，总会遇到意料之外的发生。比如走读的他按照每天习惯的时间走在回家的路上，却被好事者堵在了墙角。他们要抢他的书包，搜刮里头的资料，他脑子里迅速检索这些面孔，门口卖炸鸡柳的小卖部、细窄的居民巷口、校门口长长的绿荫，电光火石间便被砸了一拳。他第一次遇到这种事，捂住腹部，咬着牙关，那小混混指着他骂道，看什么看？撑着你那死人脸，看得爷一肚子火。另一个跟着骂说你是哑巴？我们问你钱在哪儿呢！你那包里就几本破书，你零花钱呢？他说很显然你们对于价值的认识相当肤浅，又挨了一下。那混混说草鸡吧蛋，欺负爷们没读书？你没钱你管你爹妈要，孝敬爷们点烟钱。听见没有？小兔崽子别想跑，也别耍花招。爷们盯着你呢。</p>
+<p>  他父母早逝，家里只剩下祖母，两祖孙相依为命，但第二天，混混们还是在他的包里搜出了一百块钱。因为这一百块他免于拳打脚踢，混混们没想到能拿到这么多，一时间都愣住了。有个人拍拍他的脸，说看着你白净，没想到真是小少爷。混混又说算你识相，乖一点，道上大哥也罩着你。他低头没有说话。</p>
+<p>  混混们也不是天天来，有时也会隔好几天。再一次来只在他身上搜出五毛钱，混混们勃然大怒，拿着小刀顶着他的下腹，问他是不是把老子当猴耍。他低着眉，说不是他不想给，而是昨天有另一伙人找上了他，把他身上的都搜刮走了，那边的老大说一点都不能给你们留。他们说今晚还会堵他一次，看他有钱，还要拉他去参加他们的帮会。五六个混混面面相觑，一个一拳砸在墙上说岂有此理！我们在先，他们在后，一群杂种，骑到我们头上来了！白刀子进红刀子出，给他们点教训看看！另一个眼睛滴溜溜转，和他说：这样，你孝敬我们这么久，也算有点情义，咱们兄弟也不会看你平白被人欺负。他们通常在哪里逮你，你和兄弟们说，我们和他碰一下。他说了一个地名，说昨天就是在那里被蹲到的，又说他实在害怕，不敢回家，也不能留在学校；有一个混混就说行吧，咱们道上也讲仁义，收了保护费帮帮你也行。到时候你去学校外头两百米的那个广场里等着，我们派兄弟守你。</p>
+<p>  当天夜黑风高，他背着一个包到了广场，一个年纪看起来甚至还要比他小一点的男孩子，蹲在石桩上抽烟。看见他，那男孩子故作成熟地上下扫他一眼。他对了暗号，男孩子把烟头往石桩的红漆上一摁，跳下来拉着他拐进了广场公厕旁边的杂物间。那男孩说算你好运，让我这个打遍宝商街的来保护你。我也想和老大去火拼，结果却来这里守着你这只弱鸡。他问男孩如何保证这个地方不会被发现？我们恐怕需要一个更安全的据点。男孩烦躁地挠挠头，说屁事多，这地方是咱们的，还有谁会来？我们就这一个窝，你还想去哪儿？做人能不能有点志气，大不了就和他们拼了。他说很惊讶于你的自信，你认为我们的赢面有多大？依靠我，还是依靠你？那男孩啧了一声，挺起胸膛说你什么意思？我以后是会变成Alpha的。这个年纪的孩子大多没有分化，Alpha对于他们来说只是一个概念，在他们的印象里，这世界上大多数人都是Beta，Alpha是人类进化的特异种，是鹤立鸡群的人中龙凤。男孩如此形容，是不许质疑的意思。</p>
+<p>  他哦了一声，站了起来。男孩警惕说你要做什么？他说开灯，我要看书。男孩愣了一下，骂骂咧咧地替他扭亮灯泡；灯泡大概也老了，光昏黄的，照得四周全是暗影，他皱了皱眉，说你们只有这种水平的基础设施吗？伤了眼会很麻烦。男孩说我草你还讲究上了，你算什么鸡巴东西？他说既然你接受了保护我的任务，满足我的需求不是理所应当？男孩死死地瞪着他，眼神恶狠狠地，好像要在他脸上剐出一个洞来。他的神情倒是平静，好像他现在不是面对着一个见过血砸过人的同龄人，而是立于山风绿林之中，只是在看深湖里小小的漩涡。那男孩子哼哧哼哧地喘了会儿粗气，把手里的板砖往地上一砸，起身开门。他说算老子倒霉，我去拆厕所的灯泡，你敢作什么出格的，回来把你剁碎了喂狗。他嗯了一声，没有再说什么。他更关心他手上的精装书，王力先生的《清代古音学》，和相熟的书店老板提前打了招呼，等待数月才拿到手里的一本。祖母包的书皮没有一丝褶皱，合拢处是柔顺的平整。他的手指摩挲着里头的纸张，轻柔的老旧的光打在他的脸上，显出稚嫩而温和的轮廓。</p>
+<p>  突然外头哐啷一声，一个男声很快速地说“对不起对不起”，他马上警觉起来，书一合塞进书包，小刀捏在手心。铁门没关，吱呀一声灌风，一个金色的身影钻进来，还没看清是谁，对方先爆发出一阵剧烈的咳嗽。他一边挥着手，“咳、咳咳，怎么，咳，这么多灰……”</p>
+<p>  那个人穿着同学校的校服，身量颇高，手脚细长。等对方从灰尘的冲击里缓过来，他注意到来人的眼睛居然是明亮清透的红色。对方很迅速地向左右扫一眼，便去拉他的手。他一闪，“你是谁。”</p>
+<p>  “我是学长，来救你的。”他一皱眉，就被对方抓住了小臂，“你别怕，跟我来。”</p>
+<p>  “我不需……”</p>
+<p>  “学长”捂住他的嘴，说嘘，不知道还有谁呢。他灵光一闪，夜晚的明星高悬，飞奔时凉风湍流般穿过，一个拉着另一个，两个人飞快地把拉上闸的小士多、黑漆漆的文具店、无声息的打印店，那些白天挤满校服，现在空空荡荡的、属于学生的大半个世界甩在身后，街道管理不善，路灯十盏有三盏坏，隐晦地忽闪忽灭，照得年轻人的影子时短时长，像太老的电影卡了胶，流畅的白穿过黑色的断线。他们狂奔到大路的终点，直到种满花草的街心公园，“学长”拉着他从塑料喷红的大字边溜进去，时候晚，里头一个人也没有，只有太早的蝉稀疏的叫鸣。</p>
+<p>  四下无人，他警惕起来，问学长目的。对方支支吾吾无法回答，他转身想走，却被抓住手臂。学长说太晚了，也许你可以来我家住——在社交惯例上，它可以表示“被收留”，也有相当一部分等同“性暗示”，无论是哪一个都不符合他的行事作风，他断然拒绝。即便从客观角度来说“学长”的确很有魅力：外形相当出众，面容秀丽，身形虽然单薄但形状好看，是纤细美人那一款。但他判断吸引力并不仅仅依靠外观，此时握着他的手轻轻颤抖，“学长”神情似乎有点哀切，与他流转的眼波相衬，显示出他情感丰富的特质，这说明“学长”可能会做出许多非理性的举动，与他的处事原则并不相符。如果和这样的人深入交流，只会给他带来无穷无尽的麻烦——</p>
+<p>  但他正想说什么，“学长”却先封住了他的口。对方一把抱住他，他还在长，额头碰到“学长”的锁骨，那根往上翘的聪明草抵在年长者的下巴处，晚风里茫然地摆动。</p>
+<p>  那个的怀抱很暖，环绕着皂角的香味，是清爽温柔的热，就像夏天的萤火虫。他的手攥紧在两边，身体有些僵硬。他虽能判断出“学长”的性格，然而却没有应对的策略，又实在不适应于身体接触，一时间不知道怎样行动才最得体。</p>
+<p>  他们旁边的灯，是四下唯一的光明，旁边一丛丛昏暗的灌木，是杜鹃与鸭脚木，后者已经到了花期，白色的小花清幽，自然有香气。木长椅上了油漆，但“请勿落座”的“勿”字被涂成鬼脸，水泥地上的小狗脚印没有被抹平，观赏石上刻了一堆杂乱的名字，还有几个歪歪扭扭的爱心。他终于后知后觉地意识到这里是附近谈情说爱的胜地，生活的新鲜一向为他忽略，此刻却很恍惚地凝结，氛围，气味，和手上的手，都通过构造强烈的陌生感，毋庸置疑地烫进他的脑中。</p>
+<p>  一种新奇而有效的社交策略，他想。</p>
+<p>  明月高悬，那是艾尔海森和卡维的第一次见面。</p>
+<h5 id="2">2.</h5>
+<p>  听说学校侧门外经常敲诈勒索学生的两伙混混，前几天被抓了。</p>
+<p>  说是他们打架斗殴的时候被警察偶然遇见，一窝端了。但也有消息更为灵通的，在四人小组下课聊天的时候，偷偷传消息说其实“他们”本来打算按照聚众闹事处理，结果有人举报，说他们敲诈的金额巨大，情节恶劣，已构成立案标准；领头的老大留了好几年级，前几天刚过十八岁，剩余的喽啰除了刚进来的几个，多数也满了十六。有人问说金额巨大，那得多少？传消息的人说，隔壁班那谁谁叔叔就是管这个的，说当晚去查封据点，翻出了好多整钞。哪个学生啊？这么有钱？不知道。总之是触了霉头。卡维坐在座位上默默地听，手竖在旁边，脸贴着书面，鼻腔里轻轻哼哼，眼里是午后过于明亮的窗外的绿色，新鲜得叫人昏昏欲睡。他心里绕着事，睫毛扫着纸上粗糙的纹路，同学们说的话从耳朵里滑进去，自动分解成一帧帧昏暗的画面。</p>
+<p>  比如，在嘎吱嘎吱摇晃的晕黄底下，学弟捏着他的手臂，眼睛睁得极大，道，“停下。我去拿他们的账本。”</p>
+<p>  是的，那件事他全程在场。他看着学弟在那间满屋子灰尘的杂物间轻车熟路般翻找，在一个个铁饼干盒里抽出各种资料，眼睛像扫描仪般上下一动，什么该抽什么放回原位，两三秒内就解得结果。他捏着手站在旁边，昏倒的小男孩就在屋角垂着头，他既担心自己下手太重，又怕他提前醒来，两三秒就得偷偷瞟一眼，罪恶紧张得心跳过速。“可以了吗？”他听见他说。胸腔里的跳动声扑通扑通，好像海啸喧嚣的潮。“还有四十秒。”他听见学弟说。学弟在变声期的末尾，声音有一点浑，但语气中的笃定精确，一瞬间好像大人。他紧张起来便容易掐手，数到三十八秒，学弟扒出了一张纸条，他的视力很好，瞄到了上头的字——“是这个吗？”“是这个。”</p>
+<p>  “你怎么知道他们有账本？”他记得他问。对方没有回答。他想到了不太好的可能，道，“你不会其实和他们是一伙的吧？还是你是他们对头的……”</p>
+<p>  “不，我只是一个普通人。”对方很快地打断他，“只是他们保密工作做得实在糟糕，而且危机意识也很薄弱，只需要稍微调查就能找到。”</p>
+<p>  他隐隐约约似乎听到一群纷乱的脚步声，朝着他们的方向来。要是被围着就完了，血涌上他的脑袋，两人对视一眼，他拽着学弟的手臂便往外跑。向哪里跑？不知道，总之越远越好。等他反应过来，他已经跑到了家门口的街心公园；想要“往安全的地方去”，不知不觉便又回到了家前面。学弟轻轻地喘气，头发跑得有点乱，脸也有点红，皱着眉头问他目的地是哪里，他答不上来。学弟看了他一眼，道“接下来还有什么事吗？没有的话我先走了。”他却突然抓住了学弟的手臂。学弟回头，绿色的眼睛深幽，像泛满绿藻的红树林，让他有些失语。他于是才知道自己可能是太累了，才会明明家里一个人都没有却跑回了家，明明把人带出来已经送佛送到西，而且两人本来毫无联系，但即便是这么简单的一点分离，都会让他感觉到寂寞。学弟是什么人？他并不了解，看起来并不像坏人。但他是什么人好像也并不重要，他很安静，此刻默默地注视着他，分明只是小孩，却好像能将他开膛破肚，把他的病灶与缺憾一并倾倒出来。他问，</p>
+<p>  “你还需要更多帮助吗？……现在已经很晚了，或许你可以来我家睡。”</p>
+<p>  对方很直接了当地拒绝了。也是，其实两人不过萍水相逢，对方看起来也很谨慎，不一定要因为他的善良或年长而豁免。他松开手，想说“那么我送你回去吧，家里人得着急了”，却听见面前的人说，“如果自己的能力不足以帮助别人，最好不要逞强。”</p>
+<p>  他愕然。他指了指自己，“可是我救了你啊？”</p>
+<p>  “其一，我已经计划妥当，事实上并不需要你的帮助。其二，”学弟的声音平缓流畅，像一条小溪，“其二……看起来你的状态比我糟糕得多。如果做一件事超出了你的承受范围，聪明的办法是直接回避。”</p>
+<p>  他的心一跳。他知道学弟说的不过是今晚的事，的确，他并不擅长于使用暴力，更不擅长于面对暴力，那间杂物房的象征损耗着他的心神；但那一瞬间，他敏感的神经觉得不仅仅如此，学弟的语言与更广袤的事物接通，含沙射影，他辩解道，“我没有。我……我还好。”</p>
+<p>  “是吗？我对你的状态不感兴趣，但你说出这句话前，最好拿出镜子看看自己。”学弟顿了顿，“你容易紧张，同时消耗过大，恕我直言，看起来很快就要‘崩溃’了。这就是‘还好‘吗？”</p>
+<p>  土崩瓦解。本来好像一切正常，学弟说出这句话以后，疲惫感铺天盖地，他身上的力气一瞬间被抽走，险些栽倒下去。他好像还说了一些话，具体是什么已经不太记得了，只记得学弟还说，“无意冒犯，但完全不能以自我为中心考虑，我认为是病理性的性格缺陷——唔！”</p>
+<p>  他抱住了学弟。现在想想实在太冲动，他也不是随便与人勾肩搭背的那一类，但那一瞬间，好像如若他不能感觉到活着的肌理，他就会碎裂、融化，就会像一滴水掉进泥地，渗入地底，永不可见天日。抱住了学弟反而不说话了，安安静静地一动不动，他甚至还感觉到学弟的手在他背后僵硬地拍了拍，意思好像宽慰。有多久没有拥抱过了，自他告诉自己孑然一身亦可活着，世界变成了原子与原子，再没有无忧无虑索要体温的运气。他想说他真的好累，老师布置了很多不属于他的任务，学生会提要求根本是命令而非咨询，学校的性别歧视让人讨厌，今晚一个人收拾器材到十点，家里的金鱼还没吃上晚餐——但面前的人不过萍水相逢，和年幼撒娇也实在为难，他到底什么也没有说。只是觉得非常久违地，通过拥抱，纠结的疲倦被柔柔地抚平。</p>
+<p>  ……</p>
+<p>  想起那一点任性，他把头埋在臂弯里，只有一点翘发从额边的缝隙钻出。啊啊——他在心里的悬崖，朝着无垠的旷野叫喊——本来以为自己已经习惯了承担全部，没想到百密一疏，在一个陌生人面前露了马脚。有些害羞，又有点愧疚，但提着小蛋糕去道歉，好像又没什么缘由。更何况根本不知道对方是哪个班的，小小一间学校也有几千人呢。心里的小世界花又慢慢垂下头，山谷里都是呐喊的回音。如果能有再见面的缘分的话——忽然桌面传来了震动，叩叩两声，他抬起头。两个同学旁边，一个挥着手，一个指关节还在桌上半寸，惊动他的便是此物。</p>
+<p>  他回过神来，拢了拢头发，暗自担心脸上的懒散了没散，微微笑道，“你好，请问有什么事吗？”</p>
+<p>  “请学长出来说。”</p>
+<p>  他的记忆力不错，对这两位同学都有些印象，大概知道他们的来源。文艺部，他们自报身份，卡维点点头。虽然没有正式参与，但因为出众的艺术天赋，卡维也帮着组织了几次活动。一个叫萨哈尔，一个叫塔希尔，一个过分热情，一个性格散漫。热心肠的那个给他递了一封烫印的硬纸信，“卡维学长，这个是我们毕业舞会的邀请函。”</p>
+<p>  卡维略略扫了一眼，“学妹好。不过，我现在才高二，按道理说应该不会轮到我……”</p>
+<p>  两人对视一眼。塔希尔清了清喉咙，“是组织小组的邀请。高三的学长学姐们內部进行了投票，一致决定请卡维学长当我们的‘特邀嘉宾‘。”</p>
+<p>  “对对对。”萨哈尔连忙补充道，“……卡维学长不是很会跳舞吗？之前在元旦文艺汇演也表演过的。学长学姐们都对学长你印象深刻，更何况高三的学长学姐说，要有漂亮的omega场子才能热起来——”</p>
+<p>  塔希尔用手肘捅了她一下。卡维的脸色有点发白。他努力地咧了咧嘴，权当是对“夸奖”的回应。塔希尔见情况不对，“别听她胡说！卡维学长——”</p>
+<p>  “我、我还好，没事。”他道，“不过很抱歉，那段时间高二要准备期末，而且还有竞赛要准备，我可能很难抽出时间，应该不能——”</p>
+<p>  “卡维学长，我们也知道你任务很繁忙，但是我们舞会也就是一个周日，花不了你多少时间。而且希忒姐也说，如果卡维学长不来，毕业舞会的精彩程度只怕会对半砍。”</p>
+<p>  他向身边的女生使了一个眼色。“就是啊！”那女孩子抓着了机会，拽着卡维的手晃，“他们都超级期待的！求求你了学长！”</p>
+<p>  “拜托你了！”</p>
+<p>  两个人双手合十，两个乌黑的头顶对着他，还有一条马尾轻轻摆动，天真柔顺地残忍。卡维沉默了一会儿，笑着说好。</p>
+<p>  学弟学妹们完成任务，欢呼一声击了个掌。学长捏着那张邀请函，朝他们挥了挥手，转身走进教室。</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>JuusanYomitsuru</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="https://juusanyomitsuru.github.io/2023/05/17/d8f0af06f563/">https://juusanyomitsuru.github.io/2023/05/17/d8f0af06f563/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2023/05/17/742583340bc6/">性启蒙（其二）</a>
+            
+            
+            <a class="next" rel="next" href="/2023/04/01/370f149b8c77/">天街如水（其七）</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<span class="site-uv">
+    总访客量:
+    <i class="busuanzi-value" id="busuanzi_value_site_uv"></i>
+</span>&nbsp;
+
+
+<span class="site-pv">
+    总访问量:
+    <i class="busuanzi-value" id="busuanzi_value_site_pv"></i>
+</span>
+
+
+
+    <div class="copyright">
+        <span>© JuusanYomitsuru | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>

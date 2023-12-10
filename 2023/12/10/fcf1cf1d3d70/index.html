@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="JuusanYomitsuru">
+
+
+
+
+
+<title>天街如水（其三十） | Hexo</title>
+
+
+
+    <link rel="icon" href="/yumaobi.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">JuusanYomitsuru&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">JuusanYomitsuru&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6; // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function() {
+            tocbot.refresh(obj_merge(tocbot_default_config, {
+                hasInnerContainers: true
+            }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function() {
+        tocbot.init(obj_merge(tocbot_default_config, {
+            collapseDepth: 1
+        }));
+    });
+
+    function expand_toc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, {
+            collapseDepth: expanded ? 1 : DEPTH_MAX
+        }));
+        b.innerText = expanded ? 'Expand all' : 'Collapse all';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">天街如水（其三十）</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">JuusanYomitsuru</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">December 10, 2023&nbsp;&nbsp;15:36:24</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E5%A4%A9%E8%A1%97%E5%A6%82%E6%B0%B4/">天街如水</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h4 id="阅读之前……">阅读之前……</h4>
+<ul>
+<li>系列前文请点击右上角<a href="https://juusanyomitsuru.github.io/category/">Categories</a> 。</li>
+<li>例行超长预警：
+<ul>
+<li>非常感谢您点进这篇文章。</li>
+<li>这篇文章主角为军贼头子（军师）海X大学老师卡，内含R18内容。大概是被海哥竞争对手盯上的卡与海哥假扮情人，最后渐生爱意的故事。</li>
+<li>其中有卡女装要素，是旗袍和舞女装，请注意。</li>
+<li>因为民国pa的背景限制，除了海维赛提等出现的须弥角色外，其他统统为璃月名。如感觉不适也可退出。</li>
+<li>文笔小白，逻辑天真，希望看客愉快。</li>
+</ul>
+</li>
+</ul>
+<h4 id="正文">正文</h4>
+<p>  “哎，哥。”说话的人年纪在十六七岁上下，身材瘦小，皮肤黝黑，只有一双眼睛在夜色里亮得吓人。他悄悄靠近身边大他八九岁的男子，“真的不会被条子发现吗？他们今晚不会来这边吧？”</p>
+<p>  “啐。”他口中称哥的男人胡子拉碴，浑身是做体力劳动自然形成的肌肉，只有手臂上有一道直达肩膀的、骇人的伤痕。这道伤痕来自一个他永远难忘的夜晚。他瞥了畏缩的同伴一眼，轻蔑道：“胆小鬼，怕的话就不要来。今天我们不是来要财银的，是给我们的兄弟讨公道的。还没成事就要尿裤子了，还是滚回去喝你妈妈的奶吧。”</p>
+<p>  刚刚问话的男孩闻言，瞪着眼睛，挺直了脖子：“谁说我怕了？敬哥这么照顾我，我早就把他当做亲哥哥了。他出了事，我也要替他报仇！别忘记了，今晚的点还是我偷偷进来踩的。别看不起人！”</p>
+<p>  “这样说才像个男人！”壮汉绷直的脸终于露出一点笑容。他拍拍男孩的肩，视线移到面前的工厂，表情忽然又变得凝重。他咬紧牙，“狗老板，人在外面大鱼大肉，我们在里面做猪做狗，到头来连辛苦钱都被吃个精光。敬子在厂里干了三年，人人都夸良善，替工人说两句公道话，被你们捅瞎了眼睛。做不了工吃不起饭，老婆跑了，孩子被拐了，他想不开上吊走了，家里一个老母，天天哭到三更。他妈的，那几个告密的贱骨头，倒还做上了工头。……老天爷不给公道，我们就自己来讨。我们活不下去了，谁也别想好过。”</p>
+<p>  还有几个兄弟，身上都带着刚愈的伤痕。他们都是建材商扔进局里，串通好上下，好好拷打了一番的人。地上都是碎石裂钢，他们各自完成了任务，埋好燃料便伸头向互相打着手势，一个一个从厂房里头退出，汇集到壮汉身后，眺望着面前曾经吃过他们血肉的怪物。壮汉道：“平时看不起我们，现在是时候叫他们看看工人的本事了。”</p>
+<p>  “烧！”</p>
+<p>  那个字斩钉截铁。兹拉一声，有人划亮了火信，于是从那小小的火苗开始，橙红的暖色越膨越大，越跑越快，到了大门，冲天的火焰，便忽地喧腾起来。热潮向他们扑去，熏得人面上发痛，但谁都没有躲开。男孩盯着张开大口的火龙，吞了口唾沫。他轻轻问哥，说我们接下来去哪里？</p>
+<p>  “接下来能卖的东西都卖掉，送给工人和工人们的老娘。哥们几个能自食其力的，便去做流浪汉。”壮汉的眼睛里跳动着逐渐蔓延的火光，“去桓城。去没有财主能压榨我们的地方。”</p>
+<br>
+<br>
+<p>  工议局的会议厅中，掌声如雷，经久不息。须国商人刘屹君抓住了这次工议局董事会改组的机会，成功获得了一席珍贵的席位。结果宣布之后，在喧闹的恭喜声中，他轮流和会场上的人们握手。到为他投出关键一票的克莱蒙先生和大力推荐他的图卢兹先生的时候，他后退一步，深深地朝他们作了个大揖。</p>
+<p>  建材商本来也是候选人之一，但因为提前做了与艾尔海森的交易，他自动让出了自己在租界的资源，相当于把席位拱手让贤，机会已然与他无缘，今天来不过是走一个过场。不过他也并不心急，他相信只要能够在宝城站稳脚跟，有了结实的资本，只需要略费一些心思经营，机会迟早会落回他的手里。于是此时，他也颇为大度地鼓起掌来。</p>
+<p>  会后众人聚在一起聊了会儿天，约莫八点半左右，卢老板才拍拍衣裳，信步走出洋楼。不料刚出门，便被神色慌张的人扑了个趔趄。建材商怒道找死吗？一脚便把人踢开。定睛一看，扑他的不是别人，却正是他的亲信。仆人从地上爬起来，六神无主地抱着他的大腿，说老爷，厂房走水了！建材商心头咯噔一声，说走水？怎么回事？为什么不早说？</p>
+<p>  仆人说冤枉啊，老爷有所不知。府里的电话今天不知怎的打不出去，问了好几家，那一片的电话都断了。我好不容易到这里，门口放哨的却说里面开着会，死活不让我进门。我等了大半个时辰，像热锅上的蚂蚁似的，好不容易才把老爷您盼来了。您快去看看！</p>
+<p>  这时候还有许多车夫等着来客。建材商连忙叫了台车。车夫拉着他们在夜色中飞奔，忽生意外，他的心跳得极快，焦虑症隐隐又有复发的态势，灭顶的不安几乎要如长枪刺穿他。他捏着手心，努力让自己的声音保持平静：</p>
+<p>  “是有人蓄意为之，还是走线的意外？</p>
+<p>  “小的也不清楚。也是有住得近的工人先看到了烟，过来告诉我，我才知道厂房走水了。但听他们说，是之前赶走的那几个工人吃了一点教训，怀恨在心，为了报仇，才做出这等骇人听闻的事。证据是好几个人都收到了风声，叫今晚不要留人……”他往地上吐了一口口水，“呸！这些狗奴才，不踢便不会动，也不知道先和我们通报一声，只敢自己私下碎嘴。照我看，都是吃里扒外的软骨头，简直算是一伙的！”</p>
+<p>  他说得激动，尾音已经不由得变尖，听着相当刺耳。建材商深吸一口气：“那纵火的工人呢？”</p>
+<p>  “不知道！走了，跑没影儿了！”仆人嚷道，“问起来谁也不知道在哪儿！”</p>
+<p>  说罢，对方偷偷瞧他的脸色。建材商佯装不知，只叫车夫快点，再快点。</p>
+<p>  远远地便闻到一股浓浓的烟味，但却已不见明显的火光。力士石灰厂在宝城的大郊区，四周围没什么人烟，深夜里漆黑，看不清情况。车夫离目的地还有一里路便不愿再走，建材商给他塞了一个银元，才让他把他们带到现场。天地都黑黢黢的，一个人影也没有，他们叫车夫等着，往前走两步，便踢到了一个硬邦邦的东西。提起来一看，竟然是一个水桶，除此之外，便是一地的瓦砾尘灰。偌大一个工厂，借着惨白的月光看空旷得吓人，像一个巨兽的尸体，被蝼蚁啃得只剩下一个崎岖的骨架。卢老板不可置信地看着亲信，对方慌了：</p>
+<p>  “小、小的明明叫了好几个工人来救火……还马上叫人去吴老爷公馆找帮手……警察局也派人去了，怎么……”</p>
+<p>  他的声音也渐渐小了。</p>
+<p>  大概被派来救火的人，看见火势大了，救不了了，自己本来也只是厂里打工的，便扔下水桶跑了。吴言川吴训兴许不在家中，又或者见不能从他身上讨到足够的便宜，便冷眼旁观。上次解决问题，便是通过吴言川调动的警力，现在吴不站在他这一边，警厅自然有千百种理由消极怠工。这个年代的公义，便旋系在各方势力的手里。但他仍然有盟友，卢老板咬着牙：“那艾尔海森……”</p>
+<p>  不对，不对。</p>
+<p>  派来救火的人，即便是看到火势大了，也应该会四散去求助。吴言川既然精明，未必不愿意卖他一个人情，想要进租界，他卢广永还有价值能让他榨取。警厅哪怕再消极怠工，这么大的动静也总会察觉。但那些改变结果的因素一个都没有出现，他像是被刻意放在了一个人为制造的真空地带，与所有人都遥遥隔绝。仔细一想，每一处都荒诞不经，每一处都有迹可循：在所有导向结局的路径之间，有人切断了通往其他任何可能的道路。用无数暧昧的巧合，推动多米诺骨牌顺次倒下，直至令巨物轰然倒塌，这种手法，他只知道一个人有。</p>
+<p>  没有出现的名字，才是那个正确的答案。</p>
+<br>
+<br>
+<p>  艾尔海森刚结束简餐，坐车回到公馆。既然今晚刘屹君在工议局的胜利已是板上钉钉，他又素来不喜欢会议，无意陪同代理人玩你来我往的社交游戏，便拒绝了刘的邀约，独自一人享受夜晚的宁静时间。车缓缓从后门驶入，司机停好车，例行检查车辆情况，艾尔海森走到门前，忽然门里闪出阴恻恻一张脸，直直停在他眼前。</p>
+<p>  除了天顶上悬着的阴惨惨的月，花园中唯一的照明便是从公馆客厅透出的稀疏亮光。散落的冷光打在人的脸上，都只能勾出一条模糊而涣散的线条。面前忽然出现陌生人，他动作敏捷地一退。天赋使然，他的夜晚视力颇佳，看清楚了来人，紧绷的肌肉却没有放松：</p>
+<p>  “原来是卢老板。天气已经转暖，居然还穿着这么厚的棉衣。无论如何，现在已经过了接待客人的时间了，有什么事也请明天再来。”</p>
+<p>  “艾尔海森。”建材商的气质本就阴郁，再加上语气森冷，夜里表情晦暗难分，五官蒙蒙如没有五官，活脱脱一个撞了邪复了生的阴魂。他声音很轻，“是你干的？”</p>
+<p>  “不明白你在说什么。如果状态不稳定，我建议你去看医师。”艾尔海森皱了皱眉，“我这里不接收精神病人。”</p>
+<p>  “我在说什么，你我心里应该清楚。如果不是你安排，他们又怎么有胆子做出这种大逆不道的事，又怎么能如此轻易地逃离法网？一个片区的电话被切断，知道内情的人被疏散，警厅说今晚根本没有接到任何报案。”卢广永顿了顿，狞笑道，“好漂亮的手笔啊，是我小瞧你了。拿我石灰厂的三厘分息原来也是烟雾弹，让我误以为你的目标是真金白银。不到最后，谁也不知道你的目标是拔走整个厂子。……让我猜猜，你图谋的原来是孙成林的势力，想把我这颗扎眼的钉子拔出宝城。这下我全明白了。”</p>
+<p>  “很有意思的说法。”艾尔海森却面色不变，“卢老板做企业实在屈才，应该去警厅做侦探。今晚我的确听说贵府所在区域的电话线需要进行日常维修；刚过年关，放了长假回来，警长们有些疏忽也很正常。至于你所说的内情……不妨让卢老板说说，到底是什么秘密值得遮掩。一句忠告：在将责任推给别人之前，麻烦先审视自己。无谓将无关的人拖入你的妄想中。”</p>
+<p>  “哈哈！”建材商大笑两声，“真是目中无人。你又是什么正人君子？只不过有几分运气，便自视甚高，以为自己真是神算子，反倒教训起别人来了。” 语调一顿，他厉声道：“但你真以为能事事如意吗？”</p>
+<p>  砰、砰、砰。</p>
+<p>  棉衣中骤然闪出火光。建材商竟将枪支藏在衣服里，话语间黑黢黢的枪口伸出，直直对着他的心脏。艾尔海森反应速度已然很快，但深夜里仍有血肉穿断的声音。这么近的距离下躲避子弹是天方夜谭，即便没打中要害，也要被开几个血窟窿。再不可一世的人，面对钢铁也只是区区肉身，下一枪瞄准的就是头部，扳动扳机的一刹那，他的虎口忽然一阵剧痛。冒着被再次击中的风险，艾尔海森快速接近，一个手刀直击他的手腕关节。咔擦一声，枪支应声而落，被对方抢在手里，他本能去夺，却被冷冰冰的金属抵住额头。</p>
+<p>  “……说够了？”艾尔海森的声音有些轻飘，他一只手还捂着左腹，语气却冰冷，“袭击军官的罪名，就足以让我就地处决你。”</p>
+<p>  “要杀要剐，悉听尊便。”死亡的硝烟味就印在眉心，他却瞪大双眼，语气全是快意，“你以为我还想活？但我要死，也要拖你这贱人下地狱。你也伤得不轻吧，小子。棋差一招的感觉，是不是很快活？”</p>
+<p>  血腥的味道绕上他的鼻尖。建材商倒下之前，耳边听见钢铁落地的脆响；对方的声音冷酷而无情：“为人最大的危险，便是自作聪明。不过很可惜，你已经没有机会反省了。”</p>
+<br>
+<br>
+<p>  司机听到枪声，带着人赶到现场的时候，地上便倒着两个人。一个已经变成尸体，另一个探探鼻息，也只有出的气没有入的气，性命危在旦夕。满地的血迹流在一起，涨潮似的，染得每个人满脚湿濡，谁也分不清来自谁的身体。喊叫声，哭泣声，命令声，宽慰声——为艾尔海森少将遇刺一案，今夜警笛长鸣。</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>JuusanYomitsuru</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="https://juusanyomitsuru.github.io/2023/12/10/fcf1cf1d3d70/">https://juusanyomitsuru.github.io/2023/12/10/fcf1cf1d3d70/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2023/12/10/afca92866f52/">天街如水（其三十一）</a>
+            
+            
+            <a class="next" rel="next" href="/2023/12/10/eb7bbf607fd4/">天街如水（其二十九）</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<span class="site-uv">
+    总访客量:
+    <i class="busuanzi-value" id="busuanzi_value_site_uv"></i>
+</span>&nbsp;
+
+
+<span class="site-pv">
+    总访问量:
+    <i class="busuanzi-value" id="busuanzi_value_site_pv"></i>
+</span>
+
+
+
+    <div class="copyright">
+        <span>© JuusanYomitsuru | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>

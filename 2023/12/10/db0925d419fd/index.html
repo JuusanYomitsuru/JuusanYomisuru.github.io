@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="JuusanYomitsuru">
+
+
+
+
+
+<title>天街如水（其二十七） | Hexo</title>
+
+
+
+    <link rel="icon" href="/yumaobi.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">JuusanYomitsuru&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">JuusanYomitsuru&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6; // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function() {
+            tocbot.refresh(obj_merge(tocbot_default_config, {
+                hasInnerContainers: true
+            }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function() {
+        tocbot.init(obj_merge(tocbot_default_config, {
+            collapseDepth: 1
+        }));
+    });
+
+    function expand_toc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, {
+            collapseDepth: expanded ? 1 : DEPTH_MAX
+        }));
+        b.innerText = expanded ? 'Expand all' : 'Collapse all';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">天街如水（其二十七）</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">JuusanYomitsuru</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">December 10, 2023&nbsp;&nbsp;15:36:11</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E5%A4%A9%E8%A1%97%E5%A6%82%E6%B0%B4/">天街如水</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h4 id="阅读之前……">阅读之前……</h4>
+<ul>
+<li>系列前文请点击右上角<a href="https://juusanyomitsuru.github.io/category/">Categories</a> 。</li>
+<li>例行超长预警：
+<ul>
+<li>非常感谢您点进这篇文章。</li>
+<li>这篇文章主角为军贼头子（军师）海X大学老师卡，内含R18内容。大概是被海哥竞争对手盯上的卡与海哥假扮情人，最后渐生爱意的故事。</li>
+<li>其中有卡女装要素，是旗袍和舞女装，请注意。</li>
+<li>因为民国pa的背景限制，除了海维赛提等出现的须弥角色外，其他统统为璃月名。如感觉不适也可退出。</li>
+<li>文笔小白，逻辑天真，希望看客愉快。</li>
+</ul>
+</li>
+</ul>
+<h4 id="正文">正文</h4>
+<p>  “你确定要走这一步吗？”拉赫曼双手交叉，语气有些踟蹰。赛诺则站在墙边，环着手臂，直言不讳道：</p>
+<p>  “我建议你想清楚。如果出现纰漏，你可能会死。”</p>
+<p>  他们注视的对象正斜斜地倚靠在椅子上，手上拿着一本书，翘着腿。闻言他一摆手，“我不否认这个计划有相当的风险，但如果问我最有效的办法，我仍然会推荐这个。毕竟回报必定伴随着相当的危险。更何况，这也符合你们的要求。”</p>
+<p>  “我不否认这一点。”赛诺道，“我也看到了你对白先生的诚心。但我仍然认为不必用生命去铤而走险。”</p>
+<p>  “任何事情都有赌的成分。即便谋划得再周到，也可能因为一个小小的意外满盘皆输。”艾尔海森表情淡淡，像即将处于凶险境地的人并不是他，“但这不能成为畏缩不前的理由。‘大风纪官’应该最清楚，抓捕罪犯的时候不可能走最安全的道路。方法越危险、越出人意料，达到的效果便最好。”</p>
+<p>  赛诺沉默。拉赫曼道：“但要如何保证王存芳无法及时反应？倘若他提前识破了我们的计划，或者是突然转变想法……”</p>
+<p>  “那就要看诸位的努力了。”灰色的头发轻轻晃了晃，艾尔海森尾音稍稍上挑，“我们今天之所以在这里，便是因为这件事需要所有人的参与。准备充足，抗风险能力自然提高。若是处理得不干脆……”</p>
+<p>  他悠悠道：“那自然不会如意。事在人为。很简单的道理。”</p>
+<p>  拉赫曼也安静下来。空气中弥漫着沉重的气氛，艾尔海森却似乎对这种焦躁无动于衷。他的视线在他的两个盟友之间巡回：“我想我们已经讨论得很清楚了。还有其他疑问吗？”</p>
+<p>  拉赫曼不说话，赛诺则摇摇头。事实上，比起“讨论”，这场对话更像是听风暴中心的艾尔海森阐述他的行动计划，并没有太多的变更空间。他们都是经历过不少风浪的人，心中皆十分清楚：只有让混乱足够剧烈，危险中才会伴随机会。</p>
+<p>  艾尔海森的视线扫过表情凝重的两人：“很为难？我倒是很期待结束之后的生活。”</p>
+<p>  毕竟在那之后，你们的麻烦便和我无关。他表情淡淡，合上书，慢慢站起身：“如果没有其他问题的话，我们都可以开始准备了。不过在开始之前，我要先去处理一些私事……”没有人问他是什么事。他自顾自地说了，又自顾自地停下，话锋转回，“无论如何，先预祝我们合作愉快。”</p>
+<br>
+<br>
+<p>  女商人推了推玳瑁眼镜，金色的眼睛仔仔细细地描过纸张上的每一个字，唯恐漏看什么细节。放大镜拉低又提高，翻动纸面的声音哗啦啦地响，被火燎过的纸张上隐字排布均匀，勾直皆颇为有力，显示出写字人不俗的功底。一笔一划累加，说的无非是这么一件事：</p>
+<p>  如无意外，宝城股市于月底会有大变动。现有的热门选择，一个都不可以收。</p>
+<p>  确定没有遗漏的细节，多莉微微一笑。她手腕底下压着的便是手下每日汇报的信息，上头写着各处线人提交的动态。人人都以为自宝城当地商人拿下工议局席位后，形势便会向某几位特定的企业家翻转，但多莉何许人也，当然已经敏锐地察觉到事情并非这么简单。</p>
+<p>  利益越大风险则越大，市场的变化并非日日夕退朝涨的潮水。暗潮汹涌而变幻莫测的海底，吸引着探宝的潜客，但处处是蛰伏的火山，一着不慎，便可让天真的玩家尸骨无存。人人都可望见的风潮，很可能是一幕投射的幻影。只有看得见后面交织的暗线的人，才能从幻想解构之前趁早抽身。</p>
+<p>  这几天她一直在搜集信息，知道了不少内幕。谁能挡得住最有门路的多莉？她是须弥蛰伏的蜘蛛，又像端坐于宝城之顶的蚁后。无数兢兢业业的蚂蚁为她构筑出四通八达的巢穴，而每一只工蚁都捆着一条蛛丝，直到把一只无形的手延展到又一个深不可知的角落。</p>
+<p>  而探往某一个角落的蛛丝，近来传来强烈的震动。将军府、租界、宝城商会……于是敏锐的商人知道新的价值连城的情报就在眼前。</p>
+<p>  直至与另一只蜘蛛正面交锋。</p>
+<p>  和艾尔海森的会面正是在两日前。宝城贤行公园正门往东走一刻钟，一家炒货铺的二楼，在无声无息间成为了拉赫曼的据点。她正想着要记录下这里的位置，好在附近安插人手，便碰上了一双苍翠的眼睛。</p>
+<p>  “我想多莉小姐无需耗费心神。”那位军贼头子坐在太师椅上，姿势依然潇洒，“两天后便会有一家普通的三口之家入住这里。换而言之，这个地方是一次性的。”</p>
+<p>  看起来为了迎接她，拉赫曼和艾尔海森那方也花费了不少心思。这样才对嘛，多莉想。她笑眯眯的，衣摆的金属装饰发出银元相击般的清脆响声：“哎呀呀，真是大张旗鼓。稀客、贵客！特别是拉赫曼先生。警长做得风生水起呀，这个月头才升了职？宝城有你这样尽心尽责的警长，我这样的小市民才能安心过日子。”</p>
+<p>  拉赫曼微微交叉着手。他当然知道多莉意有所指，但神色不变，只微微点头，说谬赞了，多莉小姐的事业才是蒸蒸日上。大巴扎娱乐街的产业生意好极了，真是日进斗金。两人虽然都是宝城暗地里最有势力的两支，但在微妙的制衡下多年来井水不犯河水，寒暄两句便可以结束。女商人金色的瞳仁转向一边端坐着的大员：</p>
+<p>  “至于艾尔海森先生，前段时间我们才用纸条通过信吧。虽然没有碰上面——卡维老师后来有和我聊天，说他在找新的住所。我当时还吃了一惊，说多莉这里已经没有位置了，毕竟当时被中途断了租，谁又知道忽然又有变故？”她笑起来的时候，眼角会有很可爱的褶，显得神情亲切又真诚，“当天多莉拿到你的纸条，和卡维老师通了电话，听他的口吻，还真为你们担心呢。所幸没有出什么大事。哎呀，多莉也松了一口气。你们感情还好么？”</p>
+<p>  拉赫曼斜斜地看了身边的人一眼。艾尔海森面色不变，只换了个姿势：“按照卡维的个性，想必多莉小姐当天也不会有什么亏损。……另外，情况还不错。多谢关心。”</p>
+<p>  三言两语间交锋，谁都没有让步。</p>
+<p>  暂且鸣金收兵。多莉落到柔软的垫子上——招待多莉小姐的地方理所应当足够舒适，理所应当会有柔软的枕腰与垫子——而后施施然环着肩膀。金色的视线在眼镜的凝结中更显得锐利，她慢慢道：“那不妨说说看，你们想要从多莉这里买什么？”她伸出手指，一根一根地掰数，“房产、轿车、名酒、奇药……顾客想要什么，多莉就有什么。当然。”她的手腕一转，像被上头的金饰压倦了关节，“只要钱管够。”</p>
+<p>  “既然找到了你。”旁边的拉赫曼开口，声音浑厚，“多莉小姐应该知道，我们想要的当然不是这些。至于报酬，做我们这一行最讲究诚信，自然不会短少。这一点多莉小姐可以放心。”</p>
+<p>  “哦？既然是以你的名义担保，那多莉自然不会有什么担心。那么艾尔海森先生。”她的视线毫无顾忌地直直盯着那位主谋，“你又想要什么呢？”</p>
+<p>  她当然很清楚，这些人找上她，绝不是要向她寻找普通的货物。事物的珍奇或高昂，对于这些人来说都无关紧要：他们有自己的目的，亦只会根据目标行动。与什么人交易，也绝不是因为哪家的报酬的值当或优惠，而是因为这件商品非某人无法达成。</p>
+<p>  非多莉不可达成。</p>
+<p>  她已经准备好提出一个足够高的价码。</p>
+<p>  “我需要多莉小姐的两个线人。”</p>
+<p>  “又是线人呀。”多莉道，头微微后仰，“上次艾尔海森先生找我就是要人，这次又是要人。原来先生对多莉的线人如此热衷，再下一步是不是要多莉也到《宝城商报》做你们的线人？”</p>
+<p>  “越是珍稀的商品，越能取得不菲的报酬。在这个时代，物产没有情报珍重。多莉小姐应该也很明白这一点。”</p>
+<p>  多莉没有回应。她很清楚，对方还未说到关窍。还没到需要她表态的时候。</p>
+<p>  艾尔海森念了两个名字，说我需要你帮我和他们接洽。多莉皱了皱眉。经过上次和艾尔海森的交道，她知道没必要再作遮掩，但这两个名字的出现的确超出了她的预期：“这两个人虽然是多莉的‘老朋友’，但据多莉所知，一直在医院就职，并未牵涉其他行动。……还是说艾尔海森先生有朋友要入院医治？那多莉还有更好的选择……”</p>
+<p>  “关于目的的解释，不在今天的交易范围之内。”艾尔海森道，“我只需要这两个人的联系方式和住址。根据调查，这两个人一个曾经受过你的资助，一个曾经在你这里购买过一些尚未被判定为合规的产品，在那之后也成为你的信息来源。如果由你来安排会面，想必他们不会拒绝。”</p>
+<p>  多莉的手指一弹，口袋里的银元叮哐一声，叫她的思绪冷静而稳定地快速运转。刚才询问艾尔海森的意图，当然不是在关心这位军贼头子友人的健康，更何况她从未听说过这位大员有什么病重的友人。只需稍微探探口风，她便敏感地意识到这可能是某个计划的一个关节，指向着某项任务的特定转折点。银元再落下时她已经做出了决策，道：</p>
+<p>  “可是这两位和多莉认识已有五六年，是不可多得的‘好朋友’。哎呀呀，折损了这两位，再要遇到新的可不容易……”</p>
+<p>  “事成之后，拉赫曼会保证他们的安全。至于对你，你可以提任何想要的条件。”</p>
+<p>  那时的多莉便微微笑着。银元在她的手心打转，她悠悠然，说了一些她认为和她的付出相当的报酬。</p>
+<p>  并没有经过什么讨价还价。艾尔海森很爽快地同意了。</p>
+<p>  这张潜藏在《兰亭集序》仿写下、用余火加热才出真章的字条，便是报酬的第一部分。当然，这一张纸条还不足以让交易一锤定音，她自有无数其他的手腕去帮她搜集信息。但一条线索搭在将军府核心的感觉实在畅快，而合乎情理、与她的猜测一般无二的走向又说明了交易的诚心，综上所述，这桩买卖在她的账本里可以被痛快地划归为“成功”一级别。</p>
+<p>  她并没有参与了变动的兴奋或刺激。盘踞了太大的世界，无论是如何惊世骇俗的动荡，在她的注目下也只如小小的浪花。擅长如何让自己的生活变得悠游愉快的人常常如此。</p>
+<p>  她躺在家中柔软的坐垫上，跷着脚，愉快地哼鸣起来。</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>JuusanYomitsuru</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="https://juusanyomitsuru.github.io/2023/12/10/db0925d419fd/">https://juusanyomitsuru.github.io/2023/12/10/db0925d419fd/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2023/12/10/43f5779df5a3/">天街如水（其二十八）</a>
+            
+            
+            <a class="next" rel="next" href="/2023/12/10/eef9f71ce111/">天街如水（其二十六）</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<span class="site-uv">
+    总访客量:
+    <i class="busuanzi-value" id="busuanzi_value_site_uv"></i>
+</span>&nbsp;
+
+
+<span class="site-pv">
+    总访问量:
+    <i class="busuanzi-value" id="busuanzi_value_site_pv"></i>
+</span>
+
+
+
+    <div class="copyright">
+        <span>© JuusanYomitsuru | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>

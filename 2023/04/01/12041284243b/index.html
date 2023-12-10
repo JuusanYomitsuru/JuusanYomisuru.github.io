@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="JuusanYomitsuru">
+
+
+
+
+
+<title>天街如水（其六） | Hexo</title>
+
+
+
+    <link rel="icon" href="/yumaobi.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">JuusanYomitsuru&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">JuusanYomitsuru&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6; // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function() {
+            tocbot.refresh(obj_merge(tocbot_default_config, {
+                hasInnerContainers: true
+            }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function() {
+        tocbot.init(obj_merge(tocbot_default_config, {
+            collapseDepth: 1
+        }));
+    });
+
+    function expand_toc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, {
+            collapseDepth: expanded ? 1 : DEPTH_MAX
+        }));
+        b.innerText = expanded ? 'Expand all' : 'Collapse all';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">天街如水（其六）</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">JuusanYomitsuru</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">April 1, 2023&nbsp;&nbsp;13:35:38</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E5%A4%A9%E8%A1%97%E5%A6%82%E6%B0%B4/">天街如水</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h4 id="阅读之前……">阅读之前……</h4>
+<ul>
+<li>感情线1v1，但因为情节需要，<strong>在本章有卡被海的竞争对手性骚扰的桥段</strong>（您可以自由选择跳过该章或直接退出阅读）</li>
+<li>前文请查看博客历史发布（Posts）</li>
+<li>以下是例行超长预警：
+<ul>
+<li>非常感谢您点进这篇文章。</li>
+<li>这篇文章主角为军贼头子（军师）海X大学老师卡，内含R18内容。大概是被海哥竞争对手盯上的卡与海哥假扮情人，最后渐生爱意的故事。</li>
+<li>其中有卡女装要素，是旗袍和舞女装，请注意。</li>
+<li>因为民国pa的背景限制，除了海维赛提等出现的须弥角色外，其他统统为璃月名。如感觉不适也可退出。</li>
+<li>文笔小白，逻辑天真，希望看客愉快。</li>
+</ul>
+</li>
+</ul>
+<br>
+<br>
+请确认您已阅读完毕预警全文。
+<br>
+<br>
+请看正文。
+<h4 id="正文">正文</h4>
+<p>  他吓了一跳，下意识地想踢开。但生物电流不知怎么断了线，肌肉不听使唤，他一点力气都使不出来，腿只是懒懒地抻了一下，仍然被那双手稳稳捏住。他好像意识到了什么，鸡皮疙瘩从被抓住的地方一路向上窜，后颈也阵阵发痒。他听见抓住他的那个男人叹了口气，</p>
+<p>  “卡维先生……我等了你好久啊。”</p>
+<p>  他挣扎起来。但手腕被勒在一起动弹不得，眼前有了微微的光亮，但什么也看不清。他很快反应过来那点光是来人开的灯，看不见是因为他被蒙了眼。不安感冲上脑袋；他斥道，“你是谁！……放开我！”</p>
+<p>  “我是谁并不重要。你只需要知道，今晚你会和我一起度过。……期待吗？我可是期待得不得了……”</p>
+<p>  我为什么会在这里？</p>
+<p>  下午五点左右我和提纳里出门吃月菜……吃完之后我就回了家。接着我开始看文献、查资料，学习案例……然后有人按响了门铃。</p>
+<p>  按响了我家的门铃。</p>
+<p>  我披上衣服出去看，那是一个面色和善的中年男人……微胖，皮肤有点白，有些拘谨地搓着手……我认出来他是我楼上的房客。他对我说，他们家马桶坏了，想借一下我家的洗漱间……问了好多家都没有让他进。我给他开了门。</p>
+<p>  我给他开了门。</p>
+<p>  接着我就失去了意识。</p>
+<p>  再回忆一下，似乎刚开门他的表情就变了……变得很可怕……他用布捂住我的口鼻。想来是那块布里有玄机……也许之后还给我打了什么东西。不知道。不敢想。</p>
+<p>  凭着声音，他判断出这是今天给他打电话的中年男人。一个死缠烂打的富商。他一瞬间便想起了艾尔海森说的话，想起他口中的“那条大鱼”，也马上明白了自己的处境。他用他最脏的词骂他，“卑鄙！无耻！下流！……变态！”</p>
+<p>  但对方似乎不为所动，甚至还好兴致地笑了一声。</p>
+<p>  “美人就是美人，连骂人都让人觉得甜美……多骂些，再骂脏点……啊，兴致起来了。真好……”</p>
+<p>  他感觉对方的手沿着他的脚踝向上摸，很有耐心地把他的裤脚挽上膝盖。对方一手握住他的小腿，喟叹道，“真是宝贝……平时也有精心打理吧。一点儿毛都没有……玉似的。真嫩……又白……光看腿我就已经兴奋得不得了……”</p>
+<p>  “混账！”卡维拱动身体，想把手挣开。他又羞又怒，“小人！真下流！”</p>
+<p>  “啊啊……我下流……我真下流……”那人痴痴地念道。卡维看情势不对，试图调动肌肉躲避，“你打算要作什么？我警告你，拘禁是违法的。”</p>
+<p>  “哦~美人想用法律吓我。”对方毫不在意般一笑，“原来天下还讲法。不愧是老师，学识渊博。”</p>
+<p>  “既然知道我是老师，”卡维佯装镇定，“那应该知道尊师重道的道理。快把我放开！”</p>
+<p>  “是啊。我是一直很尊重老师的。”那人的手指碰上他脚背的皮肤，“我还等着我的好老师把你的关窍教给我呢……夫子……呵呵……”</p>
+<p>  卡维只觉得浑身上下起了一阵鸡皮疙瘩。他言语中的意味露骨，那种熟稔于潜规则的姿态也叫他直泛恶心。他感觉对方的手指从脚背划到脚心，只听见对方喃喃道，“这么漂亮的脚……用着应该很爽吧。”</p>
+<p>  “！”</p>
+<p>  “你到底在说什么混账话？！……去死吧。”卡维绝望地说，“你去死吧。下地狱吧。真的。”</p>
+<p>  那男人捧着他的脚，受兴奋驱动，呼吸也变得粗重。</p>
+<p>  “我要死也会和你一起死……把你干死……”</p>
+<p>  他感觉到那双手摸到了他的裤腰，“牡丹花下死，做鬼也风流……我情愿死在你身上……美人……老师也好学生也罢……要我做奴才也行……我想你想得快疯了……”</p>
+<p>  卡维别过脸去。他啐了一口，“你他妈真下贱，你甚至不敢放开我，和我堂堂正正地打一场……算了。”他嗤笑一声，喃喃道，“……你们这些人根本不会把人当人看。”</p>
+<p>  那男的正想说什么，突然门外传来脚步声。有人在外面喊“大事不好了”。兴致被打扰，那人爆发出了一声可称恐怖的怒叫。他破口大骂，“你杀千刀狗娘养的东西，我他妈不是说不要烦我吗？你脑子被狗吃了？”</p>
+<p>  “……”外面传话的大概是当值的下属。他短暂地沉默了一会儿，似乎鼓起了很大的勇气，结结巴巴地喊，“是、是孙将军！他打电话过来问老爷你是不是、是不是反了……”</p>
+<p>  “反了？”那人咆哮道，“那狗日的是不是反了？”</p>
+<p>  “我、我不知道！”那声音快哭了，“孙将军说，如果老爷不给他一个准话，他明天就开大炮把、把老爷祖坟轰了……我、我也不敢乱说！总之府里上下都闹起来了，老爷快去看看！”</p>
+<p>  卡维听到那人嘟嘟囔囔地小声骂什么“龟孙”“狗日”“全家”，接着是咚咚的步声和轴承开合的吱呀声。他还听见那男人迁怒着什么人，“看什么看？……婊子养的，眼睛贼溜溜的……”然后便是砰的砸门响。</p>
+<p>  听起来那男人走远了。卡维僵直的身体稍微放松了一些，但同时他也意识到，等到那人办完事之后，他还会回来的。在那之后他怎么办？……会继续吗？还是那人又会想出花样百出的技巧折磨他？他能支撑到什么时候？……他什么时候能够回家？</p>
+<p>  焦躁的情绪混合着恐惧，攥紧了他的心尖。察觉不到的地方，一丝疲倦也慢慢缠绕上他的精神。他想起白天还为自己能为改善群众的生活而高兴，晚上就被权势关进房间里，不禁感慨命运总爱对他开一些让人笑不出来的玩笑。不知道现在能不能一头撞在床板上，了结这荒唐的一生——他动了动手脚，力气还没有恢复，看来药下得狠。</p>
+<p>  那这条贱命恐怕还没到结束痛苦的时候罢。</p>
+<p>  “……先生。卡维先生！”</p>
+<p>  他突然一个激灵。有人在床边叫他。</p>
+<p>  “我们来救您了……等等，我先把您的手解开……”</p>
+<p>  那人手脚麻利，卡维很快感觉手腕桎梏一松。血液向指尖涌的感觉酥酥麻麻的，他忍不住扭了扭手腕，扯掉蒙眼的黑布，扔到一边。习惯黑暗的眼睛突然接触亮色，卡维被刺得眼睛一眯。然而他贪恋自由的光，很快又瞪大双眼。来人是个身量很高，穿着黑长衫的汉子；但只需看一眼他灵活的动作，便知道那衣服底下一定藏着精壮的、勤于锻炼的身体。近看他脸上还有些伤疤，但被很好地掩盖了起来。直觉告诉卡维这是一个军人。</p>
+<p>  “我是将军的近卫。奉命来接您出去。”</p>
+<p>  “将军。”卡维咀嚼着这个字眼，“哪个将军？”</p>
+<p>  “当然是艾尔海森少将。不多说，卢广永很快要回来了。我先把您背出去，外面有人接应我们。”</p>
+<p>  那人不容拒绝地把卡维驮到后背，扶住他的腿，掂了掂，便向外冲去。卡维身板不算小，人也高，背起来也不会轻到哪儿去，但在这个男人似乎驮着一层云一般毫无阻碍，飞快地绕过卢广永家的下人，擦着他们视线的边角错进拐角。卡维这时候才能看到卢广永“家”的构造——原来正是在本地最大的旅丰酒店。卢广永包了个顶楼的大房间。他们一闪进了楼梯间，三步并作两步往下跳；卡维焦虑稍微缓解，一晃一晃地困意又上来了。那人说，“先生应当是吸了药，乏力是正常的，支撑不住可以在我背上睡一觉。我们一定把您送到安全的地方。”卡维迷迷糊糊地应了一声，心里还想着不能松懈，要睁眼看清去路——但头一垂，又失去了意识。</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>JuusanYomitsuru</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="https://juusanyomitsuru.github.io/2023/04/01/12041284243b/">https://juusanyomitsuru.github.io/2023/04/01/12041284243b/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2023/04/01/370f149b8c77/">天街如水（其七）</a>
+            
+            
+            <a class="next" rel="next" href="/2023/03/26/2a22776473ba/">天街如水（其五）</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<span class="site-uv">
+    总访客量:
+    <i class="busuanzi-value" id="busuanzi_value_site_uv"></i>
+</span>&nbsp;
+
+
+<span class="site-pv">
+    总访问量:
+    <i class="busuanzi-value" id="busuanzi_value_site_pv"></i>
+</span>
+
+
+
+    <div class="copyright">
+        <span>© JuusanYomitsuru | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>

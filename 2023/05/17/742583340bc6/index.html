@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="JuusanYomitsuru">
+
+
+
+
+
+<title>性启蒙（其二） | Hexo</title>
+
+
+
+    <link rel="icon" href="/yumaobi.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">JuusanYomitsuru&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">JuusanYomitsuru&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6; // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function() {
+            tocbot.refresh(obj_merge(tocbot_default_config, {
+                hasInnerContainers: true
+            }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function() {
+        tocbot.init(obj_merge(tocbot_default_config, {
+            collapseDepth: 1
+        }));
+    });
+
+    function expand_toc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, {
+            collapseDepth: expanded ? 1 : DEPTH_MAX
+        }));
+        b.innerText = expanded ? 'Expand all' : 'Collapse all';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">性启蒙（其二）</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">JuusanYomitsuru</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">May 17, 2023&nbsp;&nbsp;22:13:50</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E6%80%A7%E5%90%AF%E8%92%99/">性启蒙</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h4 id="阅读之前……">阅读之前……</h4>
+<ul>
+<li>来一场永远慌乱、永不落幕的青春电影</li>
+<li>现代ABO，时间线可推溯类上世纪九十年代末。</li>
+<li>系列前文请点击右上角<a href="https://juusanyomitsuru.github.io/category/">Categories</a> 。<br>
+<br></li>
+</ul>
+<h4 id="正文">正文</h4>
+<h5 id="3">3.</h5>
+<p>  第309页。</p>
+<p>  “拉丁语里有八个动词的变位形式不完全而被称为不全动词。它们是：mémini(我记得),novi(我知道),odi(我恨),coepi(我开始了),inquam(我说),aio(我说), quaeso(我请求).fari(说)……coepi可以代替动词incipio(我开始)的完成时，如Dicerecoepi(我开始说)。Consilium coepit(会议开始了)。coepi这个动词的被动态，如coept-us(a,um)sum(es, est,etc.)等常和被动态的不定式动词连用。例如：</p>
+<p>  Urbs aedificari coepta est.城开始建立。</p>
+<p>  Coeptus sum vocari.我开始被呼唤。”</p>
+<p>  大课间的音乐开始响，艾尔海森站起来，等其他同学“谢谢老师老师再见”完毕，便又坐下来，翻到下一页：下一页是无人称动词，排版与前页相当近似，他皱着眉，圆珠笔在底下的白纸上落了几个点。15分钟的休息时间，高中生睡倒了一片，还有精力社交的奇行种，则在外头的栏杆边三三两两聊着天，他靠着椅背想了一会儿，站起身，抽起书塞进抽屉，起身去办公室。</p>
+<p>  班主任是一个秃了一半脑袋的大叔，数学老师，Beta，脸黑而皱，两颊有点突，眼睛倒很大，像过年门口贴的神荼。他也确实以降伏小鬼的本领享誉学校，管理风格狂风骤雨，令行禁止，也因此常驻重点班，是年级操练学生的龙头人物。此时他正和同事谈笑风生，听到艾尔海森敲门报告，他收了收神色， “请进。”</p>
+<p>  “有什么事吗？”</p>
+<p>  “老师。”艾尔海森单刀直入，“我的图书馆借阅证申请好像还没有批复。请问什么时候才能走完流程？”</p>
+<p>  这个学校的图书馆非常神妙。管理员像十五年的肥猫懒在门口尚且不提，略微检索，就发现有好多书籍普通学生不能借阅，只有教师图书室有藏。据说是因为教师图书室有很多“不适合学生看”的书，且为了把禁令落实到底，教师图书室还有另一个专门的图书管理员，负责瞪一切探头探脑的学生，艾尔海森见过有学姐对着那个管理员求情，好说歹说都没有用，那人眉毛一竖，只说一句话：“叫你们的老师给你们办许可来！”</p>
+<p>  他手里这本《拉丁语基础》虽然好但内容有限，缺乏文献的融合讲解，教师借阅室里有更好的英语版本，刚开学不久，他就和班主任提交了申请。他入学成绩相当不错，班主任很爽快的收下申请表，只说要等学校回复。</p>
+<p>  但一个月过去了，没有一点消息。</p>
+<p>  虽然对外界的办事效率没什么指望，但满足不了求知欲对艾尔海森而言并不是小问题。他绿色的眼睛没什么情绪，而班主任则愣了一下——艾尔海森便知道对方已经把这件事抛在脑后了。班主任清了一下喉咙，</p>
+<p>  “是这样的……”</p>
+<p>  “学校认为呢，我们同学啊，还是以学业为主。现在公共借阅室的书籍已经完全够用，像教师借阅室里的一些东西呀，不适合这个阶段的同学们去读，也没有必要。所以呢老师这边还是建议啊，专注学业，参考书可以适当的读一下，不要顾此失彼，主次不分。”</p>
+<p>  艾尔海森沉了一口气。“我认为我有进行基本判断的能力。”</p>
+<p>  “当然，我不是说你判断力有什么问题。你非常聪明，老师们也都知道。但是呢，你的聪明要用在正道上。比如什么英文原版书啊，诗词啊，练习题啊，公共阅览室都有。高中三年是拼搏的时候，当然你现在还早，不过也要好好准备……”</p>
+<p>  艾尔海森感觉到英语老师的视线。Beta，女性，刚毕业没多久的高材生，眼神分明写着“爱莫能助”。学校的权威体系轻易不可逾越，他听得烦倦，只想回归自己的MP3，就趁着班主任停顿的关口，很快地道了谢，便头也不回地撤退了。</p>
+<p>  他和“高中生学生行为规范”之间，到底还有人和物的差异。</p>
+<br>
+<br>
+<p>  这个年纪的少年总有无穷的精力可浪掷，亦对一切事物都抱有过分的好奇心，心智慢慢发展，小小的细芽从重重的书山下抬头，迷茫的叶举目四顾，在大人的按部就班与儿童的天真烂漫之间，留给他们的是无穷的、混沌的灰色，模仿成年人的爱恨情仇如太阳耀斑偶尔汹涌喷发，褪不去的象牙塔气又为纯粹与痴愚留有余地，假设有人拿试管取一缕云气去分析，那么浮动在一所囊括了八千人的学校上的，除了校规校纪上写的梦想朝气团结义信，更有乌云密布的焦虑、妒忌、轻蔑、狂喜，还有如因为过分压制而坍缩如黑洞的、虎视眈眈的欲望。</p>
+<p>  尤其是在这么一所ABO三性混合的重点高中。经有识之士倡导、当地财政支持，已经有数十年历史的老牌名校，人人都有人中龙凤的骄矜，自诩和顺开明，谈吐俨然社会先进分子。但年龄的冲动和渴望不会消弭，只会欲盖弥彰，狼西装革履改吃工业产品，小狼也还会喜欢肉腥。</p>
+<p>  比如，每年一届非官方的“校园风采之星”大赛。</p>
+<p>  举办者是学校里的礼仪社团，重点高中御用的门面。每一届的下半学期，他们都会进行一次非官方的匿名投票，将同学们所推举的“形象大使”排个三六九等。所提供的奖品非常简单，活动本身也没什么出彩之处，但同学们就是对这类活动乐此不疲。因为报名不需要本人到场，活动也成为了恶作剧的高发地，很多参赛者直到拿到奖状，都对这件事毫不知情。</p>
+<p>  以至于卡维被通知说“你现在在榜上是第一耶！”的时候，第一反应并不是高兴，而是愕然。什么榜，什么排名，在哪里？同学们以为他在开玩笑，说“‘校园风采之星’啊！贴在操场对面，高一楼底下。你不知道？”卡维说他不知道，从来没有参加过这样的活动。同桌跟着起哄，说卡维不愧是卡维，肯定是哪个暗恋你的人给你报的。现在下面票最多的就是你！这届你赢定了！</p>
+<p>  他的心猛跳了一下。下午最后一节课他惯例要去竞赛室，今天特地多做了两套题目，留到太阳落到半冥，红昏染了星天，在晚自习快要开始，路上没什么人的时候，他偷偷凑到高一楼底下。真的就在一进门就能看到的黑板底下，贴着一排海报，上面列一排又一排的照片、姓名、性别，还有一行简要的介绍。他的脸非常好找，就在第二张的第一行中间。帮他报名的人用的是他高一结束和同学一起拍的照片，也不知道是在哪里找的胶片，亦或者是投他的便是那个同学，那天天气晴朗，他笑容灿烂，刚洗完澡就被朋友抓出来拍照，头发蓬松，边角翘起，像金色的蒲公英。温柔的感情似乎能从冲洗的相片上满溢，他怔了怔神，看了那张照片好久。</p>
+<p>  其实也只是生活中非常普通的一瞬。那个同学只是高一分班后不再在重点班，卡维刚好是他的前座，于是一起拍了张照片。说是朋友也是朋友，要说非常熟稔大概也算不上，卡维本来并没有太多的感觉。但此时看到这张照片里他无忧无虑的笑容，却好像被陨石倏忽击中一样，尘沙滚滚，草原望风披靡。</p>
+<p>  下面写着：卡维，高二一班，Omega。理由：像星星坠落在人间一样，完美的第一名。</p>
+<p>  代表票数的爱心贴纸从下面投票的白色框里溢出，贴无可贴，干脆环了他的照片一圈，像给他镶了一个爱心相框。他咬着嘴唇，伸手把上面的贴纸一点一点撕下来，捏在手心。所幸粘性没有太好，取下还比较容易，用手搓了搓纸面，没有留胶。他比对了一下旁边的人的票数——是高一的学弟学妹们，参加过新生文艺汇演的，面容姣好，爱心也一层一层地叠着——偷偷地把手心的贴纸压上去。劳动了十多分钟，终于不着痕迹地拉开票数，他拍拍手，满意地叉了会儿腰。</p>
+<p>  忽然听到一阵脚步声——旁边就是楼梯，卡维吓了一跳，两边望望简直避无可避，连忙找了个角落，把自己塞了进去。</p>
+<br>
+<br>
+<p>  艾尔海森从班级里出来的时候，便看到教学楼靠外的公告板上，贴着花花绿绿、全是人脸的传单，上头“校园风采之星”几个大字相当抓眼。每个人脸下方，都标识着姓名与性别；Alpha人数寥寥，仅有的几个也放在后面。列于前排的，几乎清一色是面容姣好的Omega和Beta，衣着得体，朝着橱窗外的行人微笑，好像温柔又体贴，兰质蕙心的佳选。艾尔海森略略扫了一眼，简单地下了“与我无关”的判断，走了几步路，角度豁然一转，却看到橱窗的展板底下白鞋露出边缘，一根翘起来的棕色毛发好似缠着立柱上爬的风车茉莉，从塑料板的侧面伸出。他看着手表，数了数时间，三十秒以后，一只啼血杜鹃一般的眼睛，便偷偷探了出来——</p>
+<p>  艾尔海森怀里还抱着一本辞典，盯着对方，脸上没什么表情。卡维被撞了个正着，干笑两声，摸了摸头发，“哎呀这么巧呀……”</p>
+<p>  “……”</p>
+<p>  对方的表情好像在说“你要不要看看你自己在说什么”。卡维决定转守为攻，“学弟，你不是应该要上晚自习吗？怎么这个时间点还在外面？”</p>
+<p>  “高二的晚自习时间比高一更早吧。”兵来将挡水来土掩，对方丝毫不为所动，“你又为什么不在教室，卡维学长。”</p>
+<p>  “……”</p>
+<p>  “……”</p>
+<p>  这还有为什么的，都逃课了呗。</p>
+<p>  两人大眼瞪小眼，半晌没有说话。</p>
+<p>  “我……”</p>
+<p>  “你……”</p>
+<p>  “说。”</p>
+<p>  “你先说。”</p>
+<p>  两个人的的语词撞在一起，又把话路堵住。卡维受不了尴尬的沉默，又忍不住开口，</p>
+<p>  “就是说我……”</p>
+<p>  “卡维学长不上晚自习，到高一教学楼游荡，且有破坏公共财物嫌疑的事，如果满足我的要求的话，我可以替你保密。”</p>
+<p>  卡维愣了愣，“我什么时候破坏公共财物？”</p>
+<p>  “或许你希望我说学长试图在非官方比赛上舞弊，被我目击？”艾尔海森道，“听起来后者更有煽动性。”</p>
+<p>  “你！……”</p>
+<p>  他到底看到了多少？他出现的地方确实瓜田李下，把分数改低也的确可称舞弊，卡维哑口无言。谁也没想到，他本来只是不想多生事端，到头来倒是落人把柄。</p>
+<p>  “你……”卡维用指甲掐着掌心，吞了口唾沫，镇定道，“你有什么要求，说吧。但事先说明，如果太过分的，就别指望我同意。”</p>
+<p>  “我的要求很简单。”脸还带着婴儿肥的学弟老成地环着手，“我想进校图书馆的教师阅览室。”</p>
+<p>  “你应该有权限的吧……年级第一的卡维学长。”</p>
+<h5 id="4">4.</h5>
+<p>  “你这个家伙，怎么真的是来找书啊。”</p>
+<p>  “不然呢。”对方回复相当利落，很显然他没什么闲余工夫搭理，“我来野餐吗。”</p>
+<p>  手指划过精装的书面，绿色的眼睛一扫，他又抽出一本砖头书，略微翻阅几页，抱在怀里。卡维看着那座书塔已经摇摇欲坠，看不下去，抽了好几本到手里。深绿里灿烂的金黄沉默地注视着他，卡维道，“帮你拿一点，不是要抢你的！……”</p>
+<p>  竞赛教练为了方便他们学习，统一给他们申请了教师阅览室的阅读权利，算是小小的特权，本来密不外宣。艾尔海森只是按照逻辑推理赌了一把，结果真的赌中，卡维拿出学生证和借阅证，同吊着眉毛的管理员打了声招呼，报了老师的名字，就非常顺利地带艾尔海森溜进了阅览室。</p>
+<p>  两个人好不容易把那堆书移到旁边。教师阅览室里头不仅藏书更加丰富，叫大人们深深掩藏的秘密是，里面其实还是一个舒适的自习室。外头公共阅览室里只有硬邦邦的塑料凳子，一墙之隔里陈列的却是柔软的沙发、矮桌、配好茶包和咖啡粉的饮水机，外观精巧的立灯小台灯，还有可爱的绿植。透过窗可以见到圆圆的月与莹莹的小湖，教学楼的灯亮在远处，阅览室内很静，立于其中，四周都是纸张与油墨的味道，好不惬意。图书管理员探头探脑，有借阅证在人也硬气，他们挑了一张桌子——事实上前后都没有人，想怎么选就怎么选——卡维一屁股坐在沙发上，柔软的记忆棉慢慢回弹，他看着已经翻开了目录、一只脚已经踏入小世界的学弟，实在是忍不住，“我说你啊……”</p>
+<p>  艾尔海森又翻了一页。卡维敲了敲书面，“在听吗？”</p>
+<p>  “在。”他的回答无比简短，“说。”</p>
+<p>  这家伙怎么这么酷啊，卡维腹诽。他也抽过一本书翻了翻，上头全是密密麻麻的字母与引用注释，大致辨认了一下语种，“……你完全没必要这么急吧……哪里会有人和你抢着借这种书啊……”</p>
+<p>  “和这无关。我不想虚耗我的精力和时间。”</p>
+<p>  “什么意思啊……你是说你已经学到这个程度了吗？”他又看了眼那本大部头，“……不会吧。高中生吗？”</p>
+<p>  艾尔海森完全没有搭理他的意思。说出去的话掉在了桌面，他看对方实在太有性格，好奇心也被激发了起来，一屁股坐到对方的沙发上，凑上脸。艾尔海森缩一下他也跟着挪一下，又缩又挪，再缩再挪，艾尔海森到底忍无可忍，</p>
+<p>  “有话直说。”</p>
+<p>  “这句是什么意思。”手指在半空转了转，落在文本上。学弟沿着他的指尖看，大概是想快点把他应付过去，居然老实回应，“‘现在我们必须考虑灵魂的行为与智力和欲望的力量。<sup>1</sup>’”</p>
+<p>  “……那这一句呢。”</p>
+<p>  “……灵魂是否通过智力认识肉体。<sup>2</sup>”</p>
+<p>  “真的假的！”卡维抓着那页书前后翻翻，“也没翻译……你真的看得懂啊？！”</p>
+<p>  “我会英语和法语，看的时候觉得很熟，但具体的意思也就不明白了……你怎么直接学拉丁语啊！”</p>
+<p>  闻言艾尔海森一挑眉毛，“大了一届也还是只会英语和法语吗？”</p>
+<p>  卡维愣了一下。反应过来，他扑哧一笑，“臭小子！”手掌轻轻地落在对方的手臂上，学弟的面容也柔和，他心里忽然生出亲昵的意思，微微贴近，道，“学了多久了？”</p>
+<p>  “三个月。”</p>
+<p>  “几个？！……”</p>
+<p>  “一通百通，找到关窍就很容易。”艾尔海森又把视线凝在书上，“但如果摸不到门道，三年也难。”</p>
+<p>  卡盯着他的侧脸。这家伙长得很好看，他在那个光线昏暗的杂物间里就已经知道了。哪怕脸上都是灰尘，绿色的眼睛还是明亮，抓着他的手言辞如凿的时候，利落的唇线和鼻线从尚且幼稚的脸上拔尖，叫人留下锋芒的印象。当时氛围紧张，他的心跳得很快，现在四周安静得像小溪小河，艾尔海森皮肤白皙，鼻尖有一个可爱的弯弧，睫毛微微颤动，像轻鸿毛如飞雪，也叫人心痒。卡维道，</p>
+<p>  “艾尔海森。”</p>
+<p>  他们刚刚才交换名字。高一三班艾尔海森同学，早一年上学，其实小他两岁。艾尔海森“嗯”了一声，权当回应。</p>
+<p>  “你为什么要用那种方式。你直接和我说，我也会帮你。”</p>
+<p>  艾尔海森的手顿了顿。“结果都是一样的。”</p>
+<p>  “什么叫结果都是一样的……！”闻言，卡维的脸颊都皱了起来，“明明你和我认识，用更缓和的方式不好吗？我还以为那天晚上之后我们已经是朋友了。”</p>
+<p>  “你对朋友的定义太轻易。”学弟的声音很平，“以及，我不喜欢欠别人人情。”</p>
+<p>  “那难道让别人讨厌你就很好吗？”</p>
+<p>  “无关喜欢或者讨厌，只是交换。对别人很好未必能够换取真心，卑鄙也可能受人爱慕。有个词叫做‘斯德哥尔摩综合征’，受害者也可能对犯罪者产生情感。……无论哪个都很麻烦，不如保持距离，方便做自己的事。”</p>
+<p>  “你……”</p>
+<p>  卡维不是没想过他说的事。只是他的行为准则由心而发，情感过于丰沛因而无法斩断与他人的链接，屡屡告诫自己但病灶难除，此刻听艾尔海森如此轻易地说出这样的话，只觉得心跳得很快。他咬着嘴唇，“你一定没什么朋友。”</p>
+<p>  “如果是按照你的定义，那么确实。”艾尔海森又翻了一页，“不过我很满意现在的状态。”</p>
+<p>  卡维说不清楚自己的感情，好像有点难过，有点惆怅，又好像有点喜悦，矛盾的情感混在一起堵在心口，好像此刻他不想点办法抓住艾尔海森，他便会像一个鼓胀的气球，被针尖扎破就会在天花板底下乱窜，直至变成一团不成形体的胶，黏成溶解的糊。“……如果你要进阅览室的话，随时可以找我。我会帮你……不必用威胁的方式。”</p>
+<p>  “反正这么厚的书，这么多，你总不可能一个晚上看完吧……有我在你才能把书借走，也才能再进来自习。是不是很有吸引力？”</p>
+<p>  对方从书里抬头，看了他一会儿。“你不想参加那个比赛，我可以帮你。”</p>
+<p>  卡维反应过来他的意指，刚想笑说他要怎么帮忙，忽然想起对方把勒索他的人全部送进局里的事，意识到如果他要做真的可以做到，脸上的表情一瞬间凝滞。对方还在等他回复，指甲掐着虎口，他沉默了一会儿，</p>
+<p>  “……不必了。他们也是……一片好心。”</p>
+<p>  “我不认为在不经过别人的同意就张贴正脸照片会是什么好心。”顿了顿，又补充道，“我听说了贵校的惯例。”</p>
+<p>  “……你不懂。他们真的是好心……只不过我不喜欢而已。没事的，赢了说明我很有人气，输了也没有什么妨害……没有人真的在意，也不会有什么后果。”他的声音轻轻的，好像也在说服他自己。他定了定，又直直地望着小他一届的学弟，“你的人情我先留着，下一次的时候再用。”</p>
+<p>  “……看你这么慷慨，我还以为我可以不还。”</p>
+<p>  “不行！那不是着了你的道了？有借有还，再借不难。如果干干净净的，要是你下次再威胁我怎么办？”</p>
+<p>  那双红宝石一样的眼睛瞪着他，似嗔怪又有笑容。艾尔海森垂眼，什么也没有说。</p>
+<br>
+<p>[1]. 托马斯·阿奎那《神学大典》Quaestio 84。</p>
+<p>[2]. 同上</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>JuusanYomitsuru</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="https://juusanyomitsuru.github.io/2023/05/17/742583340bc6/">https://juusanyomitsuru.github.io/2023/05/17/742583340bc6/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2023/05/25/a7b048b4abad/">天街如水（番外一）贺新禧</a>
+            
+            
+            <a class="next" rel="next" href="/2023/05/17/d8f0af06f563/">性启蒙（其一）</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<span class="site-uv">
+    总访客量:
+    <i class="busuanzi-value" id="busuanzi_value_site_uv"></i>
+</span>&nbsp;
+
+
+<span class="site-pv">
+    总访问量:
+    <i class="busuanzi-value" id="busuanzi_value_site_pv"></i>
+</span>
+
+
+
+    <div class="copyright">
+        <span>© JuusanYomitsuru | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>

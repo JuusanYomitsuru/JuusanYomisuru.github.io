@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="JuusanYomitsuru">
+
+
+
+
+
+<title>天街如水（其九） | Hexo</title>
+
+
+
+    <link rel="icon" href="/yumaobi.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">JuusanYomitsuru&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">JuusanYomitsuru&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6; // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function() {
+            tocbot.refresh(obj_merge(tocbot_default_config, {
+                hasInnerContainers: true
+            }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function() {
+        tocbot.init(obj_merge(tocbot_default_config, {
+            collapseDepth: 1
+        }));
+    });
+
+    function expand_toc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, {
+            collapseDepth: expanded ? 1 : DEPTH_MAX
+        }));
+        b.innerText = expanded ? 'Expand all' : 'Collapse all';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">天街如水（其九）</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">JuusanYomitsuru</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">August 17, 2023&nbsp;&nbsp;20:52:03</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E5%A4%A9%E8%A1%97%E5%A6%82%E6%B0%B4/">天街如水</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h4 id="阅读之前……">阅读之前……</h4>
+<ul>
+<li>系列前文请点击右上角<a href="https://juusanyomitsuru.github.io/category/">Categories</a> 。</li>
+<li>例行超长预警：
+<ul>
+<li>非常感谢您点进这篇文章。</li>
+<li>这篇文章主角为军贼头子（军师）海X大学老师卡，内含R18内容。大概是被海哥竞争对手盯上的卡与海哥假扮情人，最后渐生爱意的故事。</li>
+<li>其中有卡女装要素，是旗袍和舞女装，请注意。</li>
+<li>因为民国pa的背景限制，除了海维赛提等出现的须弥角色外，其他统统为璃月名。如感觉不适也可退出。</li>
+<li>文笔小白，逻辑天真，希望看客愉快。</li>
+</ul>
+</li>
+</ul>
+<h4 id="正文">正文</h4>
+<p>  “老鼠一号报：太阳下降三格，野猪的尾巴到森林大道的长木屋，拿着一颗蘑菇，要报告斑点的错误。从木屋出来后，尾巴迅速前往石板房外，等待与野猪会合。”</p>
+<p>  手指一搓，翻到第二张。</p>
+<p>  “青蛙一号报：月亮上升一格的时候，野猪与刺猬一起玩。野猪想要刺猬的一颗打兔子的石头。”</p>
+<p>  写字的人似乎并不擅长文字，笔迹歪歪扭扭，间有错笔和漏笔，都用信手涂鸦似的小画替代，“刺猬”便用画上去的一颗圆滚滚带两条尖刺的团子指示。好在画技还算不错。“石头”两个字之后便隔断一行，在纸张的下半页，写这封消息的人才补充道，</p>
+<p>  “刺猬把石头给了他。”</p>
+<p>  接着便是一则截自情报处的消息。</p>
+<p>  “听闻化城与桓城或有联系，将于六日晚九时在宝商街附近见面，交换情报。已派人届时前往蹲守。”</p>
+<p>  三张纸条，看起来互不相干的三则信息，却在艾尔海森这里连成了完整的线索。前面两则童话风格的留言，应用了他和信息来源约定俗成的暗语；报童们穿梭在大街小巷，无论出现在哪里都不会惹人注意，是天然绝佳的情报搜集人选；而黄包车夫每日近距离接触形形色色不同的角色，也是窃听记闻的一把好手。老鼠和青蛙是他们的代号，太阳/月亮的下降与上升指示了时间，野猪便是我们的老朋友拉赫曼，而“野猪的尾巴”，便是拉赫曼辐射宝城的信息网，将他的行动织进宝城这片花纹繁复、错综复杂织锦的那些梭子。“到长木屋拿着蘑菇报告错误”是一个完整的事件。长木屋是《宝城商报》的编辑部，因工作地点位于建筑二楼朝向大街的一长条区域而得名；到一周的特定时间，抑或是有什么紧急事务发生的时候，野猪尾巴便会拿着一张报纸，到《宝城商报》编辑部“报告印刷的错版”；旁人只会以为又有人借《宝城商报》“纠错有奖”告示来打秋风，只有内行人才知道，这是一种隐秘而灵活的对接方式。接头人辨别出他的身份，便会把他请到“主编室”，同一个势力的两股人脉，便会在主编室中交换信息。因此第一张纸条说的内容是：</p>
+<p>  某日下午三时，拉赫曼手下到宝城商报与线人碰面，而后匆匆离开编辑部，与拉赫曼报告重要事项。</p>
+<p>  第二张纸条，报告的是拉赫曼接下来的活动。</p>
+<p>  拉赫曼并非无业游民。他虽是黑帮出身，但后来“金盆洗手”，如今有一个光明正大的身份，便是宝城的一名警长。而“刺猬”，指的便是他公务上的上司，宝城的警察局局长。“打兔子的石头”则指代某项重要的任务。</p>
+<p>  因此这一段话，指的是：拉赫曼通过一场饭局，从上司的手里，接下了某个任务。</p>
+<p>  第三张纸由于是内部系统呈递的消息，内容已然简洁明了。结合艾尔海森的情报，这件事的来龙去脉大概是：</p>
+<p>  化城与桓城私底下勾连，各自派人与对方会面。宝城商报收到消息，紧急联系了拉赫曼，而拉赫曼便利用职务，接下了监视与蹲守的任务。</p>
+<p>  而作为桓城情报网的宝城商报之所以会如此反应，或许是因为《宝城商报》与拉赫曼的立场，与决定和化城联系的所谓“桓城”的立场并不一致。艾尔海森听闻桓城的小白将军并不受部分下属信任，没想到情况严峻，已经到了演“真假美猴王”的地步。</p>
+<p>  但当然，站在宝城的立场上，真美猴王是冉冉升起又与他们意见不合的对手，假美猴王却试图与自己的兄弟——即便从现在的情况看，已经是岌岌可危的兄弟——暗通款曲，很显然，无论是哪边都让人难以忍受。王存芳得知这个消息之后怒不可遏，也在情理之中。</p>
+<p>  但艾尔海森并不关心这些。他关心的是到底是什么“情报”，能让拉赫曼及《宝城商报》如此紧张——拉赫曼在宝城十多年，位置已经根深蒂固，《宝城商报》也是本地发行量最大的报纸，能让两边都火急火燎，桓城的“叛徒”交上的，必定是一份不容小觑的答案。好奇心一向是他为人处世中绝不会亏待的欲望，他抵住钢笔，在情报上“六日晚九时”的时间上画了一个圈；笔尖在下方一点，墨迹在柔滑的纸张上克制地晕开，他思考一会儿，在结尾简略地写下几行字。</p>
+<p>  外头有人敲门，仆人通传是一位自称姓刘、从租界来的先生。艾尔海森看了眼时间，也的确到了接见的节点。手上的句子已经写到了句点，他心里已经有了答案。于是合上笔记，站起身，披上大衣，他以一种利落而精确的姿势，打开了书房的大门。</p>
+<br>
+<br>
+<p>  “为什么啊提纳里？你说这是为什么？是什么让他们向我提出那样的请求？是因为觉得我好欺负才这样，还是只是我比较倒霉？我只是普普通通地接到一份订单而已，为什么会遇上这种事？”</p>
+<p>  “你不是……唉，”提纳里揉了揉太阳穴。自卡维冲进酒馆，凶猛地灌下第一杯，他便听卡维絮絮叨叨地念了一个钟头有余，自觉口水都已经变干，“这不是你的错，我觉得你的决定也是正确的……”</p>
+<p>  “可是，”卡维已经面色酡红，抓着酒杯的手危险地一歪，却还摇摇晃晃地举起来，道，</p>
+<p>  “可是我真的很想做那份委托……我不明白……为什么会这样……”</p>
+<p>  事情还要从今天早上开始说起。</p>
+<p>  大建筑师一早上便精心准备了得体的衣物，小心地将第一份草稿压平铺整，用文件夹装起来，带上包，出发前往租界。这是他慎之又慎对待的订单，参考了中外十几家慈善医院的建筑风格，根据选址附近的建筑特点进行调整，又对比着教会的宗教书、融合本地文化的代表性纹路，精心添加了许多装饰细节。即便是第一版草稿，为了能够让客户更加直观地看到自己的思考路径，他还做了相当详尽的装饰和批注，希望能叫客户满意，留下他这一版稿子的大部分设计。原因无他：这座医院的设计在很久以前便降临他的脑海，他只不过是把他一直以来的想象表现出来。草稿定下的那一刻他看着自己的心血，直觉地知道如果顺利，这将会是他的代表作品之一。</p>
+<p>  他和客户见了面，流畅地把设计思路讲完，对方对医院的整体设计赞不绝口。但等到他谈到医院的分区的时候，传教士却提出了一个他从未想到过的问题。</p>
+<p>  他问他：洋人的小孩，应该在哪个区域？</p>
+<p>  卡维确实愣住了，在那个瞬间大脑空白。他结结巴巴地说，据他所知，不同人种孩童的身体特征和性格特征并没有那么大的差异，去除不必要的活动区隔也有利于拓展人们的活动范围。你看以我们现在的设计，里面的空间都能够充分地利用到，而且根据不同孩子们的情况，也可以形成有效的流动和补充……客户露出为难的神色，说我们当然非常尊重你的意见，但这是专业之外不言自明的请求，希望你能再考虑一下。</p>
+<p>  卡维从传教士的住处出来，觉得脚步也有些恍惚。他至今为止的工作生涯中遇到过不少蛮不讲理的要求，想要复刻巴比伦的空中花园，抑或是要把家居装扮成泰姬陵，和那些头脑一热便提出的离谱提议相比，这位客户的诉求似乎很简单，对于卡维来说并不难实现。但他却觉得有一点说不清道不明的难受，好像自己身体的一部分被剜了出来，与其他无数面貌相仿的小孩子摞起来放在天秤里，他却只能眼睁睁地听人判定轻如鸿毛。于是他在外头的一家西菜馆坐了一会儿，喝了杯清醒精神的咖啡，便返回客户的家里，告诉对方：没有证据证明根据人种分隔医疗区有科学上的必要，况且这并不符合他对建筑的理念与定义。如果客户仍然坚持刚才提出的要求，那么医院的性质在他看来便也随之改变，恕他无法继续这份订单。</p>
+<p>  客户并没有做出什么明确的表态，但在卡维看来，对方沉默的态度，已经在无形中为他们的合作判了死刑。他带上草稿，提着袋子，头也不回地从租界出来——紧接着便冲进学校，从堆成小山的案牍里挖出一脸茫然的提纳里，一头扎进明光酒馆。</p>
+<p>  “老板，你认为……什么是平等？”就在提纳里询问附近哪里有电话的一点当口，已经喝得半不省人事的酒鬼就逮住了路过的酒馆老板，道。“你认为……不叫老爷、也不行跪拜礼、嗝……我们就、平等了吗？</p>
+<p>  “不平等。”酒馆老板抓着醉鬼的手，试图将之扯离自己的衣摆，“卡维老师和我们这些小市民相比是上层人物，我们哪里有什么平等？”</p>
+<p>  “我不是。”老板只是敷衍的意思，醉鬼却很认真地反驳，“上层人，是、莺歌燕舞，推杯换盏的大人物……我只是一个，普通人……一个希望所有人幸福的普通人……”</p>
+<p>  提纳里打完电话，便赶忙跑过来解围。他虽然个子不高，但力气却不小，应付酒鬼的经验又丰富，手一伸，便把卡维乱动的手从别人的衣服上拽了下来，按回醉鬼自己的怀里，“好了好了，卡维先生。我们大家都是普通人，但普通人这个时候，也该回家了。”但没想到卡维听到“回家”两个字，本来双眼迷离，忽然眼睛一瞪，道，</p>
+<p>  “回哪儿？……我不回！我不要……”</p>
+<p>  “你现在还住在别人家里，难道没有宵禁？我刚刚已经和艾尔海森通了电话，他说会过来接你。”两人既然是好友，卡维搬家的事，提纳里也知情。眼见着卡维的手又颤颤巍巍地提起来，提纳里难得地“啧”了一声，一把移走对方面前的酒瓶，“差不多得了，别喝了。”</p>
+<p>  “我不、我不回……”神志不清的大建筑师没了支点，便可怜巴巴地蜷缩起来。他咬字已经不太清晰了，含混间，提纳里听见他小声嘟囔道，“我昨天才……和他炫耀……今天就，灰溜溜的……太丢脸了……”</p>
+<p>  “这些事并不是你的主观意愿，对你来说也是无妄之灾，你不需要用这件事来惩罚自己……况且照你的说法，你也不是第一次在他面前丢脸了。”</p>
+<p>  “所以才……更加不……想……呼……”</p>
+<p>  “提纳里说得不错。”</p>
+<p>  说时迟那时快，话音才落，主角便已经到了。艾尔海森的身影从门口闪进，提纳里便好像见着大救星似的，赶忙把软成一滩烂泥的醉鬼扶起来，塞到对方手里。醉鬼“唔”了一声，无骨鱼似的软塌塌地往面前人身上流，艾尔海森听见提纳里说麻烦他大晚上出来接人，便回应道，</p>
+<p>  “无所谓。从和卡维签订同居的条款的时候，我已经预料到这种风险。”</p>
+<p>  “这谁……？”酒鬼总算还留着一份神智，迷迷糊糊地抬眼，“艾尔……海森？你干嘛来……”</p>
+<p>  “来带早上还意气风发，晚上就一通烂醉的酒鬼回去。”</p>
+<p>  “我没有……我……”</p>
+<p>  卡维似乎想狡辩，但狡辩的话在嘴里打了一个结，他“我、我”了两声，也没有“我”出什么所以然来。提纳里在一旁扶额，三言两语把事情交代了个清楚，便叹息道，“他平时就这样，心情不好就喜欢喝酒，但酒量又不好，喝一点就醉。你多担待。”</p>
+<p>  “不意外。”艾尔海森侧脸看了眼趴在他肩膀上、头已经开始一点一点的卡维，“他酒量不好这件事我知道。只是不知道工作上遇到了麻烦，也会用这种本人完全不擅长的方式解决问题。”</p>
+<p>  “他的问题一向难以解决。只不过这一次的委托他特别重视，比平时还要用心，莫名其妙遇到这种专业无关、但情感上无法接受的问题，想借酒消愁也在情理之中。虽然大概明早起来还会难受一阵子……唉，他这种性格，老问题了。”他知道艾尔海森一向性格理智，也许会对卡维的感情用事嗤之以鼻，考虑到好友现在的状态，便忍不住多说了两句，</p>
+<p>  “或许你也无法认同他的处理方式，但建筑这个行业很辛苦，燃烧的是建筑师本身的热情和灵感，如果他对建筑本身就没有认同的话，很难一直坚持下去。在这件事上，我尊重他的选择。”</p>
+<p>  “我对我们彼此之间的差异已经有了一定认知，这件事的发展也符合我对他的判断。有些人已经形成了顽固的价值体系，旁人的话语亦无法轻易对他们造成影响。”艾尔海森抬了抬肩膀，把卡维的位置扶正，“好了，时候不早了。没什么事的话，我先走了。”</p>
+<p>  提纳里点点头。他敏锐地感觉到与他们上次见面相比，艾尔海森对待卡维的态度似乎自然而然地发生了改变。本来开口闭口都是“非理性”，皱着眉头评价卡维不懂得利害得失的锋利的青年军官，似乎真的在认真探索卡维的内核，并开始尝试与这种镜子般截然相反的个性相处。不难想象他们之间会充斥着无数角力与波动，但从艾尔海森愿意来酒馆接人、甘心承担卡维泛滥的情感波动来看，对方并没有对这种日常表示反感。</p>
+<p>  也就是说，坚冰与烈焰，居然真的找到了一种方式，维持住他们之间微妙的平衡。卡维性情单纯，似乎还对这种测试与把控浑然无觉，只是怀着对艾尔海森本能的好感，却不知道这种亲近是另一个人思考演算、步步判断的结果。提纳里说不清楚自己好友的命运如何，但却也感觉到，在滚滚向前的戏剧性桥段中，卡维的心情也被引导着，不知不觉地进入下一个章节。</p>
+<p>  艾尔海森把肩膀上的人扶进车里时，卡维还在迷迷糊糊地抱怨他。什么不通人情啦、过分理性啦，艾尔海森问他“你昨天所说的‘建筑理想’实现得如何？”他却又不说话。过了半天，他才近乎本能地、断断续续地念道，</p>
+<p>  “我不会……让别人……践踏我的理想。”</p>
+<p>  艾尔海森便知道对卡维顽固的判断分毫不错。</p>
+<p>  “你知道吗，我觉得……这不是我一个人的……尊严问题。我的尊严……在他们看来……可能没什么要紧，但是我……”</p>
+<p>  他的声音很小，在车里好像轻轻便能被晚风吹走；也磕磕绊绊，咬字不清，像一块黏黏糊糊、湿湿嗒嗒的酒酿米团。眼皮垂着，漂亮的红色眼睛只露出浅浅的一角，蒙蒙地向着身边的青年。但一闪而过的路灯为他投下温和的侧影，一瞬间橘黄色的光晕蒙住他的轮廓，把他飘起的发丝也打得透明，五官秀丽而柔和，像香樟捏作覆上金箔的唐代观音。他说，</p>
+<p>  “我也知道是意气用事……我一个人，也奈何不了什么……但是我没法……没法再理直气壮地对孩子们说……那栋认为你们低人一等的建筑……是我做的……我不行……我不行……”</p>
+<p>  他的头点下来，仿佛只是说了一段平常的话，尾音迷糊地便睡着了；身子一歪，中心不稳，头便要嗑到一旁的玻璃上。艾尔海森扶住他，初冬风凉，便又顺手给他盖了一条衣服。卡维太瘦，他的衣服盖在他身上，还细细簌簌地余下一大截。一只手指轻轻压上他的额角，扫了扫落到鼻尖的碎发，又很快离开；如婴儿蜷缩于襁褓的怀抱，安睡的大建筑师脸上没有平日喜怒忿嗔的鲜活表情，只有眉目舒展的平静，大概陷入了一段平安的、无梦的睡眠。</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>JuusanYomitsuru</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="https://juusanyomitsuru.github.io/2023/08/17/fb0895a0cdfa/">https://juusanyomitsuru.github.io/2023/08/17/fb0895a0cdfa/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2023/08/17/d611054e904c/">天街如水（其十）</a>
+            
+            
+            <a class="next" rel="next" href="/2023/08/17/aff7e8e1768a/">天街如水（其八）</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<span class="site-uv">
+    总访客量:
+    <i class="busuanzi-value" id="busuanzi_value_site_uv"></i>
+</span>&nbsp;
+
+
+<span class="site-pv">
+    总访问量:
+    <i class="busuanzi-value" id="busuanzi_value_site_pv"></i>
+</span>
+
+
+
+    <div class="copyright">
+        <span>© JuusanYomitsuru | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>

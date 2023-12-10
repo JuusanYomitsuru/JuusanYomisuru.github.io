@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="JuusanYomitsuru">
+
+
+
+
+
+<title>天街如水（番外一）贺新禧 | Hexo</title>
+
+
+
+    <link rel="icon" href="/yumaobi.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">JuusanYomitsuru&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">JuusanYomitsuru&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6; // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function() {
+            tocbot.refresh(obj_merge(tocbot_default_config, {
+                hasInnerContainers: true
+            }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function() {
+        tocbot.init(obj_merge(tocbot_default_config, {
+            collapseDepth: 1
+        }));
+    });
+
+    function expand_toc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, {
+            collapseDepth: expanded ? 1 : DEPTH_MAX
+        }));
+        b.innerText = expanded ? 'Expand all' : 'Collapse all';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">天街如水（番外一）贺新禧</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">JuusanYomitsuru</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">May 25, 2023&nbsp;&nbsp;21:01:16</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E5%A4%A9%E8%A1%97%E5%A6%82%E6%B0%B4/">天街如水</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h4 id="阅读之前……">阅读之前……</h4>
+<ul>
+<li>不更正文先更番外，好一个黔驴技穷的同人女。</li>
+<li>本文时间线在正文时间线后，先为大家留一点悬念。介意的话可以退出。</li>
+<li>有赛提情节。</li>
+<li>如能接受，请往下看。</li>
+</ul>
+<h4 id="正文">正文</h4>
+<p>  门一开，雪就落了下来。</p>
+<p>  不知不觉间，日历便撕到了腊月。到了底，学生们纷纷收拾行囊回了家乡，提纳里赛诺一行人不耐路途遥远，年后又有安排，便打算留在本城过这个年。而卡维——卡维更不必说。过去数年在国外早已经习惯冷清，回来也没有甚么团圆要赴，本来也就打算自己庆祝庆祝算了。于是提纳里便计划着几个人一起去自己家，网罗了学生同事友情送的一些特产，提前办了一些甜口咸口的年货，除夕当晚，叫三两知己聚在一起，煮点饺子辟岁，烧点汤煮白肉青菜，喝点小酒，潇洒潇洒过了。</p>
+<p>  出于植物学家的兴趣爱好，提纳里家留着一个种植各类奇花异草的院子，为着今晚烟花的火气不会熏到，几人提前把这些娇滴滴的生物转移到房子的另一头去，浇水固肥，搭棚覆布，整顿完毕。如今院里横列了一排烟花大炮，又挂着好几串写着大大的“福”字的鞭炮，提纳里脖子上挂着厚得好比松糕的隔音绒耳塞，背后跟着的一条看家护院的小黄狗，见到卡维高兴地转了好几个圈。卡维笑着揉它的头。天气冷，人要一脚深一脚浅地涉，呵出的都是白气，雾蒙蒙地朝上蒸。他戴着一双厚厚的绒手套，搓了搓，进了门。</p>
+<p>  今天卡维提前到，无非是他建筑系著名的一双巧手，调配咸甜或许力有不逮，但捏面花样是灵巧自如。前天出来吃饭他喝的有点多，在新来的小姑娘面前夸下海口，说要在新年筑一个麦粉的斜塔，讲得小姑娘眼睛发光，频频看向自己师傅。提纳里扶额，说“你就是柯莱对岭大教授的第一印象，你有点师德，不能砸了”，转头给他备了五斤面粉，外加三打鸡蛋，等着他完成他的传世巨作。</p>
+<p>  柯莱已经在院里了。论年纪她还是小孩子，好奇心重，提纳里给她一个鲁班锁，她翻来覆去地研究。赛诺坐在她旁边，一本正经地和她说一些“为什么这个东西这么难？因为你在研究‘锁’。但是你一定能解出来的，因为鲁班姓‘公输’，女孩子就不会输”之类的让人毛骨悚然的双关。卡维看了一会儿，走上前拿手指轻轻点了几处，等他换一身不怕脏的衣服、洗干净手出来，小姑娘已经把锁解开了，一手握着一小块，朝他高兴地挥。</p>
+<p>  卡维说解开锁没什么难的，要做一个才难呢。以前为了研究传统的卯榫结构，他学着做鲁班锁，熬了好几天都不得要领。又靠一杯浓茶挨过深夜，出门去给自己买个包子的时候，看到两个小孩子摔跤，手手脚脚纽在一起，半天起不来，倒在地上边哭边骂对方是毛驴，一时忍俊不禁。就在那一瞬间，思路豁然开朗，灵感如水流在干枯的河道上穿行。从那以后他就很擅长摆弄鲁班锁，哄小孩子、给学生出题，时不时也会用到这个玄妙的小玩意儿。</p>
+<p>  柯莱问小孩子打架和鲁班锁有什么关系？卡维说其实没什么关系。不过有时候“指点迷津”的，并不非得是别人目的明确的开解。你现在年纪还小，所以可能没什么感觉，也许在以后你也会有想了好久好久的事，被一个毫不起眼的瞬间打动——说到这里他愣了一下，因为他想起了一根未压平而翘起的灰色头发。他接着想起了一个身材高大的男性，性格本来严谨，穿着一双毛绒绒的便鞋，头发四边乱翘，站在窗边喝咖啡的情景；他说不行，不能再聊了，再说我的斜塔起不完了。他说建筑是建筑者的第一要事，其他事情都得往后让让，捧起那几打蛋便转身回了厨房。</p>
+<p>  毕竟从那个人的家里搬出来，也已经足足有两个月了。</p>
+<br />
+<br />
+<p>  备好的柴火在灶里头烧着，炉火很热，和吹进来的冷风相冲，在房里打出了暖洋洋的气旋。卡维往把蛋液压进面粉里，细细的飞絮便凝在一起，渐渐团成圆圆；窗外的飞絮与窗内的水珠也粘连，一温一寒，鼻尖抵着鼻尖。他揪下一块老面，瞧着雾气发呆。</p>
+<p>  制作面食是家传的技艺。在他颇为遥远的、属于“家”的新年里，父母会撑开大大的木桌，上面摆满了各种食材，卡维站在凳子上，负责给发好的面塞馅。他喜欢吃甜的，所以桌子上最先消耗完的一定是果干，然后是在他催促下不断加进面粉里的奶和酥油。如果母亲说“晚一点还要吃糖藕呢，这个就别吃这么甜了”，小卡维就会急得在凳子上跺脚。这时候父亲总会出来圆场，说一年只有一次，让孩子吃够了，下一年才有东西好记挂。</p>
+<p>  现在想来好像预告了他的人生，也同新年讨糖吃一样，一开始吃得太多，往后就要忍受漫长的寂寞，靠回味那一点甜去生活。</p>
+<p>  但他手上做的这层斜塔是咸口的，因为据说柯莱最喜欢吃炸萝卜丸子。萝卜丸子，拆分一下味道，无非是香、酥、咸。卡维提前切好了腊肉丁，混了点粉丝萝卜丝，拌好了放在一边；等会儿和进面里下锅油炸塑形，一定香飘十里。</p>
+<p>  艾尔海森一定也会喜欢。他最爱吃这种味道重又口感酥脆的东西。</p>
+<p>  里头还要加很多肉。两个人吃饭，一个眼巴巴喝完汤就盼着甜点，一个碗碟里全是肉油，互相都觉得对方吃得腻，在餐桌上总要就食物的营养价值大战三百回合。最后艾尔海森总要提醒他他口中“美味而又能提供能量、促进多巴胺分泌”的食物来源于他花钱雇佣的厨师，然后卡维就会说，钱能够创造食物的实体，但不能撼动食物的概念，别想用钱颠倒黑白。艾尔海森就会说哦，那既然大建筑师靠食物的概念就足以饱腹了，那么请卡维先生下次去图书馆看菜谱用餐吧，本公馆恕不招待。</p>
+<p>  如是往复，这种闹剧好像每天都会上演。</p>
+<p>  ……怎么又想起他来了。</p>
+<p>  两个月，六十日，七百二十个时辰，音讯全无。拿西洋的怀表看，分针已经走过了骇人的一千四百圈，走一圈写一个字，分明能写出一封长长的家书。但艾尔海森毕竟是大忙人，卡维想，也许不过是把自己轻轻地忘了。这只是让生活回到正轨，没什么不好的。自己也是，明明有这么多事情要做，怎么还能分出精力来多愁善感呢。这也思，那也想，简直没完没了。</p>
+<p>  一定是今日落雪的缘故。</p>
+<br />
+<br />
+<p>  洗了洗手上的面粉，趁着发面，他推门出去透风，看见赛诺和提纳里挤在墙边，交头接耳地不知道在做什么。凑近一看，墙角堆了两个雪人，枝桠叉在一起，前面还滚了一个小圆球，插了一根细细的弯弯的绿叶。卡维问，“你们在干什么？”赛诺则回答，“提纳里说因为我打牌输了三十六次，所以这个长得歪的是我。但我认为应该按照大小分，我是提纳里的学长，所以应该这个更圆的是我。”提纳里则说，＂既然是学长，就应该让让学弟，怎么连一个雪人都要争。”赛诺又不说话。卡维哭笑不得，一个是名报社的记者，一个是名声在外的学界新秀，居然蹲在这里争雪人的冠名，果然亲密会让人变得幼稚。他正要张口。</p>
+<p>  “非常显然，为雪人取名，说明你还在为万物有灵论支配，不过考虑到家里的每盆花都有名字，我倒也不意外。另外我补充一句，我不相信同名就会影响命运的厌胜逻辑，所以别指望靠摆弄雪人左右我的行动。……要我陪你？很佩服你提出要求的勇气。有求于人的时候，应该要拿出一点诚意吧。”</p>
+<p>  诚意就是看我的雪球！柯莱在里屋不小心踢翻了一张凳子，沉滞的翻倒声把他从微笑里惊醒。提纳里和赛诺的雪人之争还在继续，他攥了攥手，好像那里已经团好了一把雪沙。</p>
+<p>  声音在脑海里还有余温，但只有落雪，在他的肩头融了。</p>
+<p>  ……又想他了。</p>
+<br />
+<br />
+<p>  柯莱性格比较害羞，在桌上比较安静。但从炸面斜塔从八层吃到两层看，卡维的手艺似乎很得她的欢心。小姑娘吃完，说打算拜年的时候给朋友绣个礼物，就离桌了。成年人则每人面前都放着一个小杯，温着一壶甜米酒，供人自斟。几人围在炉边，一边吃一边聊天，讲学生，讲工作，讲遇到的形形色色的人，也聊政治与收成。又一年过去了，局势依然动荡，风云诡谲，谣言满天飞。说外头孙将军要和白将军打起来的，又有说其实两个人要合力扳倒王将军的，有说英国人要驻兵进来的，又有说其实是美国人混淆视听的，有说明年一开春，军队又要征粮，货物税又要往上涨的，又有说北洋政府打算降低税收促进实业的，可能没一样是真的，也可能所有都是，在人们看不见的地方，正面与反面、阳面与阴面正在殊死角斗着。最近又流行了风寒，前一天还笑眯眯地朝他们招手、会往老师手里多塞几个小果子的奶奶没有撑过这个冬天，也有同事的孩子过早地离开了这个世界。去年收成颇不好，米面不好买，肉倒是便宜很多，但北边最近怕有猪瘟，不知道会不会传到这里。不知道来年会不会更好，贫穷，饥饿，好像迫在眉睫，又好像被严严实实地挡在面前这锅热腾腾的涮肉外面。每说一会儿话，桌上都会陷入一段沉默。在时代的苦难面前，语言是一种僭越。</p>
+<p>  卡维一拍手，说好啦，不要总是说这么沉重的话题，这可是新年，是翻新篇的时候。死气沉沉的，把霉运传到下一年怎么办？不如畅想一下，比如说赛诺，你什么时候升职加薪，带我和提纳里吃香喝辣？赛诺觑了他一眼，说今天我是推掉公务来的，只有扣工资的份，没有加工资的份。提纳里问什么公务，要在除夕夜赶？赛诺说是将军府的事情。最近王传芳那边很不安定，本来他走了好运，和美国人搭上了线，但其中还有玄机。具体的他不方便说，但他现在正在为这件事焦头烂额。有传言说是因为他们里面有一个很厉害的内鬼，蛰伏已久，要在年关发作。</p>
+<p>  提纳里看了卡维一眼。卡维一口青菜放在嘴里，半天忘记嚼，看见提纳里的眼神，一惊，才回了魂。赛诺也盯着他，眼神锐利，“怎么？你和这件事有关系？”</p>
+<p>  卡维打了个哈哈，“怎么可能。完全另一个世界的人。”</p>
+<p>  “但你之前不是说过……”</p>
+<p>  “都过去了！都过去了！”卡维一挥手，“都多久之前的事了。早没有联系了。”</p>
+<p>  赛诺撑着下巴，没有说话。提纳里间进来，道，“他们在查那个内鬼是谁？”</p>
+<p>  “不。”赛诺说，“他们似乎已经知道是谁了。”</p>
+<p>  卡维和提纳里对视一眼，“既然知道，为什么不直接把那个人解决掉？”</p>
+<p>  “这就是那个人的厉害之处了。他完全没有打算隐藏，但是因为他身上利害关系牵扯太多，王存芳暂时还动不了他。”</p>
+<p>  卡维动了动嘴唇。“他……”</p>
+<p>  提纳里朝他摇摇头。他又闭上了嘴。</p>
+<p>  “那意思就是，那个内鬼是完全安全的？”</p>
+<p>  “现在是。但以后，未必。”赛诺给自己续了一杯，“本来今天晚上报社打算安排我进去王存芳的宴会探口风，但我拒绝了。现在这个时候——”他掏出怀表看一眼，“——应该已经开场了。”</p>
+<p>  卡维的脸色有点发白。提纳里轻轻碰了一下他的手，没有说什么。他一边说“这酒也太没有酒味了”，一边给自己灌了三杯。提纳里说，就是怕你又要醉了才喝的米酒。新年不该有愁，有什么事明年再说。吃好了我们就去放烟花吧。</p>
+<br />
+<br />
+<p>  “天下之看灯者，看灯灯外；看烟火者，看烟火烟火外。未有身入灯中、光中、影中、烟中、火中，闪烁变幻，”不知其为世界内之烟火，亦不知其为烟火内之世界也。</p>
+<p>  提纳里戴上了他像花盆底一样厚的耳套，还给自己蒙了一层严严实实的面罩，整张脸只露出两只眼睛，可以说是严阵以待。柯莱站在旁边，她大病初愈，这是她第一个自由的新年，什么事都显得新鲜。卡维和赛诺两个成年人负责点火，但卡维总是怕那烟花会提前炸开，所以结果两个烟花都是赛诺点的——他身手矫健，又有胆量，简单的动作都显得利落潇洒，火星一晃就点上了，雁过不留痕。卡维说你是记者吗？你是特务吧——引信开始滋滋烧起来了，两人连忙蹿到屋边。</p>
+<p>  “呼——哗——！”</p>
+<p>  从小小的炮筒里冲出一道明亮的火焰，倏忽冲上高高的天空。随着一声脆响，那道烟火在高天炸开，散成千千万万道夺目的星子，奔向无数低矮的屋檐。还没等上一道消去，下一道又呼啸着划破夜色，挤压在细线中的无限热度，砰然化作一片灿烂璀璨的光团。明明离烟花很远，晚上风寒，但每个人的面上，好像都是热的。</p>
+<p>  柯莱问卡维老师为什么合着手掌？卡维说我在许愿。柯莱说对烟花许愿灵吗？卡维说可能灵，可能不灵，但既然可以对流星许愿，那对着烟花应该也可以吧。卡维也说不清楚自己那一瞬间在想什么，只是看到那一点光喷薄成满天星海，情不自禁地想起那双漂亮的绿眼睛，中间那点惊人的橘黄，在关上灯的夜晚也会熠熠生辉；也会情不自禁地感觉身边好像站着一个高大的身影，穿着带绒的大衣，揣着手，同他一起仰头看这星如雨。节庆的意义是除旧迎新，也会叫人重新思念起团圆的残影。</p>
+<p>  这城里的千家万户都等待着新年的来临，无数的烟花自远而近地升上高天，炮竹声开始在街坊邻里的巷头炸起。在浓郁的硝烟味和万重烟花的光辉下，他闭上眼。</p>
+<p>  提纳里和赛诺打算放第三筒，柯莱自告奋勇要试点。他在心里念着，</p>
+<p>  一盼得所愿。</p>
+<p>  希望你在风云变换的时局里总能稳操胜券。</p>
+<p>  二祝常康健。</p>
+<p>  十里外暗流涌动的除夕宴，灯红酒绿、推杯换盏的刀光剑影，一定平平安安。</p>
+<p>  三祝……</p>
+<br />
+<p>  “卡维老师。”</p>
+<p>  有人敲开门。来得急，身上披了一层霜，卡维接过他递过来的一个小油纸包。提纳里问是谁，他弯弯腰，说替少爷跑的腿，先生不在家，让他一顿好找。卡维捏着上头细细的麻绳，问你少爷呢？来人说少爷有公务在忙，这次也是秘密，请先生不要声张。卡维回头看，提纳里把赛诺推进了门，柯莱手里握着一根小烟花左顾右盼，也跟着进了屋子。他拆开来看，里头分明是几块精致的糕点，还有一碗细细磨出的羹汤，一点未撒，寒夜里恰恰温热。油纸里还夹着一层红纸，卡维抽出来看，上面是他非常熟悉的、苍劲潇洒的字迹。</p>
+<p>  “贺新禧”。</p>
+<p>  三盼梁上燕，岁岁长相见。</p>
+<br />
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>JuusanYomitsuru</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="https://juusanyomitsuru.github.io/2023/05/25/a7b048b4abad/">https://juusanyomitsuru.github.io/2023/05/25/a7b048b4abad/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2023/06/21/0a9e0b2a4de8/">性启蒙（其三）</a>
+            
+            
+            <a class="next" rel="next" href="/2023/05/17/742583340bc6/">性启蒙（其二）</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<span class="site-uv">
+    总访客量:
+    <i class="busuanzi-value" id="busuanzi_value_site_uv"></i>
+</span>&nbsp;
+
+
+<span class="site-pv">
+    总访问量:
+    <i class="busuanzi-value" id="busuanzi_value_site_pv"></i>
+</span>
+
+
+
+    <div class="copyright">
+        <span>© JuusanYomitsuru | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>

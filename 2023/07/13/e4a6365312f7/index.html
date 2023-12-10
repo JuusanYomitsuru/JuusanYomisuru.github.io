@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="JuusanYomitsuru">
+
+
+
+
+
+<title>流言与墩墩桃 | Hexo</title>
+
+
+
+    <link rel="icon" href="/yumaobi.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">JuusanYomitsuru&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">JuusanYomitsuru&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6; // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function() {
+            tocbot.refresh(obj_merge(tocbot_default_config, {
+                hasInnerContainers: true
+            }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function() {
+        tocbot.init(obj_merge(tocbot_default_config, {
+            collapseDepth: 1
+        }));
+    });
+
+    function expand_toc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, {
+            collapseDepth: expanded ? 1 : DEPTH_MAX
+        }));
+        b.innerText = expanded ? 'Expand all' : 'Collapse all';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">流言与墩墩桃</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">JuusanYomitsuru</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">July 13, 2023&nbsp;&nbsp;20:54:02</a>
+                        </span>
+                    
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h4 id="阅读之前……">阅读之前……</h4>
+<ul>
+<li>原著日常向。</li>
+<li>算是对那位老师说海哥作为魅力男人会不会在酒馆一时兴起抱女人的回应？因此由于题材限制，会有对知妙的一些路人梦向或恶意揣测言论（意思是一些爹味发言），与知妙本身感情线没有任何关系。介意请避雷。</li>
+<li>內容有：Bking买菜、Bking和老婆吃饭、Bking打啵。来点踏实过日子的Bking！！！</li>
+</ul>
+<h4 id="正文">正文</h4>
+<p>  “艾尔海森那家伙啊，客观来说确实长得不错。到办公室实习的女孩子，十个有九个被他勾了魂的。只是听到一些传言，偶然见过那么一面，就只会说书记官怎么英俊潇洒、怎么智识过人、怎么雷厉风行。是，我承认他是有魅力，学术水平也不差，但也不至于一幅整个教令院只有一个男人的样子吧？”</p>
+<p>  “你酸了？”</p>
+<p>  “什么叫我酸了，这叫各有各的优点。他长得是过得去，但谁知道他背地里会不会玩很大？上次我去酒馆，看他一个人喝酒，半个小时就有三个人去搭讪。你说长得帅有什么好处？结婚，谈恋爱，不就是挑个过日子的？我呢，至少老实。只有懂货的女人才能明白我的好处……哎，你们到底有没有在听……”</p>
+<p>  “文件已经在我的办公室放了三个小时。如果不需要，可以自行放入废纸堆。”</p>
+<p>  碎嘴的文员向后看，才知道他口中“玩很大”的那个男主角，不知何时站在了他的身后。他战战兢兢地接过那份签署文件，艾尔海森锐利眼神一扫。在上班时间公然开小差聊八卦的一群人如鸠鸟撞进鹰隼的注视，纷纷低下了头。“我不关心你们是否在意我的流言，但还有五分钟就到下班时间，我不希望有人因为私人情绪影响我的工作进展。另外，”他敲了敲文件，硬纸在他的指节上让人颤抖地清脆，“上次递交的时候我已经注释过格式错误，这次仍然没有修改。有时间上班说闲话，不如先研究一下工作守则，记住基本的文件规范。如果再有下一次，我会判定你失去呈交资格。”看了看钟表，“话就说到这里，到下班时间了。再见。”</p>
+<p>  黑色的披风一展，菱形金属的装饰叮哐一声，连响动也利落。大书记官下班健步如飞，文员捏着文件从臂弯里抬头时，对方已经没了踪影。</p>
+<br>
+<br>
+<p>  最年轻的贤者。</p>
+<p>  最神秘的上位者。</p>
+<p>  英俊敏捷如林中雪豹，喜恶与弱点都不可窥探，我行我素，却与草神大风纪官等人一起重整阿扎尔倒台后教令院风气，于关键节点发挥重要作用，又在功成身退后隐姓埋名，足以载入须弥史册的大书记官艾尔海森。在他辞去代理贤者这一职位后，有的人轻蔑他不足为惧，有的人揣测他心怀鬼胎，还有的人自顾自相信他虚怀纳谏。流言像暗流又像旋风，人人都在背后议论躁动。</p>
+<p>  但没有人相信他只是讨厌麻烦。</p>
+<p>  以及准点下班第一件事是去摊上买菜。</p>
+<p>  “老板。”</p>
+<p>  “大书记官，您又来了。”</p>
+<p>  须弥城内有两个风评较好的水果摊：一个在须弥城门口约二十米处，老板叫侯赛因，转行卖水果之前是奥摩斯港的水手，他们家的水果物美价廉，专做平民生意；还有一个档口在宝商街，老板叫阿尔明，之前是雇佣兵。宝商街地贵，位置紧要，他们家的水果也因此比起侯赛因家更贵，但也许是在镀金旅团时积累下不少钱财人脉，水果的种类更多，听说外地水果运来须弥城，他总能抢到头一批挑选，因此品质也更好。听说卡萨扎莱宫的须弥巨贾桑歌玛哈巴依老爷也是这里的常客，那位老爷眼神毒辣，能在她手里讨到订单，便能说明这小小水果摊的本事——而艾尔海森是这档水果摊匿名的魔晶会员。</p>
+<p>  他能够选到和卡萨扎莱宫一样好的水果，拿到比精明的多莉更低的价格。</p>
+<p>  原因无他。</p>
+<p>  一是摊主听见有人叫他大贤者。</p>
+<p>  二是摊主曾看他啧一声打趴了六个闹事佣兵。</p>
+<p>  三是他实在买太多回了！！！！</p>
+<p>  “今天新进的货有日落果、树莓，璃月进口的特脆苹果，刚刚从桓那兰那附近摘回来的墩墩桃，还有沙漠送过来的枣椰，镀金旅团的兄弟推荐的品种，包甜包松软。上次我老婆用这种枣椰做了蜜饯，好吃得不得了，我这里还剩下一块，大书记官要不尝尝？”</p>
+<p>  修长而健硕的男性微微抬手，“不必，清理很麻烦。枣椰拿三个，要熟的。另外，麻烦拿墩墩桃看看。”</p>
+<p>  摊主从果箱里翻出好几个大果，递给他的顾客。果然每个都鲜亮饱满，成熟得正好，残留的根蒂深绿，叶脉清晰，果身是诱人的紫红色，捏一捏果肉柔软地回弹，一看就是充分吸收了光照，积累了大量糖分的状态。有一颗更是熟到糜红，保持新鲜的水雾蒙在上面，太阳光一打，灵动如一只漂亮的、环着光圈的眼睛。艾尔海森盯着那颗墩墩桃，道，</p>
+<p>  “状态不错。要十颗大果。”</p>
+<p>  摊主便给他挑。一颗一颗水灵灵的墩墩桃叠在枣椰上面，在袋子里堆成小山，大书记官站在水果摊前面指点，</p>
+<p>  “两罐自酿的日落果酱，两罐树莓酱。四瓶甜甜花汁。”</p>
+<p>  小贩给他一层层码好。艾尔海森扫了一眼，很爽快地付款了。</p>
+<p>  “大书记官，您拿得完吗？要不我请人送到您府上……”</p>
+<p>  摊主瞠目结舌，看着文弱的学术分子挑两个满得快溢出的袋子如提两只小鸡。“不必了。无谓浪费时间。”说罢便提着两大袋果子转身离开。摊主挠挠脑袋，又摇了摇头，转身去给水果喷水去了。</p>
+<br>
+<br>
+<p>  艾尔海森扭开家门，扑面而来的就是一股浓重的肉烟味。他皱着眉头，脚一抬一勾，门在身后砰地关上，</p>
+<p>  “很抱歉提醒你，房产上写的是我的名字。未经同意，请不要擅自把我们的房产变成烤肉炉。”</p>
+<p>  “咳！咳咳……咳！”</p>
+<p>  一个金色的脑袋从茶几背后探出来，红色的宝石般的眼睛颇为恼怒，</p>
+<p>  “这不是在调整火力了吗……！咳！咳咳……香料放太多了……好呛……”</p>
+<p>  艾尔海森看着那个圆滚滚的脑袋又埋进茶几底下，啧了一声，把两大袋蔬果放到一边的鞋凳上，“我们卡萨扎莱宫的建造者，知名建筑师卡维，终于忍不住对我们家下手了？又在做什么震惊须弥的创新改造？”</p>
+<p>  “我在做便携烹饪炉……算了，和你说了你也不懂，等着瞧吧！我再拧一个螺丝……好了！大功告成！”</p>
+<p>  卡维呼了一声，拍拍手，从茶几底下钻出来。艾尔海森冷眼看那桌面角落那块黑黢黢的铁板，道，</p>
+<p>  “你又在什么东西上花光了你的尾款？”</p>
+<p>  “什么叫又……哎艾尔海森，我说你态度能不能好一点，对未知的事物保有最基本的好奇心，先问问这是什么伟大的发明，再来衡量它的价值，不要开口闭口就是花销，这世界上有很多东西不是摩拉可以衡量的！”</p>
+<p>  “哈。但建筑师的房租可以。需要提醒你吗？现在已经是月末，再过几天就到交房租的时候了，我认为我对事物的好奇心远没有你的存款那么需要被怀疑。……”眼看着室友发棕的发尾就要像气急败坏的风史莱姆一样腾起来，他话锋一转：“不过也不是第一次了，我并不意外。不妨讲讲你所谓的‘便携烹饪炉’的运行原理吧。”</p>
+<p>  金色发丝一飞，卡维一扭头，哼了一声。</p>
+<p>  “这是枫丹的最新科技。借助高纯度的便携燃料，人们可以直接在特制发热金属板上烹熟食物。虽然因为厨具限制，能制作的风味有限，但对于没有厨房，抑或是有户外烹饪需求的人来说，无疑是极为方便快捷的创造。但问题在于，环境通风条件不佳，烹饪的油烟就会聚集在室内，很容易影响住户的身体健康和用餐体验。所以我还另外增加了一个向下的排烟设施，虽然可能会造成一定程度的能源流失，但优点是油污收集方便，也很好清理。”他一抬脸，眼睛一眯，像一只正摇晃着尾巴的骄傲猫咪，“换一个人可未必能想到这样的点子。”</p>
+<p>  艾尔海森“嗯”了一声。他的视线又移到旁边，“那么这一堆石头又是什么？”</p>
+<p>  “这是火山石，也是进口来的，狛荷屋送了三天，今天才到。我上一单的客户专门做禽肉生意，在做菜上也很有讲究，他告诉我说，用火山石积热，烤出来的肉特别好吃，然后还送了我好几斤好肉。我心想说不吃白不吃，干脆按照他的方法试试看，恰好又有这个烤炉。”他顿了顿，红色的眼睛轻轻觑这边一眼，“……反正有人简直是吃肉狂魔。”</p>
+<p>  “总比家里要屯两柜子奶制品的人好。或许你可以考虑投资奶牛养殖，说不定比做建筑赚得多。”</p>
+<p>  “你！……”两侧像耳朵似的弯弯头发又要飘起来了，“你这家伙……！！！”</p>
+<p>  艾尔海森手指卷着钥匙晃了两转，银色的金属叫小指一勾，又稳稳抓在手心。卡维的眼睛顺着他的动作看向鞋凳上的两个大袋子，“……你又往家里带了什么？不会又是难看的装饰品吧？”</p>
+<p>  “生论派的研究课题。”</p>
+<p>  “？真的假的？没有人哭着喊着拦你吗？”</p>
+<p>  “反正我没有收到申诉信。”艾尔海森已经脱完长靴，换上了居家拖鞋。他把那两大袋水果放在茶几上，卡维的头伸过来，“既然你已经计划好了，那想必已经可以开始了吧。已经到晚饭时间了。”</p>
+<p>  “不用你提醒，火山石已经在烧了……！哦对，但肉还没有切，都用冰块冻着呢，就在柜子下面。”</p>
+<p>  “难道大建筑师设计房子的时候也会剩下一个屋顶？”</p>
+<p>  “反正你这家伙会用刀，闲着也是闲着。我看看这里有什么……啊，枣椰！”看到绿油油果子的一瞬间，他的语调也跟着上扬起来，“有一阵子没去沙漠了，好想它。看这个颜色，一定很好吃。还有什么……日落果酱和树莓酱，这个是……甜甜花汁？这个兑家里的酒喝最好，再加点冰块，清爽又不腻。剩下这一堆是什么……墩墩桃！”</p>
+<p>  艾尔海森洗净了刀，正把肉从一层层的包装里头拆出来。卡维手里捧着一颗墩墩桃，眼睛里全是光彩，好像甜蜜的果汁润着晶莹的红色瞳孔，折射着灯光熠熠生辉。手起刀落，锋利的金属片一滑，一片均匀的肉便落在盘子里，肉纹里穿着白色的油脂，如渗入赤墙的雪花。</p>
+<p>  有些喜欢会随着年岁的增长慢慢衰减，譬如小孩子时无法释手的玩具车，长大后总觉得形设笨拙，样式老旧，很难再仔细把玩。但有些喜欢却历久弥新，由习惯渐渐融入骨髓，变成生活的一个部分，随着时间一同呼吸。</p>
+<p>  就好比刹诃伐罗学院的卡维学长，曾经是“很喜欢吃墩墩桃的那个小孩”。</p>
+<br>
+<br>
+<p>  小卡维有自己小小的不合群，比如执着于在书上和不会说话的前辈们研讨，比如喜欢一个人在没有课业的时候画自己梦想的城邦，又比如在导师带一群半青不熟的小毛孩去考察的时候，在路上摘一怀的墩墩桃。</p>
+<p>  须弥城的水果并不便宜。卡维的母亲有很长一段时间无法接取工作，家里只能节省开支，小卡维渐渐学会了如何在路边的墩墩桃株里找到最熟最甜美的那个。墩墩桃是外形可爱而汁水丰盈的糖，放在盘子里就叫人心情愉快，吃到嘴里也让人忍不住晃起脚来，但它并没有让妈妈回心转意。后来妈妈去了枫丹，家里只剩下他一个，枣椰太遥远，日落果太高，陪在喜欢吃甜食的孩子身边的，也只有矮矮的，会在路边向他摇晃叶子的墩墩桃。每次见到那个粉红色的、圆润饱满像一个小小灯笼的水果，他总会忍不住摘下来，如果成熟得够好，那就摘很多。并不是因为他非要吃不可，到了和母亲分别的年纪，他已经学会了忍耐；只是在阳光底下努力生长着的、不起眼的圆嘟嘟的果实，于他而言好像象征着一种精巧的、温柔的生命力，微小而确定的幸福，是命运沉默而细心的赐予。</p>
+<p>  但总有同学疑惑，说卡维，你摘这么多，全拿回家吗？小卡维就会摇摇头，往同学手里塞一个，又把剩下的藏进怀里，说：我给我学弟送一点。</p>
+<p>  家里空空旷旷，果盘里的蔬果好像也蒙上一层雾蒙蒙的灰。他手中成熟得正好的墩墩桃，只有在飞奔向室罗婆耽学院的路上才会越来越明亮。学弟往往才下课，抱着厚厚的书从知论派的课室里出来。他两只手都盛满了东西，没有余裕向他打招呼，但戴着耳机的学弟总能在人群里一眼看见他，然后向他快步走来，接过他手里的水果，问他不是去考察吗，不是下地务农了吧？小卡维说当然是考察，回去还要交大作业和心得，这是礼物。很好吃的，带回来给你尝尝。两个人跑到凉亭，找了个干净地方把一怀的墩墩桃安置好，卡维四处找水来洗果子。小胳膊提着一桶水晃晃悠悠回来，他一边洗一边念叨果子的挑选办法。一抬头，灰头发的学弟已经把每个果子都均匀地切开，拿了中午吃饭洗净了的碟子装好，小刀挑起一块，送到他面前。他愣了下，墩墩桃甜蜜的汁水在嘴里迸开，从舌尖到脾胃都是清爽的甜味。卡维说谢谢，学弟没什么表情，低头又给他挑了一块，说没什么值得感谢的，只是这样不容易弄脏手罢了……十多岁的卡维看着他，漂亮的红色眼睛是少年人没有分毫杂质的真心，说不是那个……谢谢你在我身边，艾尔海森。</p>
+<p>  艾尔海森记忆中的卡维，在无数图像中不可忽视的中央的那一幅，便是这样微微仰头，眼里全是晚霞的光泽，认真的、纯净的面貌。那时候放学大军喧嚣在街道的另一面，帕蒂沙兰蓝紫色的花朵轻轻摇曳，挂灯悄悄亮起来，世界上好像只有他们两个人。</p>
+<br>
+<br>
+<p>  勾兑了甜甜花汁，酒精的存在就更加不易察觉，卡维喝得脸色泛红，已经抱怨奇葩客户抱怨了二十分钟。艾尔海森有一句没一句地搭，夹子下肉在火山石上滋啪作响。肉的确是好肉，油脂丰富层次鲜明，烤出来有一股淡淡的奶香气。新的炙烤方式也把食材的原味完完全全地表现出来，甚至连香料都显得多余。</p>
+<p>  卡维的客户的确没有骗他。</p>
+<p>  但为了这件事，今晚卡维已经说了五遍“这世界上还是好人多”了。</p>
+<p>  他翻了翻肉，确定没有血丝，烤度也正好，便在卡维面前的碟子上又叠一块。卡维不能吃太烫的食物，肉烤出来都得放一阵子才能入口，而且吃一口肉要配一大口卷心菜。大建筑师性情温和而坚韧，但在家里却有的是矜贵的小习惯。他喝酒喝得眼睛水润润的，脸颊通红，话刚说到客户的离谱请求又止，盯着艾尔海森往嘴里塞的肉，说你能不能改良一下你的食物光谱，不能老是吃肉！蔬菜、蛋奶，每样都要吃一点。大书记官的手一停，说妙论派之光什么时候改行去生论派研究营养学了，终于要转行了吗。卡维晃了晃脑袋，说胡说什么！你不喜欢汤水又喜欢荤菜，这样身体怎么行。而且就是因为你的饮食习惯，你的那个味道才会特别浓……</p>
+<p>  说完他自己也呆了一下。“那个”后面括号加反括号中间两个空格，藏着成年人一点心照不宣的秘密。他干咳两声，去够切好的墩墩桃。墩墩桃切成适口的块状，蜜汁从边缘慢慢流下来，是软糯香甜的熟度，很适合用来喂养鸵鸟。但酒精慢慢熏上脑袋，叉子戳下去的轨迹都是歪的，乓啷一声敲在碟子上。卡维嘟囔道怎么墩墩桃会逃跑，便看到一块大桃子被黑色手套送到嘴边。他一口吃不完，就着叉子嚼，一点一点地像兔子嚼叶，舌头一卷，连金属上的桃汁也舔干净。叉子缩回去，艾尔海森给自己灌了一口冰酒，忽然想到了傍晚听到的流言。</p>
+<p>  他并不在意传言。传言于他而言是外界对他缺乏了解的证明，又有利于迷惑人们的视线，真实性是其中最微末的要素。不少人会想象他的生活，而他的生活并不会因为虚幻的臆断而发生什么改变——但如果他们知道，全须弥数一数二的建筑师，名声在外而风度翩翩的妙论派之光，正扎着一条麻花辫、穿着睡袍，在他的家里吃墩墩桃吃得面颊鼓鼓，大概会瞠目结舌，震惊不已。</p>
+<p>  现实远比流言离奇。</p>
+<p>  大书记官与名建筑师，不可能的搭配，却在他手里真实促成。一起纠缠过的岁月，密不可分的过去，与分道扬镳的漫长空白，由一个又一个蓄意为之的夜晚凝结成一个完美的圆圈，叫柴米油盐衣食住行一日三餐覆盖成紧紧贴近的名字。卡维盯着他，甜蜜的酒气把他熏得有些结巴，眼睛显得尤大，面上白里透着微醺的粉，说你看起来又像在想什么要捉弄我的坏主意。他说我好像什么都没说，酒鬼摇摇晃晃的，说你敢！想什么……都不准……唔……</p>
+<p>  大建筑师在家里和在外面完全不同。虚张声势的外壳褪了一半，妙论派之光会偷偷变成喜欢撒娇的伴侣。这是流言绝难猜测的另外一个秘密。</p>
+<p>  卡维很轻，倒在他身上像落一片羽毛，嘴唇很甜，沾着水，又暖热，像夏天的墩墩桃果汁，怎么吸吮都不会干涸。他揪着艾尔海森的衣服，“啵”一声放开他，说你是个坏心眼的家伙，别以为我不知道……唔……他说哈，既然不喜欢坏心眼，那老好人现在又是在做什么？卡维盯着他的眼睛，两个人挨得很近，说这是、呃，学长的奖励……奖励你的……墩墩桃……</p>
+<p>  墩墩桃是圆润可爱的果实，外观漂亮内里柔软，又有顽强的生命力。汁水丰盈甜蜜，果肉柔软细腻，他也从卡维身上品尝到了那种味道。窗户影影绰绰地投上两人环抱的剪影，夏天渐渐有阵阵蝉鸣。他脱了手套。</p>
+<p>  今晚注定是一个安宁的夜晚。</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>JuusanYomitsuru</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="https://juusanyomitsuru.github.io/2023/07/13/e4a6365312f7/">https://juusanyomitsuru.github.io/2023/07/13/e4a6365312f7/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2023/08/15/31983671e523/">愿望摩天轮</a>
+            
+            
+            <a class="next" rel="next" href="/2023/06/21/f9a70c04454f/">想见你（其九）</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<span class="site-uv">
+    总访客量:
+    <i class="busuanzi-value" id="busuanzi_value_site_uv"></i>
+</span>&nbsp;
+
+
+<span class="site-pv">
+    总访问量:
+    <i class="busuanzi-value" id="busuanzi_value_site_pv"></i>
+</span>
+
+
+
+    <div class="copyright">
+        <span>© JuusanYomitsuru | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>

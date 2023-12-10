@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="JuusanYomitsuru">
+
+
+
+
+
+<title>愿望摩天轮 | Hexo</title>
+
+
+
+    <link rel="icon" href="/yumaobi.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">JuusanYomitsuru&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">JuusanYomitsuru&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6; // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function() {
+            tocbot.refresh(obj_merge(tocbot_default_config, {
+                hasInnerContainers: true
+            }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function() {
+        tocbot.init(obj_merge(tocbot_default_config, {
+            collapseDepth: 1
+        }));
+    });
+
+    function expand_toc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, {
+            collapseDepth: expanded ? 1 : DEPTH_MAX
+        }));
+        b.innerText = expanded ? 'Expand all' : 'Collapse all';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">愿望摩天轮</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">JuusanYomitsuru</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">August 15, 2023&nbsp;&nbsp;16:06:36</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E7%9F%AD%E7%AF%87/">短篇</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h4 id="阅读之前……">阅读之前……</h4>
+<ul>
+<li>现代paro，关于高中生知妙春游坐摩天轮的故事。</li>
+<li>卡维恐高是本篇内容设定，并非官方设定，在此声明。</li>
+<li>建议阅读者观看本篇时播放陈奕迅《幸福摩天轮》。文中歌词顺序有所修改，与原曲并不完全一致，请留意。</li>
+<li>文笔小白，还请海涵。</li>
+</ul>
+<h4 id="正文">正文</h4>
+<p>  “高二一班，高二一班，到这里排队。一个一个上啊，别争抢。……谁还堆在一起说话呢？安静一点！……高二二班，高二二班……”</p>
+<p>  	“好笑，还当我们是小学生呢？”齐里亚布回头对同伴笑。朋友则尖着嗓音，怪声怪气地模仿，“不要争抢，不要插队，一个一个来~”</p>
+<p>  	前后都噗呲一声，小声地发着气音。同桌推了一下维纳亚克，“喂，你不是喜欢她吗？快排到前面和她一起坐啊。”</p>
+<p>  	他们的视线落在前面长发飘飘、身材修长的女孩身上。生物竞赛的施芮娅，聪明又锐利，是男孩子小组作业的同伴。维纳亚克打掉同桌的手，算不上白皙的脸却清晰透出耳根的红，“你说什么啊！我和她才不是那种关系，你别胡说！”</p>
+<p>  	“没有关系那就发展关系啊！这种时候不就是大好机会？！你这木头脑袋！”</p>
+<p>  	春天。</p>
+<p>  	往时学校咬紧牙关，这个时间正是学生闷头读书，冲刺完中段考，查漏补缺着又要挨期末考的刀的时候。但也许是新上任的校长观念开明，亦或是终于体恤学生无休地熬着代数几何ABCD，苦闷的高二学生终于有在大考之后出去春游的机会。时间就定在中段考后一周，一个下午，去休闲山庄的小游乐场里坐新开的摩天轮。消息一经宣布，无论是平行班尖子班竞赛班海外班全疯了，像终于能出门放风的牧羊犬，又如开足了马力的摩托车，蓄势待发，雀跃地等着今天。巴士摇晃了小半个小时，休闲山庄的大门又老又旧，检票的工作人员昏昏欲睡，唯有屹立在中央的摩天轮，彩色的灯光如波浪般流转，熠熠生辉。</p>
+<p>  	象征着脱离现实的一切，高高地把年轻人们送上天空。无论是刻意为之的想象，还是全无意识的吸引，都牢牢锁住了十七八岁的心脏。卡维抬头看着缓慢抬升的车厢，它的外壳被喷上五彩斑斓的图案，载着神色紧张的男男女女，一点点脱离他的视线，徒留下一个沉默而坚硬的号码。面前排队的同学三三两两地踏上摇摇晃晃的厢体，他回头一看，前后都是不熟悉的同学——竞赛班惯于各自为政，把合则来不合则去淡如水的君子之交贯彻得淋漓尽致，虽然都与他保持友好，但说不上莫逆之交。而提纳里，这么重要的日子，却被生物老师逮住帮忙处理标本——更糟糕的是，他感觉有人正在看他。十七八岁的生活总是充满荷尔蒙的骚动，但他难以忍受和陌生人一起挂在天上二十分钟的尴尬。再下几个就到他了，紧张地视线一扫，他看到了高一三班的牌子。</p>
+<p>  	感谢高一三班尽职尽责的班长，头发剪得寸短，板举得笔直，无比醒目，叫他一眼便能看见。紧跟着他便找到那个灰色的头，穿着学校的白色校服，站在休息区大棚的阴影下，戴着耳机，似乎正在看书。连忙和后面的人打了声招呼，稍稍离队，跳下台阶，去抓艾尔海森的手。学弟手指还夹在书上，摘下一边耳机，问做什么。卡维道，</p>
+<p>  	“坐摩天轮。看你肯定是一个人，干脆来陪我。”</p>
+<p>  	一句一句地说着不好意思，他牵着学弟向前挤去。跑到围栏处，后面的同学替他留了位置，下一个恰好到他。守着队伍的姐姐看着他们，太阳有些大，小跑着有点热，卡维汗津津的，摇了摇票，抓着艾尔海森的手说“我们是一起的”。姐姐点了点头，工作人员利落地打开舱门，上一轮坐的两个女孩子下来，他们跳上去。舱门关闭，白手套一按，锁扣也啪嗒一声关紧。通过四周透明的玻璃，卡维看见后面排列着的无数张脸，眼睛都闪闪地注视着他们，抑或是说，注视着这座无限延宕着的摩天轮。直至厢体慢慢往前升高，渐渐只能看到下面的人的侧脸与鬓角，卡维才觉脱离他人的注目，松了一口气。</p>
+<p>  	一抬头，发现对面的灰色头发的学弟，正直直地看着他。蓝色渐转湖绿的眼睛在太阳底下显得清澈，锐利的五官被尚且圆钝的脸型抚平。他还处于变声期的末尾，声音不高不低，说出来的第一个字还带着童气。但语气一向老练，没大没小习惯了，张口第一句话便是，</p>
+<p>  	“又逃跑了？”</p>
+<p>  	“这是什么话？明明是看你太寂寞，好心来带你一起。要是没有我，你就要孤零零坐一个车厢了吧？”</p>
+<p>  	“需要别人陪着一起坐机动娱乐设施的不是我。”学弟说话还是那么不留情面，“我不会离不开人群又受困于社交，也不会觉得寂寞。”</p>
+<p>  	“好了，你说的都对。艾尔海森先生最聪明了，行了吧？”卡维环着肩膀，神情有些无奈，“明明自己还是个要人照顾的小屁孩，却总是摆出一套什么都明白的姿态。”</p>
+<p>  	“我与你的差异远比你想象的要小。现有教育体制的高低年级评定只反映入学年龄，与认知水平并无绝对关系。我以为你已经认识到这一点。”</p>
+<p>  	“是吗？但这话要等你变成前辈的时候才有资格说。”卡维漂亮的红色眼睛透着狡黠的光，“评定虽无关认知与知识，但却与经验相关。况且它在社会关系中也有发挥着重要的作用，不然为什么你这小孩急着要跳出后辈的身份，要和学长同起同坐？”</p>
+<p>  	学弟的眉毛微微下垂。每当他思考的时候，沉默从脸颊攀上，心绪覆盖眼神与语言，便会让他露出这样的神情。“那与社会规范无关。……不过算了，我没有在说这种事。”</p>
+<p>  	摩天轮的座舱缓缓上升，离地面越来越远。渐渐看不见露台，排队的长龙变成黑色延伸的豆点，旋转木马的伞盖花纹模糊难辨，长椅上向同伴递过的香肠纸袋抽象成一个像素点，前面的座舱还在上升，卡维终于有了攀高的实感。随之而来的是无言的恐慌，密闭空间的压抑与窒息感令玻璃如向他迫近的牢笼，而脚边透出的一丝凉风，又给予他赤裸悬空的错觉。“……这摩天轮真的安全吗。”一个莫名的念头袭击了他，“如果掉下去了怎么办？”</p>
+<p>  	车厢升到一定高度，吊悬的钢缆索仅支撑头部，叫风一吹便左右轻轻晃动。他吓了一跳，抓紧了座位的扶手。艾尔海森抬了抬眼。</p>
+<p>  	 ♪“追追赶赶，高高低低。” ♪</p>
+<p>  	 ♪“深呼吸然后与你执手相随” ♪</p>
+<p>  	“你耳机漏音了？”</p>
+<p>  	“怎么可能。”学弟指了指座舱上方，“是广播。”</p>
+<p>  	叮叮咚咚的前奏之后，柔和的男声渐渐盈满车厢。他又说，“原来你恐高。”卡维一噎，不想在低年级面前承认自己的紧张，梗着脖子说怎么可能。艾尔海森倚着座椅，环着手臂，说你该看看你现在的表情，像一只受惊的公鸡，一动也不敢动。说着便翘起腿，稍稍一动，车厢又摇晃起来。卡维大惊失色，说你别乱动！学弟一摊手，把脚回正，车厢又向后荡。学长面色发白，心想这家游乐场营业资质真的合规吗，检修到位不到位？艾尔海森却好像把他的心思看得清澈明白，道，“不必紧张，只要你已经买够足额的保险。”又发出一个鼻音，</p>
+<p>  “不过，现在说也有些太迟了。”</p>
+<p>  	 ♪“动歪西倒，忽高忽低”♪</p>
+<p>  	 ♪“惊险的程度叫畏高者昏迷”♪</p>
+<p>  	 ♪“沿途就算意外脱轨”♪</p>
+<p>  	 ♪“多得你 陪我摇曳”♪</p>
+<p>  	“这到底是什么歌？”卡维道，“怎么还带诅咒？”</p>
+<p>  	“我倒觉得词写得不错。”艾尔海森回，“有人看起来真的要昏迷了。”</p>
+<p>  	无关座舱人的意志，摩天轮依然执拗地运转。旋转木马渐渐变成装饰雪糕的小伞，奔跑的学生变成寻食的蚂蚁，视线错过青山，远处一排排平房如压低的积木方块，逐次映入眼帘。艾尔海森的脸边便是巨大的白色钢架，缓慢移动如凝滞不前。卡维从包里掏出零食，在学弟面前伸了伸。</p>
+<p>  	“不要。”</p>
+<p>  	“怎么了？我都带了两份。”</p>
+<p>  	“打开的时候果汁会溅到手。”</p>
+<p>  	“你这人……怎么能嫌麻烦嫌成这样？不要就算了。”</p>
+<p>  	啪嗒一声，果冻的瓶盖被拧开。橙子味的果汁，包装也是明亮的橘黄，与他柔和的金色头发相得益彰。卡维紧张地吸着果冻，甜味沿着食道下滑，多巴胺应命分泌，试图抚慰他紧张的精神。艾尔海森扫了他一眼，说别吃太多，怕你会吐。卡维侧脸看着山庄外一块波光粼粼的湖泊，太阳在他的鼻子上打出蝴蝶般侧影。“才不会。”</p>
+<p>  	 ♪“天荒地老流连在摩天轮”♪</p>
+<p>  	 ♪“在高处凝望世界流动”♪</p>
+<p>  	 ♪“失落之处仍然会笑着哭”♪</p>
+<p>  	 ♪“人间的跌荡 默默迎送”♪</p>
+<p>  	“那个是不是我们学校？”卡维仿佛发现了新大陆，点了点玻璃，“那一栋，好像就是高三楼？你看那上面的标语。”</p>
+<p>  	艾尔海森的视线也跟着他的手，“嗯。对面就是高一高二。”</p>
+<p>  	“你说如果你今天没来，我在这里能不能看到你逃课在走廊看书？”</p>
+<p>  	“不能。”学弟斩钉截铁，“会很吵。”</p>
+<p>  	他说的是大课间，整栋楼的高一学生都会涌出课室，窜门的、买小吃的、洗手的、说闲话的，众生百相，于他而言是一样的杂声。卡维咂舌，“所以说你更融入集体就好了。”</p>
+<p>  	艾尔海森不予置评。摩天轮再往上去，渐渐连巨物般的学校也看不见了，视线越过曾经不可跨越的牢笼，向城市的另一角延伸。视线里出现一格一格竖起的小楼，卡维道，“那是不是你家？……那一栋，绿色的那一栋。”</p>
+<p>  	学弟的眼神也落在自家的楼栋，眼神微微闪光。卡维道，“这个时候，祖母已经在准备晚饭了吧？不知道今天晚上会做什么。”</p>
+<p>  	“炒肉吧。”</p>
+<p>  	“为什么不说是玉米羹？”</p>
+<p>  	“除了你来吃饭的时候，我们家从不出现这么粘稠的食物。”</p>
+<p>  	“但我看祖母爱做那个。她还和我说，‘可惜我们家艾尔海森不喜欢喝汤’……”</p>
+<p>  	“想象力不错。”</p>
+<p>  	“她真说过！”</p>
+<p>  	“她没有。”</p>
+<p>  	“你不信？……回去问问。我看就是因为这个，祖母才爱招待我。”</p>
+<p>  	“如果你的胆子像你的脸皮一样厚，不担心你要靠嘬果冻解压。”</p>
+<p>  	“你这家伙……！”</p>
+<p>  	 ♪“当生命似流连在摩天轮”♪</p>
+<p>  	 ♪“幸福处似乎能吻到星空”♪</p>
+<p>  	 ♪“惊栗之处仍能与你互拥”♪</p>
+<p>  	 ♪“仿佛游戏之中 忘掉轻重”♪</p>
+<p>  	艾尔海森很清楚，卡维不过试图用不断的语言来缓解内心的不安。摩天轮缓慢升到最高点，数十米的高空，前后只剩下他们两人，在离天顶最近的地方摇荡。碧蓝的天空晕着暖光，澄白的云透出打卷的棉絮，如盖如幕的澄澈天穹，怀抱般笼罩着他们。卡维道，“如果是夜晚来，大概会更好看。”</p>
+<p>  	“很难理解要牺牲夜间时间来参加集体活动的想法。”</p>
+<p>  	“不是说这个，我是说别的情况……！”但又撇撇嘴，“算了，估计我也不会在摩天轮上谈恋爱……怪吓人的。”揉了揉白色校服底下的身体，“胃都感觉有点抽痛。”</p>
+<p>  	艾尔海森又下意识地要翘腿，车厢一晃，一把眼刀飞过来，卡维眉毛都挑到鬓角，“你故意的吧？”</p>
+<p>  	“正常的躯体动作。”学弟放下腿，“倒是你，大惊小怪。”</p>
+<p>  	“体贴一点啊。”学长很自然地挑起眼睛，却发现学弟苍翠的眼睛一直注视着他，仿佛窗外的光景与平日所见的随俗浮沉并无二致。“为什么一直看着我？”学弟于是眼神一闪，侧脸看向窗外，“没什么。看别人紧张得想吐的样子，很有趣。”</p>
+<p>  	“你……！”</p>
+<p>  	摩天轮下降到半途，楼顶在他们眼前缓缓上升。失重的实感随着视线中出现地面而大大缓解，卡维松了一口气，又后知后觉地有点不舍。摩天轮的魅力除了在最顶处的俯瞰，便在这个触摸到终止符而又等待最后一段的瞬间，他看向艾尔海森，说坐摩天轮其实还挺有意思，平时看不到的东西都能看到，又好像离其他人其他事很远很远。可惜终于会有回到地面的时候。学弟留着一边耳机，不予置评。</p>
+<p>  	歌曲循环到多少次，他们渐渐落到了底。工作人员上前来为他们打开舱门，学长弯腰走出车厢的时候，座舱跟着晃动，他身子一歪，学弟很自然地抓住他的手臂。卡维说谢谢，艾尔海森的手却没有松。他说免得你过分紧张，卡维便皱着脸，说别胡说，我才没事。</p>
+<p>  	下一对十七八岁跳上座舱，厢门关闭，摩天轮又送他们直上天空，仿佛在凝望下会天荒地老地流动。艾尔海森一只手搭上卡维的肩膀，不知不觉间他已经长得很高，学长的发丝唯能蹭到他的脸侧，手臂的肌肉也隐隐有了线条，身形板直，有了成年人的一点样子。在卡维没有留意到的地方，他已经变成了一只张开翅膀的鹰隼。回头看七彩灯光恒常流转，他很清楚地知道，若有下次，一切都会不同。</p>
+<p>  	 ♪“深呼吸然后与你执手相随”♪</p>
+<p>  	 ♪“可这样荡来荡去，无畏无惧”♪</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>JuusanYomitsuru</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="https://juusanyomitsuru.github.io/2023/08/15/31983671e523/">https://juusanyomitsuru.github.io/2023/08/15/31983671e523/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2023/08/17/aff7e8e1768a/">天街如水（其八）</a>
+            
+            
+            <a class="next" rel="next" href="/2023/07/13/e4a6365312f7/">流言与墩墩桃</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<span class="site-uv">
+    总访客量:
+    <i class="busuanzi-value" id="busuanzi_value_site_uv"></i>
+</span>&nbsp;
+
+
+<span class="site-pv">
+    总访问量:
+    <i class="busuanzi-value" id="busuanzi_value_site_pv"></i>
+</span>
+
+
+
+    <div class="copyright">
+        <span>© JuusanYomitsuru | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>

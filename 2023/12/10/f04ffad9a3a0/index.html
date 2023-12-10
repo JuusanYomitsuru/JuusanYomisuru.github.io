@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="JuusanYomitsuru">
+
+
+
+
+
+<title>天街如水（其二十五） | Hexo</title>
+
+
+
+    <link rel="icon" href="/yumaobi.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">JuusanYomitsuru&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">JuusanYomitsuru&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6; // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function() {
+            tocbot.refresh(obj_merge(tocbot_default_config, {
+                hasInnerContainers: true
+            }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function() {
+        tocbot.init(obj_merge(tocbot_default_config, {
+            collapseDepth: 1
+        }));
+    });
+
+    function expand_toc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, {
+            collapseDepth: expanded ? 1 : DEPTH_MAX
+        }));
+        b.innerText = expanded ? 'Expand all' : 'Collapse all';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">天街如水（其二十五）</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">JuusanYomitsuru</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">December 10, 2023&nbsp;&nbsp;15:32:02</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E5%A4%A9%E8%A1%97%E5%A6%82%E6%B0%B4/">天街如水</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h4 id="阅读之前……">阅读之前……</h4>
+<ul>
+<li>系列前文请点击右上角<a href="https://juusanyomitsuru.github.io/category/">Categories</a> 。</li>
+<li>例行超长预警：
+<ul>
+<li>非常感谢您点进这篇文章。</li>
+<li>这篇文章主角为军贼头子（军师）海X大学老师卡，内含R18内容。大概是被海哥竞争对手盯上的卡与海哥假扮情人，最后渐生爱意的故事。</li>
+<li>其中有卡女装要素，是旗袍和舞女装，请注意。</li>
+<li>因为民国pa的背景限制，除了海维赛提等出现的须弥角色外，其他统统为璃月名。如感觉不适也可退出。</li>
+<li>文笔小白，逻辑天真，希望看客愉快。</li>
+</ul>
+</li>
+</ul>
+<h4 id="正文">正文</h4>
+<p>  艾尔海森看到了他。偌大一个会场中两人目光能轻易交接，似乎是心意相通的证明，但卡维的心情却无法用喜悦去概括。银色的面具没有削减军官的丰神，反而平添了一种神秘的气质，但同样地，金属掩盖眉间偶尔的柔和，徒留下眼睛无情的锋锐。他并没有向卡维走来。</p>
+<p>  他的眼神表达的含义相当清楚。相处许久，卡维已经能直觉地翻译出他的语言。他在说：</p>
+<p>  “你不该在这里。”</p>
+<p>  他身边是百乐门时见过的法国人与建材商，三个人聚在一起谈话，艾尔海森素来喜怒不形于色，但剩余两人的姿态却不显反感。卡维一瞬间想起百乐门时艾尔海森谈论建材商的态度，说“好处有很多”时的语气，总是驶向租界的车辆，还有下午听到的报童的吆喝，一个可怕的想法忽然生出。</p>
+<p>  有没有一种可能，正是艾尔海森帮建材商解围，借以获得建材商的信任，获得与租界接触的机会？</p>
+<p>  所谓限制对方，挑衅对方，其实都是强迫对方与他合作的途径，是那天百乐门里走向对面包厢的序曲？</p>
+<p>  那么他卡维，其实并不是匡扶正义的帮手，而是野心家扩张势力的跳板，是他钓上大鱼的耳钩？</p>
+<p>  他听见自己血液流动的声音。</p>
+<p>  ……这就是艾尔海森从不肯把计划完全告诉给他听的原因？</p>
+<p>  如同将冰块扔进沸腾的热水里，啪嗒一声，透亮而坚硬的冰便会从中间产生一道裂痕。这里人人都戴着假面，辨不出身份的华贵的甲乙丙丁，和越发紧张密集焦灼上扬的舞曲，都嗡嗡地混成一团杂色，叫他隐隐有些晕眩。</p>
+<p>  此处不可久留。</p>
+<p>  他转头就走。</p>
+<p>  没忘记今天来的目的，他找到了贝里夫人的侍女。对方捂着嘴，说夫人帮着凯瑟琳小姐准备舞会，忙得忘了和你见面的事，真是不好意思。他懒得去追究那个不认识的名字，更无力谴责这个随性得荒谬的理由，对方连忙说一定和夫人通报，他嗯了一声，拿回藤箱。侍女说卡维先生，外面下雪呢！我替你叫辆车。卡维头也不回，说不必了。下雪也没什么妨碍。</p>
+<p>  墙纸在昏暗中显出一点暗淡的金色，温暖的棕调环绕在眼前，像擅于麻痹精神的歌舞升平。但豁开的门如裂开的伤痕，外头的洁白纯净凝成一块血块，雪叫西风吹斜，沉默地在眼前的方圆中沉落。门是界限，阻隔，亦是庇护，恒久构筑一个难被觉察的谎言，在里面享受温暖的人，从不能想到外面的落雪。他提着他最为珍视的草稿，在门前顿了一顿；冰花晶莹剔透，单纯却脆弱，然而纷纷不息。于是一低头，戴上帽子，拢起围巾：卡维先生毅然决然地走进了雪中。</p>
+<br>
+<br>
+<p>  回到公馆时他肩头发顶都已经落了一层薄霜。但拜这天地的寒凉所赐，他稍微冷静了些，四肢虽然有些麻木，但意识却前所未有地清醒。仆人看他回得比预期的要早，七手八脚地来帮他拿箱子拿围巾，他说不必了，我去洗个热水澡就好，便沉默地回了房间。把草稿精心放置，衣物拍去雪灰，在床上坐了一会儿，又看着天花板发了一会儿呆。收拾衣服洗漱，他忽然想着到以前在澡堂里洗澡的时候，虽然位置局促又吵闹，但是人与人之间却有着舒缓的坦诚。偌大的房子，无数道遮掩的房门，精致而利落的划分，却像一种隐喻。</p>
+<p>  他头发也被雪沾得湿软，便顺便就着热水快速清洁了一下，拿着毛巾揉着头发出门，接着听到电话的响声。艾尔海森家有用独立电话的奢侈，电话进来想必也不是找他，他本不想再费心关注，却听到正收听电话的吴妈说，是多莉小姐是吗，回头我会把您的来电转告将军；他便三步并作两步，跑到电话机前，拿过话筒。</p>
+<p>  “是多莉吗？”</p>
+<p>  对面愣了愣。空气凝滞了一瞬间，对方反应过来，话筒里的声音又高扬起来：“哎呀呀，这不是卡维先生吗？一下子忘记你还在艾尔海森家里了。怎么样，最近过得好吗？”</p>
+<p>  “别打马虎眼。”卡维捏着话筒，克制的声音里头却是涌动的焦躁，“你打电话给艾尔海森做什么？你们在密谋什么？”</p>
+<p>  外头风雪，兴许线路也受了影响，电磁声滋啦啦地钻进耳膜，掩盖对方平静的呼吸声。卡维几乎可以想象出多莉压下玳瑁眼镜，从下往上觑他的神态。果然，对方的声音慢慢：“卡维先生在说什么？多莉听不明白。只不过是雪下得大，多莉听说艾尔海森少将外出，打过来关心一下朋友罢了。难道卡维先生不会问候朋友的健康吗？”</p>
+<p>  “大晚上花几圆的电话费来‘问候朋友’，可不是多莉小姐的作风。”卡维却毫不退让。宝城的电话费按分钟算，一个钟头的电话便是普通人一个月的收入，多莉虽然家财巨万，但仍然看重钱银，她绝不会做无缘无故的人情往来。愿意花费成本与艾尔海森联系，说明他们一定有利益上的交换。</p>
+<p>  再加上多莉参与了他和艾尔海森的相遇，她既“手眼通天”，一定知道更多内情。</p>
+<p>  他平日是不去想，但不是不聪明。恰恰相反，卡维对关系和人心的觉察异常敏锐，能轻易发现人们感知与表达上的错节与龃龉。他把毛巾放在一边，道：</p>
+<p>  “这样说来，我也算是多莉小姐的朋友。现如今也是艾尔海森的‘室友’，要问候艾尔海森的话，不如让我代为转达。如何？”他眼睛一挑，漂亮的红色眼睛里闪着光，“艾尔海森时常不在家，只有我能见到他；脾气又不好，有时候说话也不好听。多莉小姐，电话费可不便宜，打电话过来又落空，只徒然给通讯公司送冤枉钱，还闹得自己不开心。”</p>
+<p>  这个大学讲师，今晚似乎尤其锋利，多莉从未觉得他有这么难缠。她听说舞会已经散场，图卢兹家的婚约已经在口头上敲定，便想抢先一步道个恭喜，顺便探一下艾尔海森的口风，谈谈他们一开始说过的“报酬”。她是商人，虽然知道军官不好对付，但只要利益足够诱人，自然不计前嫌。没想到艾尔海森没在她预估的时间里回家，电话没打到他手里，反倒是被卡维截了胡。她有点摸不准卡维和艾尔海森现在的关系，亦不想和卡维翻脸，面对咄咄逼人的大学老师，她揉了揉眉心，道：</p>
+<p>  “卡维先生想得太多了。你当然是多莉的朋友，所以多莉才不会劳烦你。有什么事可以找多莉帮忙，但多莉今晚的确只是打电话来问候一句——”</p>
+<p>  有人轻轻敲门。多莉还握着话筒，使了个眼色，便有人替她出去处理。却拿回来一张纸条，多莉一只手接过，皱着眉头打开，眼睛一扫，表情便微微变化。话筒那一头卡维的声音低而急促：</p>
+<p>  “不就是谈价钱吗？五十圆，够不够买我的知情权？”</p>
+<p>  “八十。”多莉话锋一转，从善如流，“再低免谈。”</p>
+<br>
+<br>
+<p>  艾尔海森回到家的时候，时针已经指向十点。他脱下蒙雪的大衣和沾着雪泥的皮鞋，信步走进房间。一推门，便看见穿着睡衣，踩着家居拖鞋的卡维倚在他的柜边，居高临下地望着他。圆领的上衣露出大学老师一截清瘦的锁骨，他环着肩膀，道：</p>
+<p>  “出现在那种场合，你没有什么要解释的吗？”</p>
+<p>  “大惊小怪。”军官却冷冷，径直走到衣柜边，扔下大衣和帽子，摸着手腕上的表带，“没什么事的话可以出去了。我要换衣服。”</p>
+<p>  卡维怒极，语调反而变得平静。他从柜子上下来，走到艾尔海森旁边，捏住对方的领带。上面还有一层淡淡的香水味，是主人今晚宴饮的残痕。俊秀的面容慢慢转过，那双苍绿的眼睛沉默地看着他。</p>
+<p>  “刚刚‘不小心’听到了一个电话，知道了一些很有意思的消息。有人说艾尔海森少将今晚收获颇丰，代理人基本锁定工议局席位，而租界之外力士石灰厂谈成的那单生意，艾尔海森少将也能拿到三厘分息。……那些人我们是不是都在百乐门见过，嗯？原来运筹帷幄，你才是最大的赢家。”他凑近前，气息喷在军官的颈上，一字一句，“早晚相对，连我也被你蒙骗。是不是所有事都在你的股掌之间？”</p>
+<p>  那双眼睛直勾勾地，红得很深。和平日里温和儒雅的建筑设计师不同，现在的卡维像一团被压缩的火焰，浑身上下散发着一种被刻意压制的动荡的剧烈。艾尔海森捏住对方的手腕，把对方的手从领带上拿开，面色如常：“看起来你今晚和客户见面不太顺利。新改的部分被否决了？还是说又提出了新的要求？”</p>
+<p>  “艾、尔、海、森。”卡维一字一顿，“别转移话题。我问你，这些消息是真还是假？”</p>
+<p>  “在演剧？”艾尔海森皱了皱眉，“这种姿态大可不必。恕我直言：我似乎没有向你报告的义务。我们之间已经有了分明的约定，麻烦不要跨越界限，做多余的事。”</p>
+<p>  “你！……”卡维瞪大眼睛，咬着牙，把冲动的话压在舌尖。他深呼吸，努力让意识恢复平静，再张口语调冷冷：</p>
+<p>  “可惜有人根本没有遵守我们的约定。你说我们目标一致，结果你转头就和对方合作，还借对方的手搭上租界。你敢说你的目的纯洁？倘若不是我今天偶然见到你们在聊天，我还蒙在鼓里。”卡维恨声道，“亏我听说建材商东山再起，还担心你会灰心丧气，原来天真的是我。早有人精心策划，步步为营，赚得盆满钵满，只有我被卖了还傻兮兮替人数钱。”</p>
+<p>  “随便你怎么说。”艾尔海森脱下马甲，洁白的衬衫已经穿得有些褶皱，疏疏地勾勒出他饱满的肌肉线条。他松了松领子，似乎并不把卡维的话放在心上。“我仍然按照约定行动，信不信由你。”</p>
+<p>  “事到如今还用这种话敷衍我？艾尔海森少爷都同他们是利益共同体了，还摆出一副杀伐果断的样子？”卡维冷笑一声，“说不清是你荒谬还是会听信你话的我荒谬。”</p>
+<p>  他又顿了顿，道：“和我解释清楚很难吗，艾尔海森？这里又没有其他人，不会有人通风报信，让你功亏一篑。给我一个准话，告诉我你到底是怎么计划的，是不是还打算一直利用和蒙蔽我，然后我们该分道扬镳的分道扬镳。很难吗？”</p>
+<p>  艾尔海森捕捉到字眼，微微蹙眉：“什么意思？”</p>
+<p>  “意思是。”生怕对方听不明白似的，卡维睁大眼睛，一字一顿，“道不同不相为谋。既然你已经成功得到你想要的，那我对你来说已经没有利用价值了吧？无非是给我一句话，让我有个明白。我东西已经收好了，军爷一声令下，我明天就可以搬出去。”</p>
+<p>  “我还是那句话。”艾尔海森内衬松垮，下沿露出一角紧致的腹，语气里却全然是被纠缠的不耐。“不应该关心的事情，不要多问。以及。”他擅长于语言，吐字与语调的拿捏都精准，像一把太锋利的小刀，刀刀往红心中去，“既然你已经有决断了，又何必再和我浪费时间？你要冲动行事，也是你的自由。”</p>
+<p>  卡维上上下下地看着他，好像在重新认识这个人。艾尔海森却旁若无人，对着衣柜，开始解倒数第二颗扣子。愤怒到了极点，心绪反而平静，卡维慢慢道：“这可是你说的。”</p>
+<p>  “我一向认为过分激烈的情绪是对精神的一种损耗，根本没有必要。”艾尔海森的声音仍然平稳，手上的动作不停，似乎连一个眼神也吝啬于给予，“但很遗憾，有人仍然没有改正这个陋习。”</p>
+<p>  “你！……”卡维眉毛压到了底，眼角愤怒地上扬，瞳孔紧缩，拳头慢慢捏紧。但他的素养和温柔个性不允许他歇斯底里，也不容许他伤害别人，即便怒不可遏，卡维老师也仍然克制又体面。他一字一句，缓声道：</p>
+<p>  “那末便让理性的家伙无情到死吧。”</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>JuusanYomitsuru</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="https://juusanyomitsuru.github.io/2023/12/10/f04ffad9a3a0/">https://juusanyomitsuru.github.io/2023/12/10/f04ffad9a3a0/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2023/12/10/eef9f71ce111/">天街如水（其二十六）</a>
+            
+            
+            <a class="next" rel="next" href="/2023/12/10/0e1a0d26fbb4/">天街如水（其二十四）</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<span class="site-uv">
+    总访客量:
+    <i class="busuanzi-value" id="busuanzi_value_site_uv"></i>
+</span>&nbsp;
+
+
+<span class="site-pv">
+    总访问量:
+    <i class="busuanzi-value" id="busuanzi_value_site_pv"></i>
+</span>
+
+
+
+    <div class="copyright">
+        <span>© JuusanYomitsuru | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>

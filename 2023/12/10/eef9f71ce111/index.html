@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="JuusanYomitsuru">
+
+
+
+
+
+<title>天街如水（其二十六） | Hexo</title>
+
+
+
+    <link rel="icon" href="/yumaobi.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">JuusanYomitsuru&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">JuusanYomitsuru&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6; // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function() {
+            tocbot.refresh(obj_merge(tocbot_default_config, {
+                hasInnerContainers: true
+            }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function() {
+        tocbot.init(obj_merge(tocbot_default_config, {
+            collapseDepth: 1
+        }));
+    });
+
+    function expand_toc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, {
+            collapseDepth: expanded ? 1 : DEPTH_MAX
+        }));
+        b.innerText = expanded ? 'Expand all' : 'Collapse all';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">天街如水（其二十六）</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">JuusanYomitsuru</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">December 10, 2023&nbsp;&nbsp;15:36:02</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E5%A4%A9%E8%A1%97%E5%A6%82%E6%B0%B4/">天街如水</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h4 id="阅读之前……">阅读之前……</h4>
+<ul>
+<li>系列前文请点击右上角<a href="https://juusanyomitsuru.github.io/category/">Categories</a> 。</li>
+<li>例行超长预警：
+<ul>
+<li>非常感谢您点进这篇文章。</li>
+<li>这篇文章主角为军贼头子（军师）海X大学老师卡，内含R18内容。大概是被海哥竞争对手盯上的卡与海哥假扮情人，最后渐生爱意的故事。</li>
+<li>其中有卡女装要素，是旗袍和舞女装，请注意。</li>
+<li>因为民国pa的背景限制，除了海维赛提等出现的须弥角色外，其他统统为璃月名。如感觉不适也可退出。</li>
+<li>文笔小白，逻辑天真，希望看客愉快。</li>
+</ul>
+</li>
+</ul>
+<h4 id="正文">正文</h4>
+<p>  叮铃铃铃铃。瘫在棉垫上的白色团子晃了晃，一只清俊的爪从被子里伸出来，拽出一颗圆圆的金色脑袋。卡维揉着自己乱七八糟的头发，打了一个哈欠。铃声还在顽固地响着，他嘟囔道谁啊，踢上拖鞋去摸话筒：“……喂？哪位？”</p>
+<p>  提纳里的声音在话筒里清晰，里头无奈的情绪也相当分明：“……现在已经几点了，你不会刚醒吧？”</p>
+<p>  卡维眯眼看了下窗户。窗帘关得密实，只在底部隐隐约约看得到一丝光亮，确实看不出外头的时辰，他又打了个哈欠，慢慢悠悠道：“怎么打电话。阔了？电话费可是算你的。”</p>
+<p>  “我用的是《宝城商报》的公用电话。”那一头提纳里手上拿着电话，面前摆着一张写得密密麻麻的纸，眼睛还扫着剪报，“别打岔。今天又有一套新的房源出租，一厅两居室带洗漱间，价格还挺合理。当天就能看，去不去？”</p>
+<p>  “昨天不是才看完两套？要么坐西朝东太阳照厕所，要么厨房油烟开窗吹卧室，我真怕了我的同行。”卡维又慢慢打了个哈欠，“行行好，今天放个假。我实在跑不动了。”</p>
+<p>  “那大冬天的你就住办公室？我同事和家里人吵架了卷铺盖睡在楼下，你要不和他搭个伴？”小提的语调仍然平稳，但熟悉他的人便能读出他的恨铁不成钢，“你也真不怕睡地上寒腿，老了有你好受的。”</p>
+<p>  “能活到那个时候再说吧。”卡维满不在乎地揉揉脸，“而且我下面盖了三层棉胎，上面又盖了一大张厚被子，屋里还烧了火。暖着呢，神仙日子。”</p>
+<p>  “……你还烧了火？通风了吧？”</p>
+<p>  “通了。别担心，我又不是想不开。”刚起床空间感还没回笼，他四处张望着，找自己的布袋，“五分钟了。电话的钱从赛诺的工资里扣不？”</p>
+<p>  提纳里回神：“不和你说废话。这套是赛诺推荐的，坐北朝南，带街景阳台，位置在公共租界，离我们学校也不算远。主要价钱确实很实惠，不早点搞定，就要被别人预定走了。别磨蹭时间。”</p>
+<p>  “赛诺推荐的？……难道是记者的工资不够，都做起中介来了？”</p>
+<p>  “半个钟头后，岭大校门口，我和赛诺来接你。”提纳里无视卡维的插科打诨，拿出了铁面讲师的气势，“快点洗漱。马上。”</p>
+<p>  说罢便挂断了电话。</p>
+<p>  卡维盯着话筒看了好一会儿，才理清楚这不容拒绝的事态。去就去吧，也是一片好心。他翻了翻包，找出牙粉和牙刷，披上一件厚绒的衣服，准备到办公室旁边的水龙头洗漱。</p>
+<p>  从艾尔海森家搬出已有数日。</p>
+<p>  卡维是一把硬骨头。他的人生也许有许多因为感情优柔寡断拖泥带水的时候，但当一件事有违他的原则，贬低了他对世界的理解，他便会翻出他锋利的一面，毅然决然地与对方隔绝。他既然说“明天就走”，那一定说到做到。</p>
+<p>  离开的时候整个公馆的人都很愕然。他们弄不清状况，不明白为什么前一天还好好的，过了一晚便分道扬镳，都劝说卡维多呆一天，至少和将军好好谈谈。只有事情的始作俑者艾尔海森面色淡然，站在楼梯上说让他去。主人既已发话，于是没人再敢挽留。卡维乐得不必费舌推脱，冤有头债有主，他对这些曾经照顾过他的人们仍然心怀感激，一个一个地道了谢；但毕竟是非已经分明，当断不断必受其乱，他便提着行李，头也不回地走了。</p>
+<p>  ……然而去哪儿呢？</p>
+<p>  以前住的地方已经租出去了。多莉说她还有空置的房子，就是需要小小地涨一下价。他一是觉得同样的价钱能住上更好的，二是和艾尔海森沾边的一切事他都不想碰，恨屋及乌连多莉也难免受连坐之罪，于是便婉拒了。一时间找不到好的房子，柯莱在又总不方便去提纳里家借宿，思来想去，他的东西也不多，干脆先在学校办公室对付着，等找到合适的房子了再转移。他对建筑的眼光毒辣，连带着找房子也变得挑剔，耗了几天，居然觉得办公室也挺好的。毕竟岭大也是才华横溢的先辈的扛鼎之作，处处都是心血：门外就是优美的校园风景，有湖有树，设施完善，身边还有巨大的办公桌，画工图也便利。一个声音说，卡维啊卡维，你堕落了。另一个声音又说，他在这里独享一片安静天地，混沌间蜗角之争像在另一个世界那样遥远，连带着心上空缺的那一块也不必再想。又何陋之有？</p>
+<p>  但他也知道这并非长久之计。学校会开学，同事要回职，他短暂的混乱必然会被滚滚向前的现实消解。他必须支撑起来，接着已发生的事便会被自然地抛在后面。</p>
+<p>  这就是命运残酷又仁慈的地方。</p>
+<p>  今天的牙粉有一股淡淡的茶味，用起来颇为清爽，他把泡沫吐干净，对着镜子龇了龇牙，觉得今天状态尚佳。从包袱里挑出一套暖和又别致的搭配，把还剩下的炭夹进熨斗，小心地把褶皱熨平。他换下睡衣，掖了掖衣服，找了面镜子左右看看，确定已经没有疏漏。抓过表来，离约定的时间还有十分钟，他拿上包，检查未有物件落下，便锁上门。</p>
+<p>  小跑到校门的时候，提纳里和赛诺刚好走到街角。提纳里戴着绒帽，裹着严严实实的羊呢大衣，手伸进袖口，一边走一边哈气；赛诺则穿得单薄很多，一件马甲，一件针织衫，也没有戴帽子，飘逸的银色头发随便挽了挽搭在肩上。他呼吸均匀，像在回暖春日而不是寒冬腊月，如刀冷风不过是小菜一碟。他们也看见了卡维。两边会师，赛诺提提手，示意手上的油纸。卡维接过，掂了掂，触感颇为结实柔软，闻一闻香气扑鼻。提纳里在一边说：“猜你这个时候肯定还没吃早饭，就在路上带了一点。一个肉包，一个菜包，等会儿等房东的时候就可以吃。免得低血糖。”</p>
+<p>  说起来卡维确实有些饿了。提纳里不愧是提纳里，办事周到贴心，料事如神。三个人并肩向前走，卡维道了谢，又问：</p>
+<p>  “房子具体什么情况？到底得有多好，才值得你这么大费周章地把我拔出来？”</p>
+<p>  提纳里扫了他一眼：“还不是因为你对房子要求高，符合条件的房源又实在难找，好不容易才有一个，还不得快马加鞭地去相看。大概的情况刚刚在电话里已经和你说过了，朝向好，有阳台、书房、厨房、厕所，所处的地段也不错，四周围没有吵闹的商场舞厅，走几步路就能坐有轨电车。而且房租只要这么多。”</p>
+<p>  他说了个数字。卡维差点跳起来：“这么便宜？真的假的？”他的眼睛不可置信地睁得滚圆，“像你说的那样好，居然还只要这个价钱？真不是诈骗？”</p>
+<p>  “总之是投到《宝城商报》上招租的房子。赛诺他们也有同样的顾虑，收到来稿后也去实地侦察过，确定是真实的房源，才同意收稿的。”他用手肘轻轻顶了顶身边人，“赛诺本人可以证明。对不对？”</p>
+<p>  银色的青年“嗯”了一声。他的话一向不多，但一字千金，不会有一丝偏移。卡维的眉毛舒缓下来：“好吧，如果是赛诺确认过，那我还勉强可以相信……但到底为什么房东愿意用这么低的价格出租？房子难道有不为人知的暗病？”</p>
+<p>  “那我就不清楚了。”小提摇了摇头，“所以才要让专业人士亲自去看。更多的疑问留着去问房东吧，我也颇好奇的呢。”</p>
+<p>  提纳里说得没错，房子离学校的确不远，三个人步行不过一刻钟，便能望见那栋洋楼。路边栽植着长青的林荫树，路面平整宽阔，工作时间周边相当安静，淡黄色的墙面含蓄内秀，一看便叫人喜欢。小提抬手，给卡维指了一间，说这就是我们今天的目标。三个人找了会儿楼梯，踩着青色花砖向上爬，上到三楼，右手边一拐就到。卡维按了按门铃，一个瘦小的男人开了门，问他们有什么事。</p>
+<p>  “你好。”卡维作为这三位中最为外向的一个，又是本次活动的当事人，当仁不让，“请问您这里是有房子出租吗？……”</p>
+<p>  “哦，哦。”对方恍然大悟，给他们开了门，“看房子的是吗？请进。”</p>
+<p>  一进门便是临街的阳台，大约与客厅一般长，三人可并肩通过，地上摆了些花盆，泥土湿润，稍稍凸起，一看便知道里面埋了花草的种子，只蛰伏着等待来年开春。跨进门槛，客厅宽敞，采光也颇佳，阳光从窗外照进，直直照到中央摆放的茶几上。装潢简约，装饰品很少，只有必要的椅柜桌几，但家具质量不错，保养也合宜，胜在干净。卡维目测了一下挑高，又大致估算了客厅厨房卧室的长宽，确认行动空间充足。他特地每扇窗都打开看看，确定油烟的走向，厕所的通风，又看看卧室附近有没有噪音源，还敲了敲墙体，在一间房间里喊提纳里的名字，问提纳里能不能听见。提纳里摇摇头，赛诺也摇摇头。很好，隔音也相当不错，卡维颇为满意。看了半个时辰有多，卡维终于下了结论：这间房子无论在位置、面积、布局，还是在装修上，都达到了他心目中的合格水平。</p>
+<p>  最后三个人趁房东去斟茶，偷偷凑在一起小声商议。提纳里说如何？还满意？其实卡维一进门看到阳台外的景色，看到对面淡黄色的楼与一排远去的疏叶的法国梧桐，窸窣的车声和人声淡淡如烟，便对这个地方心生喜欢；怀着一种必要的审慎视察后，发现其他地方也没什么可挑剔的。小的缺陷比如取物的转角、床灯的位置，都是琐碎的小麻烦，与整体的安宁相比可以忽略不计。赛诺这时候说，最近来宝城的人越来越多，倘若不早些下手，很容易被别人订走。如果想要，就即时拿下吧。</p>
+<p>  于是卡维便问房东：这么好的房子，为什么租得这么便宜？顿了顿，像是怕被发现心思，又补充一句：</p>
+<p>  “这没法体现这间房子的价值吧？”</p>
+<p>  “哎呀。”男人姓张，姑且称之为张生。他一拍大腿，叹道，“说到这个，就说来话长了。”</p>
+<p>  三个人面面相觑，都竖起耳朵听。张生道：</p>
+<p>  “其实我本不是这间房子的房东，只是帮忙处理租房事务的人。房东是在留洋读书的一位少爷，在宝城购置的房子久无人住，便想着出租出去，赚租金是小，主要是想旺旺房子的人气。你们也知道，房子常年没人，蛇虫鼠蚁之类的脏东西就容易进来，哪一天被不三不四的人占了鹊巢，也不好说。所以便想着便宜点也好，找个可信的人住进来，一半是住，一半也是帮忙看看房子。但是啊。”他长长地唉了一声，“这少爷挑剔得很。他自己留洋读书，读什么劈、劈什么弟……”</p>
+<p>  “PhD。”卡维接道，“在读博士吧？”</p>
+<p>  “对、对，好像就是这个。……他自己有文化，便要求租客也要有。要是做老师的，最好是做教授的，还要家底清白，不拖家带口，说是租可以，不能把他整个家也占了。”张生越说越激动，一拍掌，“所以这租客难找呀！亲朋好友没有符合条件的，贴了告示，一看要求，也没有人敢来。所以不得已才去投了《宝城商报》……”</p>
+<p>  “对对对。”卡维连忙说，“我们就是看了报纸来的。”</p>
+<p>  “哦！那报纸的作用还真不错！”张生比了个大拇指，“是这个！……我也心急呀，恨不得早点把这桩事情办妥了，我自己也好脱身呢。”</p>
+<p>  “哎。”卡维道，“别急。我看啊，如果合适，这事情今天就能结了。”</p>
+<p>  “哦？”代理人眉毛一挑，“怎么说？”</p>
+<p>  “来，我给你看。”卡维翻了翻包，掏出自己的证明，“我是岭大的建筑系讲师，今年才从国外回来的。最近退了住的地方，正在找新房子。按照你们在报纸上标注的价格，我预支两个月的房租也没问题。”</p>
+<p>  张生接过证明，眯着眼睛翻。看到岭大的印章，还特地凑近了些，确定不是伪造。</p>
+<p>  “倘若你不信，也可以去岭大问问。我叫卡维，这学期教一年级的建筑设计概论。”</p>
+<p>  张生看了看证明上的照片，又比对着看看卡维，确认是本人的证明无疑，便把资料还给他。提纳里在一边坐着，道：</p>
+<p>  “我是岭大的生物学讲师提纳里，今年教细胞生物学和基因学，我可以替他做证明。”</p>
+<p>  两人对视一眼，卡维偷偷拍了拍他的肩。张生点点头，道：“几位先生的气质一看就是读书人，这我没什么可怀疑的。”</p>
+<p>  “不过还有一个疑问。”提纳里举了举手，“似乎还没说房东什么时候回来。他回来后，租客就要搬走么？”</p>
+<p>  “他？他呀……”张生拉长了语句，“他。在外头读书，没个两三年回不来。到时候再租还是合住，也会提前来问租客意见。”</p>
+<p>  “没事。”卡维轻轻拍了拍提纳里的手，小声说，“按照他这儿的租金，我住几个月，也差不多能存够搬出去的钱了。”</p>
+<p>  毕竟他除了教职，还有建筑设计的收入。虽然花钱花得快，但真要认真存起来，还是有不少余裕的。说不定还没等房东回来，他已经搬进属于自己的小屋了——张生的视线轮流在他们三个身上转，观察着每一个人的表情。看提纳里也点点头，他便道：</p>
+<p>  “那现在想法如何？有决定了么？如果卡维老师有意向，我现在便可以去拿合同。”</p>
+<p>  卡维说好。又问：“那什么时候可以搬过来住？”</p>
+<p>  “这房子一直空着的呀，只是我今天恰好来打扫罢了。如果着急，今天就能过来住。”</p>
+<p>  “那是最好不过了。”</p>
+<p>  卡维接过合同，仔细看了条款，没有发现什么不合理的地方。给提纳里和赛诺都看了一遍，两个人也没有其他意见。于是签字画押，他把自己的那份塞进包里，和张生道了谢，三人便离开了洋房。走到街上，卡维长舒了一口气：“终于不用睡办公室了。”</p>
+<p>  提纳里斜斜瞥了他一眼：“不是说住办公室是神仙日子？怎么现在又好像逃出生天。”</p>
+<p>  “那不一样。”卡维拍拍手，“要是没有选择，住办公室也不失为一种上策；但现在有得选，谁不喜欢一套舒服又合眼缘的房子？有一个词叫：相形见绌。即是办公室之于新家也。”心花怒放，迎着少人的大街，他振臂一呼：“迎接新生活！”</p>
+<p>  真是振聋发聩。提纳里微微笑着，闲暇间却留意到今天赛诺的话格外少，似乎状态不对。卡维正兴致高昂，他碰了碰对方肩膀，悄悄问怎么不说话，还在担心工作的事情吗。赛诺摇摇头，说不必担心。并不是我的事，我不会有危险。</p>
+<p>  两人默默。提纳里捏了捏身边人的手腕，换来安慰的轻拍。赛诺静静咀嚼着秘密，回头看了一眼，出租屋的“代理人”正站在阳台上，也遥遥地望着他。两个人互相向对方点了点头。</p>
+<p>  面前便是拐角，提纳里正和卡维讨论等会儿应该吃什么。身处光明的人轻快地跑向甜蜜的生活，而黑暗的眼睛却时时注视着每一个阴晦的角落。这世界天然便有光与影、白与黑之分。混乱，纠缠，但又总会在某一个时刻泾渭分明。</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>JuusanYomitsuru</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="https://juusanyomitsuru.github.io/2023/12/10/eef9f71ce111/">https://juusanyomitsuru.github.io/2023/12/10/eef9f71ce111/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2023/12/10/db0925d419fd/">天街如水（其二十七）</a>
+            
+            
+            <a class="next" rel="next" href="/2023/12/10/f04ffad9a3a0/">天街如水（其二十五）</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<span class="site-uv">
+    总访客量:
+    <i class="busuanzi-value" id="busuanzi_value_site_uv"></i>
+</span>&nbsp;
+
+
+<span class="site-pv">
+    总访问量:
+    <i class="busuanzi-value" id="busuanzi_value_site_pv"></i>
+</span>
+
+
+
+    <div class="copyright">
+        <span>© JuusanYomitsuru | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="JuusanYomitsuru">
+
+
+
+
+
+<title>想见你（其四） | Hexo</title>
+
+
+
+    <link rel="icon" href="/yumaobi.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">JuusanYomitsuru&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">JuusanYomitsuru&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6; // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function() {
+            tocbot.refresh(obj_merge(tocbot_default_config, {
+                hasInnerContainers: true
+            }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function() {
+        tocbot.init(obj_merge(tocbot_default_config, {
+            collapseDepth: 1
+        }));
+    });
+
+    function expand_toc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, {
+            collapseDepth: expanded ? 1 : DEPTH_MAX
+        }));
+        b.innerText = expanded ? 'Expand all' : 'Collapse all';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">想见你（其四）</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">JuusanYomitsuru</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">June 21, 2023&nbsp;&nbsp;17:46:59</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E6%83%B3%E8%A7%81%E4%BD%A0/">想见你</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h4 id="阅读之前……">阅读之前……</h4>
+<ul>
+<li>本文为企划《知妙24h放映厅》活动文（<a target="_blank" rel="noopener" href="https://miao5611.lofter.com/post/1f87a097_2b938f7c8">企划终宣链接</a>）</li>
+<li>有一方死亡、分手情节，但结局为HE。</li>
+<li>据《想见你》原著情节与知妙剧情延伸创作，仅为个人理解，求同存异，不喜勿喷。</li>
+<li>全文在4w左右，共9章，内容较长，可酌情观看。</li>
+<li>欢迎收看晚间狗血八点档。</li>
+</ul>
+<h4 id="正文">正文</h4>
+<p><strong>第四章 从来念念难忘，未必地老天荒</strong></p>
+<p>  2020年8月，夏末，花针从荷花流转，恰要至早桂的时节。但须城还颇为燥热，苦夏平等地折磨每一个人，城中西进东来的繁忙的早晚，昏昏沉沉的一片低气压，闷得“社畜”们像蔫了的菜叶，与快要结束暑假的学生们一同垂头丧气着。星期五下午五点半，卡维关了灯，最后巡视一圈，确定没有冒冒失失的实习生又落下什么，便落了锁。</p>
+<p>  受了导师的委托，最近工作室来了几个很有想法的年轻孩子，趁着暑假打打下手、学学经验。当年他初出茅庐时辛苦，也知道靠谱的前辈能带来的好处，于是便欣然应允。</p>
+<p>  手上的项目已经开始动工，上一个单子的款项也刚打进账户，忙乱了大半年总算有一个不错的结果，卡维手一挥，宣布工作室放假三天，请大家好好休息，该玩玩该睡睡，精神饱满了再回来鏖战。此言一出上上下下呀呼一声，订车票的订车票，选餐馆的选餐馆，墙上的白板经大手一擦，密密麻麻的示意图马上转生成本地网红点Top10，红笔蓝笔地标了两排注释。你们啊要是工作也有这么认真就好了。卡维对此的评价是。哎呀难得有休息时间，当然要好好把一直想去的地方去了呀！该干活干活，该放假放假，这就叫现代生活的松弛感，他们说。躁动的小鸟从巢里飞出去，还不忘转过来喊学长我爱你。放个假把他们开心得，卡维笑着摇摇头，和他们挥手。等到工作室走得空落落，白色的灯冷冷地照得剩下他一个人，他环顾自己一步一步攒下来的小天地，轻轻拍了拍自己，心里说：好了卡维，也给自己放个假吧。</p>
+<p>  出门的时候天还很亮。今天不想开车，于是信步，在马路上游荡。他背着一个包，偶发一点任性，踢着脚。下班高峰期，车水马龙全堵在红绿灯前面，闷得太厉害，喇叭声此起彼伏。他看着那一行行一列列无可奈何的钢铁怪物，吸了一口珍珠。</p>
+<p>  黄昏之前是所谓日入。今日天气晴朗，天老爷满面霞光，从蛋黄晕到粉，混染头顶的稀稀疏疏的一层薄云，不看地上的鸡零狗碎，天地好像一片祥和。“天上鱼鳞斑，晒谷不用翻”，明天也一定是一个好天气。</p>
+<p>  “这么好的天气，最适合什么也不干。”</p>
+<p>  脑子里忽然跳出来这样一句话。语调他早已听过千遍万遍，渗入骨髓地熟悉，连那张嘴摆动的弧度也如在眼前。他立于人潮之中，直愣愣地看着人行道的绿灯。后面的人跟得紧，不小心碰到了他，珍奶溢出一点，沿着杯边往下，滴在手背上冰凉。他说了抱歉，但没有人回应。所有人都在急急忙忙地向前赶，向家、向学校、向公司、向散落于这城的餐厅戏院小街巷，向他们缤纷多彩的无数生活，没有人有闲暇停下来听陌生人的一句呓语。</p>
+<p>  只有他还站在那条纵去的斑马线前面，无法移步。</p>
+<p>  那个纠缠了他两年的幻影，还是没有放过他。</p>
+<br>
+<br>
+<p>  那家店就在那里。从他工作室选址之后，朝朝暮暮，上班下班，他总能见到它。门口的小栅栏里种着紫色的绣球，凝固的烟花般一团团璀璨地开着，像引诱又像无忧无虑的看，安静地等待着可能推动门铃的客人。如果没有那个用荧光笔写着“实现愿望”的立牌，卡维也许会误以为那是一家咖啡店——事实上，他本来也是这么以为的，在工作室的小姑娘们说起怪谈的时候提起这家店之前。</p>
+<p>  每一个城市都有独属于它们的神话传说。有的是一条特别阴森的、只卖玉器古董的街，有的是一座尤为灵验的、会为情人赐福的庙，而这座城市的，就是一家号称能够看破因果、实现祈愿的店。卡维当时听小姑娘们聊天，一个问另外一个说这么神，你去过吗？另一个说我没有，但是我朋友有。她去过两次：一次是求姻缘，店里的老师说她注定会有个很帅的脸上有三颗痣的男朋友，不过要等到她事业有了结果之后才能显化，果然在她考完资格证之后第二天，吃夜宵的时候遇到了一个超级大帅哥，也就是她现在的男朋友；还有一次是家里的小狗走丢了，找了三天都没有找到。后来店里老师说要往水生月亮的地方找，果然在公园的湖边，十五那天找到了。那公园离她家有五百米，谁也没想到小狗会在那里。</p>
+<p>  听八卦的人说不会吧，是凑巧吧？信息源高高昂起头，说：信则有，不信则无，反正我是信的。可惜是我没什么好求的，不然我也去了。你们真想知道，就自己去试试啊！</p>
+<p>  “你们如果真想知道的话。”</p>
+<p>  ……要“想”到什么程度，才会成“真”呢。</p>
+<p>  卡维深呼吸。</p>
+<p>  门铃一响。</p>
+<p>  “欢迎光临娜比雅的店，我是娜比雅。你也是在迷茫的方舟上寻找未来的人吗？”</p>
+<p>  一只猫伸了个懒腰，从桌子上跳了下来。另一只通体纯黑、一双眼睛却如黄金般明亮的猫咪，从一排延伸的书架后绕出，在离卡维半米左右的地方悠哉游哉地趴着，爪子卷在身下，慢慢地打了个哈欠。厚厚的窗帘挡住了光，即便外头天还大亮，里面却开着灯，不知是因为空调太足还是满桌子水晶的缘故，叫人一进来便打了个寒战。面对着他的是一排厚厚的布面精装书，脊背烫的是金色的英文字母。黑色镶银的桌布从一头铺到另外一头，吊坠压着一堆散落的绘图，旁边两个白胖胖的天使雕像，侧面看去却面无表情，颇为冷酷。</p>
+<p>  一时间辨别不出声音的来头。在两只猫咪的注视下绕过书架，而后才能在那张厚实的大木桌后头看见人。从外貌上看，“娜比雅”相当年轻——甚至可以说是“年幼”，脸上像宣纸上落鸿雁似的长一排稀疏的雀斑，眼睛倒是很大，似笑非笑地看着人，脖子上挂着一颗大大的猫眼石，替主人故弄玄虚。桌面上也堆了不少书，层层叠叠地摞得很高，几乎要把她埋在里头；在那点可怜的缝隙里，又搁置着一颗巨大的、透明的水晶球，在灯光照射下莹莹地泛着蓝光。卡维心想太荒唐了，真是病急乱投医，这完全就是一个神婆小女孩——正打算道声歉离开，却听见娜比雅颇为尖利的笑，“你又来啦？”</p>
+<p>  ……什么是“又”？卡维也回了个笑容，“不好意思你应该认错人了。我是第一次来。”</p>
+<p>  “哦？是吗？不过，你确实应该不记得了。”小女巫施施然翘着二郎腿，随手翻开一本本子，“2020年7月25日，2020年8月9日……今天是多少号？8月3号是吧。唔，也不算晚……”</p>
+<p>  她声音尖细，语调轻快，在阴沉的房间里叫人凭空出一身冷汗。卡维只感觉汗毛倒立，“……什么意思？”</p>
+<p>  啪地一声本子合上，好像特洛伊的城门被倒插推翻。小女巫笑道，“没什么，细枝末节的东西。……欢迎来到这里，卡维先生，迷途的羔羊。你可以在这里实现你的梦想……”</p>
+<p>  “等等。你怎么知道我的名字？”</p>
+<p>  “当然是魔法。”娜比雅咯咯笑道，“每一个客人都是我的老熟人，我们早就在宇宙和无尽的时间里见过，你的前世今生我都清楚，知道名字又有什么稀奇？同一扇门，在行星运行的不同轨迹，却同样地被推开无数遍。每一刻的我们都是千千万万个我们的重合。而且，水晶球也会告诉我一切……”</p>
+<p>  “是因为上周有公众号发了市图书馆的宣传推文吧。上头有对我的采访。”卡维指了指娜比雅身边、屏保是“恭喜发财”元宝兔子的手机，“我看到你的关注信息了。”</p>
+<p>  “哦……呃呵呵呵呵。”对方把手机收起来，“互联网也是现代的信息渠道之一嘛。”</p>
+<p>  “……我没有什么梦想要你帮忙实现。”卡维说。他拉了拉背包的肩带，和抬头的兔子雕像对上了眼。白玉的兔子有一双剔透的红眼睛，轻轻歪着头，似乎对世间的一切都感到疑惑。“既然你已经看过我的采访，想必你也已经知道我的工作。术业有专攻，我会自己为梦想努力，不必麻烦旁人……来找你，其实是想找一个东西。”</p>
+<p>  “哦？”娜比雅用手撑着脸，水晶球将她的面容映照得变形，“想找什么？”</p>
+<p>  “……我想找一个硬盘。形制就是非常普通的USB插口，黑色的，没有任何装饰，也没有刻字。是我……”话语顿了顿，喉结上下一动，眼神微微闪了闪，“……是我男朋友的东西。”</p>
+<p>  “哦~”听者作恍然状，“你想知道里面有什么？”</p>
+<p>  “……对。他很宝贝那个硬盘，总是随身带着，按道理来说应该不会乱放。但我在家里翻箱倒柜都没有找到。以那家伙的性格，肯定是藏在哪个地方了。”</p>
+<p>  娜比雅点点头。“不过你刚刚说他‘总是随身带着’，有没有一种可能还在他身上？”</p>
+<p>  “不可能。你说的我也想到，他每个口袋我都找过了。我仔仔细细把家里打扫了一遍，银行卡、户口本、身份证，每个网站的账号密码，甚至连他小学校刊的登文我都找到了，但就是差那个硬盘。我总是看到他神秘兮兮地往里导文件，却老是不让我知道。他到底还有什么秘密瞒着我？”</p>
+<p>  “我和我的男朋友关系还……还不错，我想不明白还有什么事不告诉我。作为他的伴侣，我应该对这么重要的东西有知情权吧？还是说他又计划着什么……”</p>
+<p>  小女孩定定地看着他。良久，她交叉着长长的指甲，注视着来回踱步、越说越焦躁的卡维，道，</p>
+<p>  “……恕我直言。”</p>
+<p>  语气严肃。</p>
+<p>  “这是他在另一个世界里用于怀念的东西，希望你不要再找了。”</p>
+<p>  鞋子刮擦在地面，声音尖利刺耳。面容秀丽的金发男人脸上一阵灰白。娜比雅的字眼好像在他身上撕了一段血淋淋的口子，体温流失，他的嘴唇一阵阵颤抖。</p>
+<p>  “你的男朋友，也就是艾尔海森先生，不是在两年前就因为车祸过了世吗？”</p>
+<p>  他无法回答。</p>
+<p>  “你难道还是放不下对逝者的执着？”</p>
+<p>  “而且，天使也告诉我……你想问的也不是硬盘。你真正想问的其实是另外一个、在你生日的时候许下的愿望，对不对？”</p>
+<p>  娜比雅抚摸着水晶球，那蓝似乎尤为幽深，好像沉默的注视，又如锋利的追问，直叫人退无可退，体无完肤。语言具有直破人心的魄力，灵魂的神殿在夜晚里洞开，狂风阵阵，一切因果好像都会在吹拂中透明。卡维闭了闭眼睛。</p>
+<p>  对，但也不对。</p>
+<br>
+<br>
+<p>  蛋糕上煞是隆重地卷了一圈鲜奶油花，粉的蓝的从四周漫溢，上头还点缀着数颗可食用的珍珠，白巧克力搭了一座漂亮的秋千，摇晃的座椅抹了奶盐的面，“Happy birthday Kaveh”的字散发着甜腻的香气，精巧地铭在上面。蓝莓自然成熟，樱桃也正在季节，味道鲜美汁水丰盈，还有石榴、西瓜、桑葚，大棚里养出来的草莓与番茄，都堆成小山，列在蛋糕旁边。金色卷着彩的塑料耀武扬威地立在中间，一个弯着身，一个挺着滚圆的肚，各执烛心，构成了一个“27”的小小庆典。卡维捏着打火机坐在旁边，歪头细细地看上面的装饰，时不时还伸手拨弄一下秋千，让那条细细的链子带着他的名字浪漫地摇转。旁边一个声音道，</p>
+<p>  “大建筑师再看下去，恐怕等奶油化完了还没有机会吃上。如果你这么喜欢，建议你下次订一个钢筋混凝土的，寿比南山。”</p>
+<p>  卡维抬眼瞪他。他伶牙俐齿又“不解风情”的男友，悠哉游哉地环着肩，苍翠的眼睛眼尾上挑，好似斜睨。他哼了一声，道，“再漂亮的设计在你看来就是饱腹消化的东西，和你谈美学造诣就像对牛弹琴。我早就对你的审美不抱希望了。要不是小提上心，和赛诺早早地下了订，指望你？——没给我端上包子塔算不错了！”</p>
+<p>  “本质上来说都是糖油混合物，区别在于口味和能量配比。”艾尔海森耸肩，“希望你能认识到：食物没有高下之分，对你的身体而言，它们都是葡萄糖、氨基酸、甘油和脂肪酸。你的大部分金钱都支付给了附加的噱头与概念。另外，如果‘审美’意味着要花高价钱排三天队还要跑一百公里去提一个蛋糕的话，那么我的确不需要那样的东西。”</p>
+<p>  “你！……就不该和你说这个！”</p>
+<p>  他鼓着脸。“要不是突然下起暴雨，约好了大家都不能来，我才不和你两个人过生日呢。老是让我生气。”</p>
+<p>  闪电簌然划亮夜天。海啸般的轰鸣声震得玻璃打颤。卡维嘟囔道，</p>
+<p>  “明明下午出门的时候还好好的，怎么忽然就红色暴雨了呢？”</p>
+<p>  “当时好像有人说车坏了自己一个人又拎不动订的水果，非要我陪你。到了目的地，原来还附加一个蛋糕。似乎我才是被迫消耗自己时间的人，没想到大建筑师还有选择性失忆的特技。”那家伙灰色的头发轻轻摆了摆。翘起的头发是喜怒不形于色的他的晴雨表，显出他胸有成竹的悠游。“希望下次能知行合一。”</p>
+<p>  “你！……”他气得牙痒痒，恨不得扒着他那讨厌男友咬一口。说话老是夹枪带棒的，不呛赢他不罢休，真恶劣！他哼哧哼哧地瞪了他一会儿，一扭头，“今天是我的生日，我不和你计较。等生日过了再和你吵。”</p>
+<p>  “请便。我不过是实话实说。”</p>
+<p>  卡维故意不接话茬，专心去看那个漂亮的甜点。外头的雨极大，哗声如潮如瀑，人心也密密地沉痒。偶然有几声被困于雨中焦躁的鸣笛，安静的屋内，他伸出手，小心翼翼地把巧克力秋千取下来，恋恋不舍地放在一边，咬着嘴唇，打亮打火机，贴上烛心。滋啦一声，数字迸出明亮的星般的烟，他赶快闭上眼睛许愿。</p>
+<p>  “第一，希望工作室能够顺顺利利走上轨道，项目不要有任何差池……”</p>
+<p>  “第二，希望大家都开开心心，身体健康，不要有太多烦恼，在国外的妈妈也家庭美满……”</p>
+<p>  “第三个……”</p>
+<p>  他不说话了。蜡烛燃了个尽，迸发的光缩进数字体里便熄，只蒙上一层淡淡的灰影。卡维睁开眼，看着那对伫立的“2”和“7”，安静地发了一会儿呆，忽然叫艾尔海森的名字。</p>
+<p>  “哎。你说，……第三个愿望总是不能说出来，是不是因为不说出来的愿望更容易实现？”</p>
+<p>  “我倒认为是不说出口的愿望，实现不了也不会太丢脸。”艾尔海森言辞依然犀利，丝毫没有被生日蛋糕旖旎的气氛影响，“毕竟总有些人会天马行空，对着生日蛋糕做梦。”</p>
+<p>  卡维的脸马上红了。他刚在心里默念“希望艾尔海森不要再这么毒舌稍微可爱点多听学长话”，看起来愿望泡泡刚飞出来，便被现实无情地戳灭了。艾尔海森的眼神分明就在说“我就知道”，他恼羞成怒，偷偷刮了一勺奶油，趁艾尔海森低头的一瞬间突袭；两个人在椅子上扭成一团，绣球花似的奶油在衣领侧脸鼻尖嘴唇上都落了点。卡维骑在他身上不服输地辩，辩到针锋相对谁也不让谁，碟子上的秋千化了一角，颤巍巍地倒在桌面，奶盐沾着瓷边，Happy糊成了Homy，艾尔海森掐着卡维的手和腰，两个人气喘吁吁，呼吸绕着呼吸，鼻尖贴着鼻尖。</p>
+<p>  奶油沿着汗往下，爱欲鸣金收兵。人就好像雪与冰，通天之塔，不自觉便融在一起。</p>
+<p>  ……</p>
+<p>  很久之后卡维再重新收拾家中，才发现当时用于装饰的金色小球，顺手放在了饭桌的抽屉里头。当年有丝丝咸味，像海风一样清爽的奶油蛋糕，缺席了他两年的青春。2020年7月9日，他在工作室和学弟学妹一起加班的时候，外头的灯不知为何全灭，他推门出去问是不是停了电，却看到他的后辈们捧着一个大大的蛋糕，唱着生日歌走到他面前。砰地小礼炮一放，一顶纸制的皇冠凑上来，面前是年轻孩子们的笑脸，对他说世界上最优秀最可靠最可爱的卡维前辈，生日快乐！他哭笑不得，都几岁了还用“可爱”这个词呢，便要吹蜡烛。他们说不行！要许愿！不能因为要加班就敷衍我们！</p>
+<p>  卡维拗不过，只能说好。他双手合十，</p>
+<p>  “第一，先希望我们手上的项目顺利结束，不要出什么差池……”</p>
+<p>  “有卡维学长在，肯定没有问题的！”</p>
+<p>  “一定大获全胜，震惊须城！”</p>
+<p>  他们嘻嘻笑着。卡维“嗯”了一声，接着说，</p>
+<p>  “第二，是希望大家都开开心心，健健康康，不要有太多烦恼，都能实现自己的愿望……”</p>
+<p>  “……谢谢学长！”</p>
+<p>  “……学长怎么连生日许愿都记挂我们啊，这么好！”</p>
+<p>  “如果你能够明白，普遍的欢乐是一个伪命题，那么你下次也就不会在生日许愿这么私密的时刻，提出这样天真的请求了。”那声音顿了顿，“特别是在某人真的相信生日愿望会实现的情况下。”</p>
+<p>  众声喧闹，他却在摇曳的烛光里，看到艾尔海森的幻影。他站在人圈的最外面、靠近角落的那一角，远远地注视着他。面容、神态、衣着，还有环着手臂的姿势，都和两年前别无二致，就好像这两年只是他做的一个长梦，一段虚构的离别，醒来他提着蛋糕，嘴上嫌弃着他工作室的聒噪，却翘掉晚课，瞒着他来给他过生日，庆贺他又老了一年。结束之后当然被迫陪着他一起收拾，拌着嘴回家，过红绿灯时偷偷勾手，像二十出头的情人，互相警告对方不要弄撒收到的糕点。</p>
+<p>  ……好像从未有死亡通知，没有送过来的吊唁花圈，没有孤身一人挨过的八百多个日夜。</p>
+<p>  那身影一晃又不见。小女孩划亮火柴便能落入奶奶的怀抱，在温暖的壁炉前吃到美味的烤鸡，烛光向来有诱人入梦的本领。他的眼眶有一点湿，低头假装抵住鼻梁，小指偷偷揩去未凝的水汽。同事们起哄着说要许第三个愿，他微微笑着，说第三个可是秘密。蜡烛烧到了最后，只剩下一截短短的灯芯，他深吸一口气，在心里默念他的愿望：</p>
+<p>  想见你。</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>JuusanYomitsuru</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="https://juusanyomitsuru.github.io/2023/06/21/2d2252997224/">https://juusanyomitsuru.github.io/2023/06/21/2d2252997224/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2023/06/21/f0b42b42883f/">想见你（其五）</a>
+            
+            
+            <a class="next" rel="next" href="/2023/06/21/8023ff4f196e/">想见你（其三）</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<span class="site-uv">
+    总访客量:
+    <i class="busuanzi-value" id="busuanzi_value_site_uv"></i>
+</span>&nbsp;
+
+
+<span class="site-pv">
+    总访问量:
+    <i class="busuanzi-value" id="busuanzi_value_site_pv"></i>
+</span>
+
+
+
+    <div class="copyright">
+        <span>© JuusanYomitsuru | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>

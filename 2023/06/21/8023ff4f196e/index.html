@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="JuusanYomitsuru">
+
+
+
+
+
+<title>想见你（其三） | Hexo</title>
+
+
+
+    <link rel="icon" href="/yumaobi.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">JuusanYomitsuru&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">JuusanYomitsuru&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6; // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function() {
+            tocbot.refresh(obj_merge(tocbot_default_config, {
+                hasInnerContainers: true
+            }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function() {
+        tocbot.init(obj_merge(tocbot_default_config, {
+            collapseDepth: 1
+        }));
+    });
+
+    function expand_toc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, {
+            collapseDepth: expanded ? 1 : DEPTH_MAX
+        }));
+        b.innerText = expanded ? 'Expand all' : 'Collapse all';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">想见你（其三）</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">JuusanYomitsuru</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">June 21, 2023&nbsp;&nbsp;17:46:55</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E6%83%B3%E8%A7%81%E4%BD%A0/">想见你</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h4 id="阅读之前……">阅读之前……</h4>
+<ul>
+<li>本文为企划《知妙24h放映厅》活动文（<a target="_blank" rel="noopener" href="https://miao5611.lofter.com/post/1f87a097_2b938f7c8">企划终宣链接</a>）</li>
+<li>有一方死亡、分手情节，但结局为HE。</li>
+<li>据《想见你》原著情节与知妙剧情延伸创作，仅为个人理解，求同存异，不喜勿喷。</li>
+<li>全文在4w左右，共9章，内容较长，可酌情观看。</li>
+<li>欢迎收看晚间狗血八点档。</li>
+</ul>
+<h4 id="正文">正文</h4>
+<p><strong>第三章 所有的梦境，都是我在练习失去你</strong></p>
+<p>  有时候生活好像一场漫长的薛定谔效应。倘若不去看、不去听、不去想，将万事万物放在思维的边缘，好像一切就会按部就班、安安稳稳、万古不变地持续进行下去。但一旦有那么一瞬间，想了、听了、看了，开了刹那的念，习以为常的生活便会在意起的一刻错乱、崩塌、扭转、颠倒。就像流动的水变成冰，数千年的地宫开了面，未揭开的土崩瓦解，已逝去的从头再来。</p>
+<p>  就好比从咖啡馆外见到那个黑衣男子的第一眼后，他好像总是出现在卡维眼前。工作室对面的花店，家楼下的冰室，街心花园的石板凳，就连他偶尔一次回了学校，都好像看到一个修长的身影站在校名石边的树荫底下，悠久地注视着他。但每当他再定睛一看，那个影子又消失了。难不成是幻觉吗？</p>
+<p>  提纳里和他说了那件事之后，他就一直留心。去问了恩忒卡，她也对如此俊秀的客人有印象，但她也说，她在之前从未见过那个男生。可能只是偶然见到这家店，然后兜进来尝尝鲜吧？不知道我们的咖啡能不能吸引他再来呢？卡维跟着笑了笑，却没有说话。</p>
+<p>  2017年的4月。春天……已经快要过去了。</p>
+<br>
+<br>
+<p>  今天艾尔海森吸收的信息太多，多得他阖眼躺在床上的时候，还给自己上了一套蒸汽眼罩。此时热度正好，眼部的疲劳得到极大的缓解，温暖的感觉靶向多巴胺，在满脑子的数字和文字里提供安稳的体验。</p>
+<p>  他在熨帖之中慢慢沉入思绪的湖水，无数个相同姿势的自我在此刻重叠于一身，但正在双手合十将要开始冥想的时候，忽然听见“吱呀”一声细响。动静轻微，来人很小心，一阵悉悉索索的声音自远而近，可哪怕它的主人正有意识地克制着气息，呼吸声在安静的房间里也显得尤为分明。距离似乎越来越近，艾尔海森在对方脚步落在床沿前的一刹那，皱了皱眉，开口道，“卡维。”</p>
+<p>  “哇啊！”</p>
+<p>  对方倒是被吓了一大跳。拖鞋“啪嗒”一声，不用想也知道是左脚踩了右脚。清亮的男声结结巴巴的，虚张声势地恼羞成怒，“你怎么……你不是睡着了吗？！”</p>
+<p>  “需要我在脸上挂个‘还没睡’的牌匾吗？”艾尔海森掀开眼罩，果然看到昏暗里穿着睡衣的室友抱着玩偶站在床尾，神情颇为局促，“我好像记得我已经锁了门。”</p>
+<p>  “啊……你那门也算锁了啊？碰两下就开了啊？”</p>
+<p>  差点忘记这家伙对一切机械结构无解的天赋。艾尔海森不想再就这个话题深入下去，单刀直入道，“有什么事？”</p>
+<p>  “……没有。……啊对了！你之前借了我翻页笔还没还呢！幸好我记得，不然工作室就没法用了！”</p>
+<p>  艾尔海森侧身，“啪”地把房间灯打开。骤然明亮的灯光让卡维的眼睛像猫咪的瞳孔般缩紧，忍不住“唔”了一声。“书架上数第二格的铁盒里，黑色绒布袋装着。”艾尔海森的指令相当明确，小金发人啪嗒啪嗒地走过去，“位置很显眼。看到了？”</p>
+<p>  啪啦啪啦的翻找声，又在那一瞬停下来。艾尔海森的指令一向准确，他伸手从铁盒里摸出东西，却又站在那里一动不动。从艾尔海森的角度，只能看到他夹着玩偶，右手捏着袋子垂在身侧，左手却抓着书柜的格板，白天里绑好夹紧的头发散落，蓬松地垂着，整个人看起来太瘦，明明有一米七余的身高，站在书柜前却小小一个。“艾尔海森。”他突然说。</p>
+<p>  艾尔海森嗯了一声，意思是他在听着。</p>
+<p>  “你……假如说……”卡维的声音轻轻的，“如果我消失了，你应该不会难过吧？”</p>
+<p>  “……为什么这么说？”</p>
+<p>  艾尔海森说得很快。卡维没有转过来，他盯着上头一摞的语言学专著，似乎在斟酌字句。“就是说……你这家伙，不是很理性吗？万一到了那个时候，你肯定觉得生死有命，活着的人不应该被逝者拖累……更何况你不是一直嫌弃我闹你……应该能轻轻放下，继续潇洒过你的人生吧。”</p>
+<p>  “你恐怕没有听明白。我的意思是，”艾尔海森一字一句，“让你问出这个问题的契机，是什么？换句话说，发生了什么事？”</p>
+<p>  “……”</p>
+<p>  室友紧紧地抱住玩偶，一声不吭。等半天没有回应，艾尔海森失去了耐心，</p>
+<p>  “卡维？”</p>
+<p>  “……”</p>
+<p>  “卡维。过来。”</p>
+<p>  艾尔海森鲜少用命令的口吻。尽管他性格里有强烈的具有主导欲的部分，但一向习惯将情绪藏着，轻易不会露怯。深夜里语气急切，难免碰到真心。</p>
+<p>  “……”</p>
+<p>  他的金发学长慢慢转过身来。而艾尔海森却看他已满面泪痕。</p>
+<p>  “？！”</p>
+<p>  “我……”刚张开口，一滴滚圆的水珠便掉到脚面，卡维似乎也被自己吓到了，赶忙从身边的电脑桌上抽纸巾来掩。艾尔海森也沉默，只是走到对方身边。</p>
+<p>  “没什么的，就是……做了一个、一个不太好的梦。”他非常努力地克制着，但鼻腔里还是不可抑制地落了音，肩膀也在颤抖。侧过脸擦掉痕迹，转清亮的红眼睛去看他，眼角却又满溢出水来。只好连忙又别开视线，“算了，太丢脸了，不说了……”</p>
+<p>  “卡维。”看对方正欲要走，艾尔海森抓住他，“你梦见了什么？”</p>
+<p>  “……”只能看见学长后颈，微微颤动的金色绒毛。对方顿了顿，深呼吸，“真的没什么……只是梦而已。”</p>
+<p>  “你打算告诉我，就因为一个普通的梦，你凌晨三点钟撬开我的房门，站在我的床边盯着我哭？”艾尔海森道，“希望你尊重一下别人的判断力，卡维。”</p>
+<p>  “……”卡维瞪着他。漂亮的红眼睛还满是水汽，鼻子擦得有点红。他捏着兔子玩偶的手，又垂目盯着床脚。但他的灰发的学弟却毫无体恤之意，“你再看三个小时，我的床也不会说话。”</p>
+<p>  “告诉我，卡维。”</p>
+<p>  卡维深吸一口气。</p>
+<p>  “我……我梦见你……消失了。”</p>
+<p>  “消失？怎么回事。”</p>
+<p>  艾尔海森坐在床沿。“消失……就是……”吞吞吐吐。</p>
+<p>  “你梦见我死了？”</p>
+<p>  卡维颤了一下。他便知道自己的猜测无误。</p>
+<p>  他长舒一口气，张嘴便是冷静的辞令。“起因、经过、结果，时间、地点、人物。麻烦你清楚地表述一下。”</p>
+<p>  卡维的神色颇有不安。“……只是梦而已。为什么要说得这么详细？”</p>
+<p>  像一只受惊的小动物。是了，他的学长是心思过于细腻，容易为言语惊动的人。“……我只是很好奇，是什么样的梦，能让我们大名鼎鼎的设计师露出这种表情。”他语气稍微缓和一点，拍了拍身边的空位，“过来。”</p>
+<p>  身边的床垫迟疑地一陷，他侧目看，卡维盯着玩偶的耳朵，右手却轻轻摸上他的手背，像一片落叶碰到地面，渴望一点熨帖的安稳。他骄傲又敏感的恋人，少有这么“听话”的时候。</p>
+<p>  卡维说，他梦见他们去郊游。</p>
+<p>  城外公园当时花期灿烂，初见时两人也在花树之下，卡维一直对花有着特别的亲切，正好快到了纪念日，卡维觉得去踏青实在再好不过。为了那一天卡维准备了好久，但艾尔海森不喜欢娱乐性质的户外活动，无论卡维如何软磨硬泡，都没有半分让步。这次更是不允许卡维做任何准备：订蛋糕、订餐厅，旅行，都以“忙”推却，本来卡维已经是百忙之中准备恋爱的一点仪式，艾尔海森却皱着眉头说了些“你好像说有很多任务要做，那请问你现在在干什么。你打算花时间到五十公里外吃个汉堡然后晚上再加班到三点吗”之类的话。两人大吵了一架，卡维实在是气得不轻，好几天都没有和他说话。</p>
+<p>  但在纪念日之后的数日，在冷战中的饭桌上，艾尔海森却突然说，他认为卡维的提议也并不完全糟糕。卡维说哦，石头也会开窍？对方只是看着餐盘，说，只是觉得某人如果不自找麻烦，满足自己泛滥的情绪的话，恐怕到下一个‘纪念日’之前都不会消停。</p>
+<p>  （是不是完全像是你会说的话？卡维道。艾尔海森不予置评。）</p>
+<p>  于是他们出门了。那天卡维带上了三明治、小蛋糕、果汁，野餐桌布，还在汽车后备箱里塞了一个风筝。公园人挺多的，他们挑了个观景的好地方。花很漂亮，三明治都吃完了，果汁还剩下两瓶，风筝飞得很高，旁边的小朋友都在问是在哪里买的。梦里的他和围过来的小孩子说，都是哥哥自己做的，仅此一家哦，转头就和艾尔海森说，如果他们以后领养一个孩子，光靠飞风筝，就不愁没有别的小朋友一起玩。</p>
+<p>  当时艾尔海森看着他，眉毛平直，显得神情特别柔和。很少能够在这个家伙脸上看到能被形容成“温柔”的神色，卡维也有点心动，上车之前抓着他在侧门亲了一会儿。坐在车里的时候卡维说，你要是一直这样多好，别呛人，不要老是板着脸的。艾尔海森问然后呢？卡维就嘟囔着说，那我可以勉强承认你还算一种梦中情人。</p>
+<p>  回城途中两个人没怎么说话，卡维有点困，披着毛毯在车上睡着了。后来是被亮醒的，不知是什么车，迎面来的时候打的远光灯，晃得人根本看不见东西。紧接着卡维意识到那辆车好像是直冲他们来的，速度特别快，他们根本来不及躲避，艾尔海森方向盘一打，梦里一阵巨震，卡维只感觉一阵剧痛；下一个场景就是在医院，睁眼看到的白净的天花板，护士从旁边探过脸，问他说你是艾尔海森的家属吗。</p>
+<p>  来车醉驾，贴中线行驶，走到一半突然打了个转。离卡维和艾尔海森的车不过五十米，关键时刻根本避无可避，艾尔海森打了右向，来车撞的左侧，副驾驶受了缓冲，卡维虽然受了脑震荡，出血也多，但抢救及时，所幸捡回一条命来。</p>
+<p>  但艾尔海森……</p>
+<p>  原定的火化日期，就在卡维苏醒的前一日。</p>
+<p>  ……</p>
+<p>  卡维的眼泪根本止不住。他一边说，一边不出声地流眼泪，一直哭一直哭，到已经无法再说为止。艾尔海森沉默着，伸手替他揩濡湿的下睫毛，“只是梦。”对方点点头，努力扯出一个笑容，说，“对啊，只是梦……虽然感觉非常真实，但也、只是梦而已……”</p>
+<p>  “我在想，是不是你这家伙最近真的太可恶，以至于我做梦都梦见你挂了的场景……所以你要对我好一点！听到没有！”</p>
+<p>  卡维抓住他的手臂。艾尔海森稍稍靠近一些，他泪痕仍未干的温柔的学长，便扶着他的后脑勺贴了上去。两人缠了一会儿呼吸，艾尔海森盯着他说，“……本来眼睛就是红色的，现在更像兔子。你可以研究一下你们家族发展史。”</p>
+<p>  嘴唇上还是湿的，卡维瞪着他，“那你要不查查你族谱上有没有龟仙人？反正你的眼睛也是绿的。”</p>
+<p>  又贴了一会儿。分开的时候卡维低眉，“……说实在话，艾尔海森。虽然我觉得你这个人哪里都很坏，但如果你真的……我……”</p>
+<p>  他顿了顿。“……我运气不好，你也知道。本来就已经很多烦心事了，你这个家伙简直是其中最大的一个。而且还纠缠不清，剪也剪不断，理也理不分明。一定是孽缘。我经常觉得，赶快找个道士来除了算了。”</p>
+<p>  “……但如果你真的……不在了的话……”那双漂亮的，闪着光的红色瞳孔，直直地注视着他。不知为何，那个视线可堪“痴迷”。卡维的语气轻轻的，像一阵挠过窗户的风。“我可能会觉得……我也没什么继续下去的勇气了。”</p>
+<p>  艾尔海森沉默着。胸腔里流动沉稳的呼吸，他把一切秘密压在心底，轻柔地环住了他不安的恋人。</p>
+<br>
+<br>
+<p>  日记本第52页，艾尔海森（4），2017年12月25日：</p>
+<p>  “昨日圣诞，睡前他问我是否相信永恒。</p>
+<p>  滑稽的提问。热情会消弭，新鲜会垂朽，肉体凡胎的事物注定会腐烂。没有什么事会永远存在。他说他相信，有的事情过了太久，花费的时间奢侈，自然独一无二。听起来，所谓海枯石烂，其实也无非是趋利避害。</p>
+<p>  ……这可能是‘艾尔海森’会做的最愚蠢的决定……自进入这个循环起我便意识到我们的日常事实上非常脆弱，时时有碎裂的危险，现在是关键时刻，更应该尽力避免……但卡维依然是其中非理性的因素。当然更荒唐的是，对于这场无解的闹剧，我居然也‘深陷其中’。人生第二次，第四次，抑或是无数次。</p>
+<p>  我很清楚未来会如何发展。达摩克里斯之剑随时都可能掉下来，个体能做的唯有始终直视。直视它，直到疑虑发生，为我们宣判终结。</p>
+<p>  ……偶然看到一句话，不妨摘抄下来。</p>
+<p>  ‘谁能说出世界是什么？世界动荡不定，因此无法读懂，风向转换，那巨盘无形地转动，变化——任务就是坠入爱情<sup>1</sup>。</p>
+<p>  自我结束，世界开始。它们大小相等，相称，一个映照着另一个。’</p>
+<p>  ……事实上，这句诗在卡维的摘抄册里面。有人忙起来东西就会忘记合上，坏习惯一直都没有改。</p>
+<p>  我一向认为过度的情感只会阻挠目标的达成，但迷恋似乎一定程度上应当被视作客观因素。现在我承认这种看法：爱情与死亡，都无法避免。”<br>
+<br><br>
+<br></p>
+<p>  [1]. 露易丝·格里克《棱镜》</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>JuusanYomitsuru</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="https://juusanyomitsuru.github.io/2023/06/21/8023ff4f196e/">https://juusanyomitsuru.github.io/2023/06/21/8023ff4f196e/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2023/06/21/2d2252997224/">想见你（其四）</a>
+            
+            
+            <a class="next" rel="next" href="/2023/06/21/693a9e8a1460/">想见你（其二）</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<span class="site-uv">
+    总访客量:
+    <i class="busuanzi-value" id="busuanzi_value_site_uv"></i>
+</span>&nbsp;
+
+
+<span class="site-pv">
+    总访问量:
+    <i class="busuanzi-value" id="busuanzi_value_site_pv"></i>
+</span>
+
+
+
+    <div class="copyright">
+        <span>© JuusanYomitsuru | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>

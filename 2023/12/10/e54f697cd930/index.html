@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="JuusanYomitsuru">
+
+
+
+
+
+<title>天街如水（大结局） | Hexo</title>
+
+
+
+    <link rel="icon" href="/yumaobi.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">JuusanYomitsuru&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">JuusanYomitsuru&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6; // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function() {
+            tocbot.refresh(obj_merge(tocbot_default_config, {
+                hasInnerContainers: true
+            }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function() {
+        tocbot.init(obj_merge(tocbot_default_config, {
+            collapseDepth: 1
+        }));
+    });
+
+    function expand_toc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, {
+            collapseDepth: expanded ? 1 : DEPTH_MAX
+        }));
+        b.innerText = expanded ? 'Expand all' : 'Collapse all';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">天街如水（大结局）</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">JuusanYomitsuru</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">December 10, 2023&nbsp;&nbsp;15:36:37</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E5%A4%A9%E8%A1%97%E5%A6%82%E6%B0%B4/">天街如水</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h4 id="阅读之前……">阅读之前……</h4>
+<ul>
+<li>系列前文请点击右上角<a href="https://juusanyomitsuru.github.io/category/">Categories</a> 。</li>
+<li>例行超长预警：
+<ul>
+<li>非常感谢您点进这篇文章。</li>
+<li>这篇文章主角为军贼头子（军师）海X大学老师卡，内含R18内容。大概是被海哥竞争对手盯上的卡与海哥假扮情人，最后渐生爱意的故事。</li>
+<li>其中有卡女装要素，是旗袍和舞女装，请注意。</li>
+<li>因为民国pa的背景限制，除了海维赛提等出现的须弥角色外，其他统统为璃月名。如感觉不适也可退出。</li>
+<li>文笔小白，逻辑天真，希望看客愉快。</li>
+</ul>
+</li>
+</ul>
+<h4 id="正文">正文</h4>
+<p id="p_uinlp9wk9a1"  >灵感就仿佛受月亮引潮的海水，时时涨起涨落。卡维今天对着工图又坐了一晚，进度没有达到预期，决定到厨房冲杯奶粉加炼奶，再外兑一杯咖啡，用彻头彻尾的乳香轰击自己不省人事的大脑，再拿咖啡因来驯化这疲惫不堪的四肢。今晚月亮很亮，从厨房的小窗盈盈地撒些光进来，照亮了面前一方小台。他发了好一会儿呆，等听到那水壶慢慢发出咕噜咕噜的震颤，他才猛然惊觉，伸手把奶粉从柜子里抱出来，再拿一个漂亮的杯子——忽然他听到了一声响动。</p> 
+<p id="p_uhglp9wk9a2"  ><br /></p> 
+<p id="p_u2slp9wk9a3"  >有人从背后接近了他。</p> 
+<p id="p_uaalp9wk9a4"  ><br /></p> 
+<p id="p_ubilp9wk9a5"  >他猛地一回头，下意识地把三四斤重的密封铁盒往对方身上挥，不料对方手腕一动一卡，他的手无端便卸了力，铁盒一歪，直直往地上坠——艾尔海森弯腰一捞，那罐子便稳稳当当地回到他手上。卡维呆呆接过他递过来的奶粉，甚至还本能地说了句谢谢。面前的人却环着手臂，微微低头，眼尾上挑，一如既往地气定神闲：“独出心裁的欢迎仪式。还是说早就想这么干了，刚刚只是借题发挥？”</p> 
+<p id="p_uo1lp9wk9a6"  ><br /></p> 
+<p id="p_ue2lp9wk9a7"  >“别以己之心度他人之腹。”和他拌嘴已经刻入基因，说出两个字的时候卡维已经反应过来事态，但句子如流水一般从他的唇齿里出来，仿佛过去时间轻描淡写的重现。他不可置信地打量着面前的人，话语兀的磕磕绊绊，“你、你，你……你不是在重伤昏迷，在医院养病吗？你怎么会……”</p> 
+<p id="p_u4blp9wk9a8"  ><br /></p> 
+<p id="p_u2elp9wk9a9"  >怎么会像一闪而过的流星一样，忽然就出现在了他面前？</p> 
+<p id="p_ugjlp9wk9aa"  ><br /></p> 
+<p id="p_u3rlp9wk9ab"  >“很难理解？”对方却不知从那里掏出了一串钥匙，在他面前晃了晃。看卡维下意识地开始摸自己的裤袋，翻找他自己的钥匙，他才不疾不徐道，“当然是因为我是这里的房东。”</p> 
+<p id="p_uhllp9wk9ac"  ><br /></p> 
+<p id="p_ufxlp9wk9ad"  >“你是这里的……什么？！”又接受了新的冲击性信息，卡维本就因失眠而混乱的大脑更是被搅成一团浆糊，“‘你是房东’又是什么意思？房东不是还在国外读书吗？”</p> 
+<p id="p_ub6lp9wk9ae"  ><br /></p> 
+<p id="p_ueblp9wk9af"  >“海什木的确在国外读书。不过因为论文优秀，他提前拿到了博士学位，在国外工作了半年后，搭乘轮船返回宝城。按照计划，他会在明天中午上岸。”</p> 
+<p id="p_ukjlp9wk9ag"  ><br /></p> 
+<p id="p_ubxlp9wk9ah"  >“什么意思？”卡维愣了愣，但很快便明白了他的言外之意，“假身份？……那‘艾尔海森’呢？”</p> 
+<p id="p_ur9lp9wk9ai"  ><br /></p> 
+<p id="p_uoilp9wk9aj"  >“艾尔海森参谋作为化城安插的情报员，今晚被同伙解救，连夜赶回化城避险。他现在……”手指伸出来，轻轻向左一歪，又向右转，“可能在赶往东门的车上，也有可能在去向北门的车上。两个选择持有相近的机率，但以我对他们‘党羽’的了解，大概率会带着‘艾尔海森’走遮蔽物更多的东门。”</p> 
+<p id="p_ui3lp9wk9ak"  ><br /></p> 
+<p id="p_u2alp9wk9al"  >换而言之，宝城不会再有“艾尔海森”。卡维想到了这一点，抬眼盯着面前的人，“那你……”</p> 
+<p id="p_u3flp9wk9am"  ><br /></p> 
+<p id="p_u8wlp9wk9an"  >“艾尔海森”、“海什木”，抑或是无数个其他姓名，灰色的头发轻轻晃着，他低声道，“今晚我没有名字。”</p> 
+<p id="p_udplp9wk9ao"  ><br /></p> 
+<p id="p_ulnlp9wk9ap"  >“名字很重要吗？”他又一摆手，“名字，身份，职业，经历，这些构成人社会图像的因素，本就是人造的产物。今天你可以是大建筑师卡维，明天你就可以是供职于八卦报纸的侦探。只有对他人的认知保守又肤浅的人，才会拘泥于旁人构建的身份框架，被概念附加的想象所困。”</p> 
+<p id="p_ukdlp9wk9aq"  ><br /></p> 
+<p id="p_uqvlp9wk9ar"  >卡维并不言语。艾尔海森的自叙轻巧自由，但他毕竟对艾尔海森的最初印象就被“军贼头子”的身份深深烙刻，而后的发展又与他的立场密不可分。概念背后硕大的阴影始终笼罩着他，如今他以为难以撼动的东西如泡泡般破裂，他还需要一点时间反应。但下一秒，他又意识到伶牙俐齿的艾尔海森，又试图用语言的强烈指向含混问题：“先等会儿。为什么要换名字？还有，什么党羽？什么避险？你难道真的是化城的情报员？”他提问跟连珠炮似的，“刺杀案又是怎么回事？你不是和卢广永正在合作吗？为什么突然就关系恶化了？你到底做了些什么？事情已经到了这个地步，你不会再想要瞒着我了吧？”</p> 
+<p id="p_u97lp9wk9as"  ><br /></p> 
+<p id="p_uhclp9wk9at"  >说到“瞒”字，卡维的眼角也轻轻挑起来，眼睛微微眯起，怀疑地看着他。艾尔海森却不紧不慢的，摊着手：“这么多个问题，卡维老师在给学生出问答题吗？……不妨先从你最想知道的开始吧。”</p> 
+<p id="p_ue5lp9wk9au"  ><br /></p> 
+<p id="p_u59lp9wk9av"  >“好。第一个问题……刺杀案是怎么回事？为什么那个人突然要杀你？”</p> 
+<p id="p_u22lp9wk9aw"  ><br /></p> 
+<p id="p_u8plp9wk9ax"  >“那个人”指的当然是那条如今已经归于高天的亡魂。看到艾尔海森平平安安地站在他面前，还早已规划好了前后身份的交接，卡维不禁怀疑对方其实已经早有预料，连刺杀也是自导自演。但他想不通事情发生的关窍，也直觉这便是解开他疑云的关键。难得艾尔海森如此坦率，他便也不拐弯抹角。艾尔海森果然诚实地回答：</p> 
+<p id="p_udlp9wk9ay"  ><br /></p> 
+<p id="p_u5zlp9wk9az"  >“通过和他合作，我获得了他的信任，同时也获取了租界的资源；当然，这部分你也知道。那么你不知道的地方是：卢是王存芳义弟、化城孙将军的爪牙，肩负着在宝城拓宽势力、筹备军饷的使命。我的任务是将其‘清理’出宝城。你曾经看过的那份报告中称，卢曾拖欠工人工资，并挑起暴力事件，以威慑底下员工。而在冲突中，有几位工人因此残疾，有一位更是在半月前因经济问题和心理压力自尽。于是相熟的工人便约定为这位去世的朋友报仇。”</p> 
+<p id="p_udclp9wk9b0"  ><br /></p> 
+<p id="p_ug9lp9wk9b1"  >卡维马上想起他读过的报告：“是那场大火？……但为什么他会迁怒于你呢？”</p> 
+<p id="p_urllp9wk9b2"  ><br /></p> 
+<p id="p_ueblp9wk9b3"  >“我一开始和你讲过，说他本人有一个很鲜明的心理特征。你还记得？”</p> 
+<p id="p_u2dlp9wk9b4"  >他对他和艾尔海森的对话印象总是深刻，因此无需多想便脱口而出：“偏执？”</p> 
+<p id="p_ueglp9wk9b5"  ><br /></p> 
+<p id="p_ulolp9wk9b6"  >艾尔海森点了点头：“通过我之前对他的挑衅……也就是和你的合作，他对我积怨已深。更何况我的确在这件事情上发挥了一些微末的作用，主要是对这些工人进行了一些人道上的保护。对方在意识到这一点之后，又受性格中偏执的一面驱动，便自然而然地将责任推到了我的身上。”</p> 
+<p id="p_up9lp9wk9b7"  ><br /></p> 
+<p id="p_ub8lp9wk9b8"  >也就是说，对方性格上的缺陷，从一开始便被他拿捏在手里，并通过漫长的布局，一步一步推向最后的节点。卡维没想到他的存在会在这里发挥作用，不禁有些愕然。艾尔海森扫了他一眼：“我需要一个合适的时机和理由完成这件事，而同时，没有比他亲自送上门更好的方式了。虽然过程曲折，但所幸结果不错。我很满意。”</p> 
+<p id="p_u8flp9wk9b9"  ><br /></p> 
+<p id="p_ufslp9wk9ba"  >“那你……你为什么要做这件事？既然现在被追杀，说明这并不是王存芳的意思。难道和他们说的一样，你真的是化城的间谍？”</p> 
+<p id="p_ue7lp9wk9bb"  ><br /></p> 
+<p id="p_uhhlp9wk9bc"  >“他们？”捕捉到了关键词，艾尔海森眉毛一挑，“这种事按道理来说是机密，不会是街头巷议能听到的消息。该不会又是哪个朋友同事可怜人同你套话，你便差点自乱阵脚吧。”</p> 
+<p id="p_u3elp9wk9bd"  ><br /></p> 
+<p id="p_unnlp9wk9be"  >卡维这才意识到当时那些“同事”们可能有不同的身份，情不自禁地掩住了嘴唇：“不、不会吧……我刚到岭大，他们就已经在职了……好几个月的朝夕相处，怎么可能是……”</p> 
+<p id="p_ue1lp9wk9bf"  ><br /></p> 
+<p id="p_u2xlp9wk9bg"  >“你以为情报搜集是上一个星期速成班就能解决的工作吗？长时间的蛰伏是常事。而且只要方式自然，或者目标没有相关工作的敏锐度，那么他们就能藏匿在人群之间，一辈子都不会被发现。”看卡维的表情，艾尔海森便知道自己已经猜了个八九不离十：“很显然，大学校园里到处都是一心学术工作的‘天真的大学老师’，是他们发展的绝佳的温床。估计他们每天在学校里的工作都毫无挑战性，已经无所事事得脑子要生锈了，好不容易遇上这么一桩大事，不巧。”他发了一个鼻音，“还遇上了一个纯得不能再纯、天真得万年一遇的同事。”</p> 
+<p id="p_u83lp9wk9bh"  ><br /></p> 
+<p id="p_uo1lp9wk9bi"  >话说着说着人身攻击起来了，卡维马上竖起眉毛：“你！……”</p> 
+<p id="p_u3llp9wk9bj"  ><br /></p> 
+<p id="p_u5tlp9wk9bk"  >“不过，不意外。”艾尔海森流畅地转换话锋，就好像刚刚连用了几个“天真”搭配“大学老师”修辞的不是他，“我已经提前考虑到了这种情况。你的确什么也不知道，因此当然也问不出什么。能从他们的口中得知新的消息，也算一种反情报战。”</p> 
+<p id="p_uhlp9wk9bl"  ><br /></p> 
+<p id="p_u37lp9wk9bm"  >“喂。”他听出来了，这又是一句嘲讽的话。卡维面色不虞，像敲黑板似的，指节叩了叩台面，“别转移话题！无论是怎么知道的，到底是不是？”</p> 
+<p id="p_u8flp9wk9bn"  ><br /></p> 
+<p id="p_u6wlp9wk9bo"  >“猜猜看？”</p> 
+<p id="p_ueolp9wk9bp"  ><br /></p> 
+<p id="p_uj7lp9wk9bq"  >艾尔海森眉头稍稍上扬，嘴角下沉的弧度也转为挑起。很经典的艾尔海森式的戏谑表情，却叫卡维更加心急：“什么叫‘猜猜看’！把宝城大闹一番的是你又不是我。要我猜，你就是最穷凶极恶最丧心病狂无恶不作的坏家伙，纯是不安好心——”</p> 
+<p id="p_u70lp9wk9br"  ><br /></p> 
+<p id="p_uidlp9wk9bs"  >“也没错。”他淡淡道，“毕竟我‘私闯民宅’，深夜潜进‘前情人’的家里，还跟他有直接的身体接触。要说的确称不上正派。”</p> 
+<p id="p_ubilp9wk9bt"  ><br /></p> 
+<p id="p_u8qlp9wk9bu"  >“……”夜里看不见，卡维结结实实地愣了一下，耳朵马上红了起来，“谁、谁问你这个了？我是说……再打岔我饶不了你！快说！”</p> 
+<p id="p_ubklp9wk9bv"  ><br /></p> 
+<p id="p_uoylp9wk9bw"  >“原本不是。我只是出差的时候偶然遇见桓城的白先生，他以桓城档案室的三级观看权限为交换条件，让我帮他一点小忙。我同意了。后来我发现王存芳的野心在他智识允许的范围之外，而这会很大程度上影响到我的工作，于是我便答应桓城的进一步合作。他们喜欢如何界定和称呼是他们的自由，但我只是根据我的行为准则行事。”</p> 
+<p id="p_u86lp9wk9bx"  ><br /></p> 
+<p id="p_udrlp9wk9by"  >“是桓城？不是化城？”发现他叙述中的差异，卡维马上反应过来，自言自语，“也对。像你这样的人，怎么可能让他们知道完整的信息？……等等。什么根据你的行为准则行事，能面不改色地说出这种话，你还真是……”</p> 
+<p id="p_u7olp9wk9bz"  ><br /></p> 
+<p id="p_u1dlp9wk9c0"  >“我希望每个人都能按照自己的期望活动，但很遗憾，能做到的人显然并不多。所以他们才发明了种种条框去巩固这种脆弱……不过，那也与我无关。”</p> 
+<p id="p_uihlp9wk9c1"  ><br /></p> 
+<p id="p_ulplp9wk9c2"  >卡维心说那当然，一个艾尔海森已经把宝城闹了个对转，要是一队一群一邦的艾尔海森，怕不是说一句“给我一个支点”就要把地球掀翻。想到了什么，他又接着问：“那么租界的……”</p> 
+<p id="p_upwlp9wk9c3"  ><br /></p> 
+<p id="p_updlp9wk9c4"  >“那也是任务。……本来想着麻烦，打算放着不管，但反正上一桩事情可以和这个一起做，便干脆打包干完，免得他们再因为类似的事情找我。”</p> 
+<p id="p_uculp9wk9c5"  ><br /></p> 
+<p id="p_u4ylp9wk9c6"  >事情的脉络在卡维的脑海里渐渐延展成一条清晰的线条，理性与逻辑贯穿着偶然，慢慢推动事态发展到如今的结果。起因经过都询问完毕，但结果仍有几分疑云。卡维道：“所以你做完这两件事情之后，引起了别人的怀疑，便不得不用计脱身？”</p> 
+<p id="p_u1flp9wk9c7"  ><br /></p> 
+<p id="p_ue8lp9wk9c8"  >“这只是原因之一。凡走过必留下痕迹，雪泥鸿爪也会引起警惕，他们能产生怀疑说明他们还具有基本的判断水平。但更重要的是，我的任务已经结束，作为参谋能查阅的资料已经基本穷尽，没有必要再在这里消耗时间。恰巧又有下家提供了不错的条件，不如就从此抽身。”看卡维闻言低头，手指轻轻摩挲着上唇，表情似在深思，艾尔海森顿了顿。随即又若无其事道，“问完了？现在你我也算知根知底了。不知道这个结果，大建筑师可算满意？”</p> 
+<p id="p_uaelp9wk9c9"  ><br /></p> 
+<p id="p_ueklp9wk9ca"  >艾尔海森叙述相当清楚，逻辑缜密，行事风格也相当符合他本人我行我素的锋利性格，深夜里头听，似乎没有什么值得怀疑的地方。但当事情慢慢浮出水面，他渐渐从藻荇中捧出真相，另一个问题却从水面底下睁开了鲜红的眼睛。卡维注视着思绪镜中的自己，现在他知道当初的误会与别离也许也是艾尔海森计划的一部分，对方没有违反与他之间的契约，既满足了与他的共同目标——尽管他本人不认同这种处理方式——又让从一开始就卷进风波的卡维全身而退，顺利地回归自己原先的生活。他的任务结束了，艾尔海森的计划也走到了尾声，那么……然后呢？</p> 
+<p id="p_u85lp9wk9cb"  ><br /></p> 
+<p id="p_udxlp9wk9cc"  >卡维别过脸，视线轻轻落在台面上。月亮从高天下落，清冷的淡光也随之西移，穿进他散落的发丝，透明纯净，恍惚如蟾宫嫦娥：“你又为什么来这里？”</p> 
+<p id="p_um5lp9wk9cd"  ><br /></p> 
+<p id="p_u4vlp9wk9ce"  >艾尔海森大可以又拿出一遍钥匙，回答说“因为我是这里的房东”，来审视自己的房子天经地义，但他们都知道卡维问的并不是这个。“为什么”？卡维不相信入住时仿佛为他量身定做的条件是偶然，不相信超乎常理的便宜租金是偶然，现在想想，很可能从赛诺“收到稿件”这一个故事起，一切都是精心策划的结果。但为什么？为什么艾尔海森煞费苦心地想要卡维住进他的产业，为什么挑选了一间合适双人居住、清雅又安静的房子，又为什么在对他而言最为重要的书房里放上了向窗的小桌和小翠灯？卡维是建筑师，他很清楚居所是人心的投射与外延，精心挑选设计的痕迹，比言语更裸露与直接。倘若艾尔海森绝不会做一无所求的交易，也不在乎别人对他是否误解，那么今夜长篇累牍的自述，对他这个所谓的“天真的大学老师”，又在索取着什么？</p> 
+<p id="p_ubnlp9wk9cf"  ><br /></p> 
+<p id="p_u88lp9wk9cg"  >“你大晚上来这里，不会只是想要找个树洞吧？虽然我不介意帮你写段传记，但估计你也不会对流芳百世有任何兴趣。艾尔海森。你……”他的眼睫微微颤动，从下而上看人时，眼神有些犹豫，如蜻蜓落尾于一池春水，“你……要说的话，就只有这些了吗？”</p> 
+<p id="p_ud8lp9wk9ch"  ><br /></p> 
+<p id="p_ul8lp9wk9ci"  >艾尔海森看着他。也许是夜深的缘故，他的目光不知为何显得尤为柔和，卸去枪械与军衣，此刻的他像话本里写的光华正好的大宅少爷，沉稳、克制，锋利底下秋光乍泄的柔软[1]。卡维鲜少在艾尔海森身上看到情感如此外露的一面，如此月色、如此微风，两人面对面缩于几尺厨房里的如此良夜，他的喉结上下一动，忍不住便猜测起那个答案；但对方的情态并未维持太久，眼睛一垂一抬，又恢复了平日里从容自若的神气。他道：“我不过是来物归原主。”</p> 
+<p id="p_u4blp9wk9cj"  ><br /></p> 
+<p id="p_u8ulp9wk9ck"  >他手上提了一个蓝色的布包。卡维巧手，连系扣东西也自有一种技巧，看布包打包的方式与先前不同，他便知道有人已经看过。为什么要还给他？心中有些忐忑，艾尔海森却继续说：</p> 
+<p id="p_ucllp9wk9cl"  ><br /></p> 
+<p id="p_ue7lp9wk9cm"  >“你好像生怕别人不知道你和我有关系。那种情况下送这种礼物给我，只怕会有人剑走偏锋，把你牵扯其中。”他顿了顿，又道，“……但做得不错。”</p> 
+<p id="p_uoqlp9wk9cn"  ><br /></p> 
+<p id="p_umylp9wk9co"  >卡维做的是三层的艾尔海森的公馆。在连夜赶工的空旷里，寂寞的骨架中间，有两个小人在三楼的窗边并肩站立。彩色的铅笔绘就了小人清秀的面容，大大的眼睛和微笑或压低的嘴唇，一个看着另一个，好像永远也不会移转。偌大的房子里没有装潢、没有杂物，只有他们两个人，在这片小小的独属于他们的天地里永恒地彼此依靠着。</p> 
+<p id="p_u9ylp9wk9cp"  ><br /></p> 
+<p id="p_udclp9wk9cq"  >那也许便足够被称之为“家”。</p> 
+<p id="p_u38lp9wk9cr"  ><br /></p> 
+<p id="p_ufqlp9wk9cs"  >是什么时候开始吻的？不知道。卡维还在消化信息，是艾尔海森先伸的手。人类常用语言来表达情绪，将丰辞当作感情的载体，但最为激烈的冲动却会让最善辩的人缄口，用唇、手、发烫的身体与赤裸裸的心脏，去传达镌刻在无言无识处的欲望。与他接触并非是第一次，初遇的时候心头一颤，第二次见面便吻，而后因缘际会做了所谓情人，真情假意地亦托付了几分；那日天街底下看到真心，又情难自禁用唇齿倾诉爱慕，如今尘埃落定两人立于命运的分叉口，绕在腰后的手与攥紧后背的指头，又把这一对世事里浮沉的年轻人牢牢抵住，仿佛永世不可离分。卡维轻轻哼了一声，看见艾尔海森闭着眼睛，眉心舒展，锋利的眉缓如丘陵起伏的步道，竟从他的鼻尖读出“倾心”二字。是了，答案未必是白纸黑字平上去入的答案，它会在情人的爱抚中心照不宣地发生，有如冬去春来自然消融的雪，又像日昏启明默默无言的月，由无数个朝夕相对的日子重叠凝合，从无到有。</p> 
+<p id="p_uq5lp9wk9ct"  ><br /></p> 
+<p id="p_unalp9wk9cu"  >感觉对方的手已经伸进了衣服的下摆，温热的手压上了自己的小腹，卡维稍稍分开喘息，又难堪地别过了头。刚刚情动太深，两人不知不觉间便抵上了台沿，身体也随之严丝合缝，身体隔着两层薄薄的衣物紧紧贴在一起，似有若无地摩擦，他也有了一丝奇怪的感觉。身前的人也兴致勃勃地，嘴唇分毫不让地追，手在他衣服底下乱动，毫不犹豫地明示他的企图。对方的眼睛锐利而专注，卡维用氤氲而意切的视线去回，情欲在狭窄的距离里步步升温。卡维正想说什么，视线一低，却在艾尔海森的外套底下看到了纵深的条纹，愣了一愣：“你怎么还穿着病号服？”</p> 
+<p id="p_unolp9wk9cv"  ><br /></p> 
+<p id="p_u4zlp9wk9cw"  >“从医院里出来，时间有限。里面的衣服又看不到。”他又拢上卡维的后背，正欲继续，却被卡维抵住。看到病号服的一瞬间卡维面色一白，“你……你伤势到底怎么样？严重吗？还痛？”</p> 
+<p id="p_u20lp9wk9cx"  ><br /></p> 
+<p id="p_urelp9wk9cy"  >“比你的银行账户乐观。”</p> 
+<p id="p_udklp9wk9cz"  ><br /></p> 
+<p id="p_unflp9wk9d0"  >“你！……”卡维深呼吸，“我这次不和你计较。你明明有更审慎的方式，为什么这样冒险？难道自视甚高的艾尔海森先生，不知道哪怕枪口偏歪一点，你就可能会死？！你还敢……你还敢……”他的视线扫过某一点，又慌忙移开，“休想。伤在这种位置，你只许静养。就算是能出院，也得把身体养好了再说……”</p> 
+<p id="p_ufrlp9wk9d1"  ><br /></p> 
+<p id="p_u1nlp9wk9d2"  >苍翠的眼睛注视着他。艾尔海森微微低头，头发挠在卡维的脸侧，上面还带着消毒水的味道。他的声音向来低而有磁性，夜色里更加旖旎。却没有任何的反驳，他只说，“我明天就要走了。”</p> 
+<p id="p_u33lp9wk9d3"  ><br /></p> 
+<p id="p_umklp9wk9d4"  >“明天？”鲜红的眼睛忽然睁大，他侧着脸，语调急切，“不是说已经解决了吗？为什么……”</p> 
+<p id="p_u13lp9wk9d5"  ><br /></p> 
+<p id="p_uo7lp9wk9d6"  >“声东击西，但到底有人会察觉。明天他们大概率就会开始安排人搜索城内，暂时离开宝城，能进一步迷惑对方的视线。……当然，你会安全。他们已经排除对你的怀疑，今晚的事也不会有人知道。大可以安心。”</p> 
+<p id="p_upulp9wk9d7"  ><br /></p> 
+<p id="p_um7lp9wk9d8"  >“那你会……”</p> 
+<p id="p_ujelp9wk9d9"  ><br /></p> 
+<p id="p_uqclp9wk9da"  >艾尔海森当然会回来。作为海归博士海什木，他的房东，他会回来。但流匪遍地，军阀割据，人心难测，此去或许依然凶险。卡维的心剧烈地跳着。他知道艾尔海森说这句话并非平白无故，对方是拿定了他的个性；但命运在他面前扔了骰子，他的确无法再次在面临离别的时候，拒绝这样的艾尔海森。再抬眼，他咬咬牙：</p> 
+<p id="p_ul1lp9wk9db"  ><br /></p> 
+<p id="p_ugflp9wk9dc"  >“你真的想……”</p> 
+<p id="p_uj8lp9wk9dd"  ><br /></p> 
+<p id="p_uiilp9wk9de"  >艾尔海森只是沉默地注视着他。那双眼睛在月色底下跳动着一点橙黄，一分也没有移转。卡维知道无需再问。</p> 
+<p id="p_updlp9wk9df"  ><br /></p> 
+<p id="p_unllp9wk9dg"  >他深呼吸。</p> 
+<p id="p_ubqlp9wk9dh"  ><br /></p> 
+<p id="p_ubblp9wk9di"  >“好吧……那你别动，让我来。”</p> 
+<p id="p_ulplp9wk9dj"  >&nbsp;</p> 
+<p id="p_ufjlp9wk9dk"  >&nbsp;</p> 
+<p id="p_u4nlp9wk9dl"  ><br /></p> 
+<p id="p_ulblp9wk9dm"  >等艾尔海森穿好了衬衫，套上外衣，卡维还躺在床上，背对着他，半晌没有说话。天已经亮起来了，门外大路有了隐隐的喧闹声，城门一定已经开了，昨夜追踪的人们应该才回，要浑水摸鱼出城，没有比现在更好的时候。艾尔海森打开房门的时候，才听到背后有一声轻轻的呼唤。他嗯了一声。事后的声音有一点缱绻，耀眼的日出仍未能将两人旖旎的回忆抹平，于是这一声回应也似乎比往日温柔好多。卡维问他：</p> 
+<p id="p_uoslp9wk9dn"  ><br /></p> 
+<p id="p_u7ilp9wk9do"  >“你什么时候会回来？”</p> 
+<p id="p_ue7lp9wk9dp"  ><br /></p> 
+<p id="p_u2elp9wk9dq"  >“也许早，也许晚。但总会回来。”</p> 
+<p id="p_uorlp9wk9dr"  ><br /></p> 
+<p id="p_u8mlp9wk9ds"  >“……”那个清亮的男声似乎忽然恼怒，“你已经耍了我好几回了。要再敢爽约，你就死定了。”</p> 
+<p id="p_ubtlp9wk9dt"  ><br /></p> 
+<p id="p_u5clp9wk9du"  >“哼。”</p> 
+<p id="p_u5wlp9wk9dv"  ><br /></p> 
+<p id="p_ubqlp9wk9dw"  >对方只回了一个鼻音。像轻蔑，又像是一种含蓄的应允。</p> 
+<p id="p_u9clp9wk9dx"  ><br /></p> 
+<p id="p_udelp9wk9dy"  >他一向雷厉风行。门外的座钟响起的第一声，只一瞬间的衣角翻飞，他便消失在这房子里，仿佛从来没有来过。卡维轻轻地蜷起来。昨夜酣眠，枕上落了金色灰色的细发，纠缠地结成一团。他便躺在那团人的绒线旁边，小声地，仿佛许愿似的，喃喃道：</p> 
+<p id="p_uiylp9wk9dz"  ><br /></p> 
+<p id="p_uvlp9wk9e0"  >“……要平安。”</p> 
+<p id="p_unxlp9wk9e1"  >&nbsp;</p> 
+<p id="p_uorlp9wk9e2"  >&nbsp;</p> 
+<p id="p_ujflp9wk9e3"  >&nbsp;</p> 
+<p id="p_ucklp9wk9e4"  >&nbsp;</p> 
+<p id="p_uialp9wk9e5"  ><strong>后记&nbsp;燕归巢</strong></p> 
+<p id="p_u34lp9wk9e6"  >“喂，请问是哪位？找海、海什木先生是吗？”金发的大学老师握着电话筒，红色眼睛心虚地朝后扫了一眼，“想让海什木接个电话，问问能不能接新的专栏？呃——”</p> 
+<p id="p_upxlp9wk9e7"  ><br /></p> 
+<p id="p_um1lp9wk9e8"  >“海什木”先生正翘着二郎腿，施施然坐在客厅沙发上，悠闲地看着一本书。卡维一边支支吾吾，一边狠狠地向那位事不关己的家伙飞眼刀。大爷好不容易愿意给他一个眼神，他忙回复道：“是这样的，小姐，海什木说他不在……不对，我是说，海什木不在。他什么时候回来？这个问题……”大爷的头又低下去了，他咬咬牙，“晚上吧，七点左右。我啊？哈哈哈，我是和他合租的室友，不用太在意我……他应该会在的，应该。好，你的消息我会尽量转告给他的……”</p> 
+<p id="p_unflp9wk9e9"  ><br /></p> 
+<p id="p_uellp9wk9ea"  >像逃难似的，他赶紧说着“那先这样吧不好意思了再会”，啪嗒一声扣上了电话。身后灰色头发的俊秀年轻人，本屋的另一位屋主，从知识的海洋里抬起头，慢慢悠悠道：“还在坚持你那套‘合租室友’的说辞吗？很好奇你觉得会有谁相信。”</p> 
+<p id="p_u9rlp9wk9eb"  ><br /></p> 
+<p id="p_u11lp9wk9ec"  >卡维听着就来气。</p> 
+<p id="p_u9mlp9wk9ed"  ><br /></p> 
+<p id="p_u5llp9wk9ee"  >“你还好意思说！每次都让我来听电话。”他咬牙切齿，“这好像是你的工作吧，不是我的？这几天都帮你回了多少信了？我不从大作家这里支工资吧？”</p> 
+<p id="p_u86lp9wk9ef"  ><br /></p> 
+<p id="p_uaolp9wk9eg"  >“我从没有说过要让你帮忙。”化名为“海什木”的撰稿人、《宝城商报》特约评论员，我们前少将艾尔海森先生，现留学归国、精通七门语言的天之骄子，气定神闲地又翻了一页书，“有人喜欢给自己增加额外工作，这是你的自由。”</p> 
+<p id="p_ubhlp9wk9eh"  ><br /></p> 
+<p id="p_u19lp9wk9ei"  >“你！……”和这个家伙待在一起果然会被气得半死，即便每天都要来上这么一遭，卡维还是会毫发不爽地上同样的当，“电话都响了多久了？我也在这间屋子里好不好？有噪声我当然要来处理啊！”</p> 
+<p id="p_u59lp9wk9ej"  ><br /></p> 
+<p id="p_u8slp9wk9ek"  >“我正要把它挂掉。”</p> 
+<p id="p_uhplp9wk9el"  ><br /></p> 
+<p id="p_ucplp9wk9em"  >“但人家都找了你多少次了！”卡维手一叉腰，眼角锋利地一挑，“你倒好，四点钟之后的电话一个都不接。真受不了，之前做小领导的时候就下午三点半翘班出门，现在给报纸写稿子，还是照样神龙见首不见尾。一样是做工，怎么你就像大爷似的？你是潇洒，可怜人家要加班呢！”</p> 
+<p id="p_u70lp9wk9en"  ><br /></p> 
+<p id="p_u7glp9wk9eo"  >“受不了这份工作，大可以辞职不干。另外：为什么要在工作上浪费时间？钱又不是不够用。”艾尔海森摆了摆手，“我不认为24小时待命是什么值得称颂的状态。报纸和报刊只买了我的文章和观点，没有购买我的闲暇时间。这么急着帮别人榨取自己的劳动价值？希望你的进账足够支付你买养心丹的费用。”</p> 
+<p id="p_u6llp9wk9ep"  ><br /></p> 
+<p id="p_ur6lp9wk9eq"  >“你！……”昨天又熬夜到两点的卡维吹胡子瞪眼，“就是因为你这幅自以为是目中无人又阴阳怪气的嘴脸，我才讨厌和你讨论任何问题！”他一扭头：“听你说话就烦。早知道我就别好心帮你应付了，我还忙得很呢！”</p> 
+<p id="p_u9qlp9wk9er"  ><br /></p> 
+<p id="p_uedlp9wk9es"  >他转身就要回房。</p> 
+<p id="p_uqclp9wk9et"  ><br /></p> 
+<p id="p_u7qlp9wk9eu"  >“等等。”艾尔海森道。卡维止住步子，没好气地瞪了他一眼：“干什么？”</p> 
+<p id="p_uoslp9wk9ev"  ><br /></p> 
+<p id="p_u5dlp9wk9ew"  >他以为有什么重要的事，没想到艾尔海森只看了下时间，语气淡淡：“现在已经五点多了。不吃饭？”</p> 
+<p id="p_udlp9wk9ex"  ><br /></p> 
+<p id="p_ukflp9wk9ey"  >“……喂。”倘若岭大有人际关系系，艾尔海森绝对是其中翘楚。卡维从没有见过能像他一样三言两语就能把人气得七窍生烟的人，叉着腰，冷笑一声，“我警告你，我还在生气！别当没事似的要揭过去，你要为你的言行负责！”</p> 
+<p id="p_u51lp9wk9ez"  ><br /></p> 
+<p id="p_uoblp9wk9f0"  >“我只不过想告诉你，你前天说想吃的群英饭店春花乳饼和明前第一采的龙井，今天有折扣。熟客惠顾，还按客位送新乳布丁。”</p> 
+<p id="p_u37lp9wk9f1"  ><br /></p> 
+<p id="p_ubblp9wk9f2"  >艾尔海森不那么喜欢吃这种甜丝丝黏糊糊的东西。这句话的隐义是，那按客位上，他能吃两个。</p> 
+<p id="p_ujglp9wk9f3"  ><br /></p> 
+<p id="p_ui5lp9wk9f4"  >新乳布丁是群英饭店的拿手好菜，宝城创新引入洋点的第一步，平时吃一份就要半圆钱，但值这个价：入口丝滑绵密，奶香浓郁，犹如含着月底雪云，叫人飘飘欲仙。卡维也只有在完成了一项大工作的时候才舍得去打打牙祭——居然免费送吗，这么舍得？他默默颔首，抵住了下巴。</p> 
+<p id="p_u1plp9wk9f5"  ><br /></p> 
+<p id="p_u31lp9wk9f6"  >“上一期报纸卖得不错，听说那家饭店的老板也对我的观点多有赞同。当然，意见的相同与差异十分脆弱，并不能证明什么。不过三折的优惠券倒还能用。”</p> 
+<p id="p_ugplp9wk9f7"  ><br /></p> 
+<p id="p_uj7lp9wk9f8"  >“这么……”卡维开始踱步，“那是什么老板，怎么读个报纸就被神魂颠倒了，还巴巴给人送优惠券——”</p> 
+<p id="p_u14lp9wk9f9"  ><br /></p> 
+<p id="p_ufblp9wk9fa"  >“听说《宝城商报》还有很多读者寄给我的礼物和信件。这也许就是常人和更擅长观察的人的差别吧，我不过是写了一些常识，便有人奉为圭臬。但考虑到稿费也因此大涨，所以我没有什么意见……”</p> 
+<p id="p_u9klp9wk9fb"  ><br /></p> 
+<p id="p_urqlp9wk9fc"  >“为什么？！你不是才写了三四篇？！”卡维瞪大眼睛，“怎么稿费连连涨？！”</p> 
+<p id="p_ua9lp9wk9fd"  ><br /></p> 
+<p id="p_uljlp9wk9fe"  >“说明我的观点帮助他们获得了不少收益。他们认为我具有那样的价值。”艾尔海森挑眉，“怎么，有人又在月底花光了工资，赶不上头一道春茶吗？”</p> 
+<p id="p_unblp9wk9ff"  ><br /></p> 
+<p id="p_unklp9wk9fg"  >“我又不是你，有源源不断的进账。除了老师每个月的固定讲课收入外，其他单子都要一笔一笔费尽心思地去做，有宽裕有紧凑的时候很正常！”</p> 
+<p id="p_uidlp9wk9fh"  ><br /></p> 
+<p id="p_uqulp9wk9fi"  >“我倒是觉得你只要省下一两笔冲动花销，就足够你滋润地过完剩下的时候了。……比如，不要在每一个拦住你的流浪汉前面都掏出你的钱包。”</p> 
+<p id="p_u96lp9wk9fj"  ><br /></p> 
+<p id="p_u7lp9wk9fk"  >“你怎么能说出这么冷血的话？这个时代有的是流离失所的人，风餐露宿，只需帮他们一些，他们也许就能开始新的生活。别拿你那套优胜劣汰的话对付我！我只是做任何一个有良心的人应该做的事。”</p> 
+<p id="p_u3ulp9wk9fl"  ><br /></p> 
+<p id="p_u7blp9wk9fm"  >“你难道没发现你遇到的流浪汉特别多？”</p> 
+<p id="p_u9vlp9wk9fn"  ><br /></p> 
+<p id="p_uoalp9wk9fo"  >“只能说明最近越加不太平。听说如城那边很多流寇，也许正是从那边逃回来的人……”</p> 
+<p id="p_ud0lp9wk9fp"  ><br /></p> 
+<p id="p_u9blp9wk9fq"  >“那倒不是因为这个。”艾尔海森顺手抓过钥匙，上头精致的珐琅装饰与金色的钥匙一碰，发出轻巧的“哐当”声，“我只是听说，最近圈子里流传一句话：‘金发红眼长褂衫，人傻钱多冤大头’……”</p> 
+<p id="p_u4klp9wk9fr"  ><br /></p> 
+<p id="p_ugmlp9wk9fs"  >“喂！”远远传来恼怒的声音，“你是不是添油加醋说了？！什么叫人傻钱多冤大头……”</p> 
+<p id="p_upllp9wk9ft"  ><br /></p> 
+<p id="p_ugglp9wk9fu"  >啪嗒一声，铁门拉到了底，木门跟着合上，遮蔽了外头的日光，屋内忽然沉静下来。唯有桌上成对摆放的汝窑茶杯、堆叠得摇摇晃晃的新鲜生果、还剩半碗的盐炒瓜子，花瓶里新插的一支桃花、随意放置的许多书籍、还有谁大手一挥写下的小小福字，窸窸窣窣地笑着，慢慢迎接这个黄昏。一排笑哈哈的手工娃娃底下，摆放着两张照片：一张是四个人在岭大门口的合影，还有一张则是两位屋主的，正襟危坐，一个表情淡淡，一个天生地微微笑着，安宁地注视着着取相片的观者。在他们的目光前，许多生活的痕迹从客厅连到厨房，从书案跟到花尖，顺着咕噜咕噜冒着奶泡的小炉飘到一尊盈盈的翠灯，重重叠叠，如衔枝翻飞的许多燕，渐渐织成一个小小的巢穴。</p> 
+<p id="p_urolp9wk9fv"  ><br /></p> 
+<p id="p_u9klp9wk9fw"  >大世界的小鸟雀，会一起度过无数个春天。</p> 
+<p id="p_u27lp9wk9fx"  >&nbsp;</p> 
+<p id="p_uh7lp9wk9fy"  >&nbsp;</p> 
+<p id="p_u94lp9wk9fz"  ><br /></p> 
+<p id="p_ukclp9wk9g0"  >&middot;天街如水&nbsp;全文完。</p> 
+<p id="p_ui3lp9wk9g1"  ><br /></p> 
+<p id="p_u5dlp9wk9g2"  ><br /></p>
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>JuusanYomitsuru</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="https://juusanyomitsuru.github.io/2023/12/10/e54f697cd930/">https://juusanyomitsuru.github.io/2023/12/10/e54f697cd930/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2023/12/10/40a7ae7f799d/">天街如水（其三十二）</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<span class="site-uv">
+    总访客量:
+    <i class="busuanzi-value" id="busuanzi_value_site_uv"></i>
+</span>&nbsp;
+
+
+<span class="site-pv">
+    总访问量:
+    <i class="busuanzi-value" id="busuanzi_value_site_pv"></i>
+</span>
+
+
+
+    <div class="copyright">
+        <span>© JuusanYomitsuru | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>

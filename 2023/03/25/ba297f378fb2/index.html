@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="JuusanYomitsuru">
+
+
+
+
+
+<title>天街如水（其一） | Hexo</title>
+
+
+
+    <link rel="icon" href="/yumaobi.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">JuusanYomitsuru&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">JuusanYomitsuru&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6; // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function() {
+            tocbot.refresh(obj_merge(tocbot_default_config, {
+                hasInnerContainers: true
+            }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function() {
+        tocbot.init(obj_merge(tocbot_default_config, {
+            collapseDepth: 1
+        }));
+    });
+
+    function expand_toc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, {
+            collapseDepth: expanded ? 1 : DEPTH_MAX
+        }));
+        b.innerText = expanded ? 'Expand all' : 'Collapse all';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">天街如水（其一）</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">JuusanYomitsuru</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">March 25, 2023&nbsp;&nbsp;13:26:07</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E5%A4%A9%E8%A1%97%E5%A6%82%E6%B0%B4/">天街如水</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h4 id="阅读之前……">阅读之前……</h4>
+<ul>
+<li>例行超长预警：
+<ul>
+<li>非常感谢您点进这篇文章。</li>
+<li>这篇文章主角为军贼头子（军师）海X大学老师卡，内含R18内容。大概是被海哥竞争对手盯上的卡与海哥假扮情人，最后渐生爱意的故事。</li>
+<li>其中有卡女装要素，是旗袍和舞女装，请注意。</li>
+<li>感情线1v1，但因为情节需要，在第六章有卡被海的竞争对手性骚扰的桥段（您可以自由选择跳过该章或直接退出阅读。在该部分前会再有预警。）</li>
+<li>因为民国pa的背景限制，除了海维赛提等出现的须弥角色外，其他统统为璃月名。如感觉不适也可退出。</li>
+<li>文笔小白，逻辑天真，希望看客愉快。</li>
+</ul>
+</li>
+</ul>
+<h4 id="正文">正文</h4>
+<p>  王存芳将军要开舍利塔。</p>
+<p>  这个消息先是渗透到高层，而后从学生里汇集、蔓延、发酵，最后一层一层突破信息的壁障，在学生拿着倡议书冲进所里之后，终于抵达卡维的面前。</p>
+<p>  这段时间卡维收到了国内的第一个设计订单，是租界的民宅。屋主的要求建筑要体现法兰西的特色，又要符合当地的风俗，除此还为着住户的喜好提了一大堆鸡零狗碎的条件。卡维为了这一单在所里关得昏天黑地，吃住不出屋门，在看到盖满了红指印的白纸时，第一反应是呆滞，其后才是愕然。学生手舞足蹈地朝他比划完前因后果，那延迟的累积的怔愣，才慢慢烧起来，变成滔天的怒火。他二话不说，毅然决然地在纸上印了手指、签了名字，接着便风风火火地去找提纳里。提纳里见到他的第一眼，便把来意猜了个八九分，叹了口气。卡维把随身带的书袋往椅子上一砸，提纳里便出言道，“……怎么，有学生找你按手指了？”</p>
+<p>  “是，我按了……也找你了？”</p>
+<p>  卡维气还没喘匀就往桌子上摸水喝。提纳里是小官，有自己的办公处，位置还颇宽敞，卡维也不把自己当外人。提纳里沉默了一会儿，指尖轻轻地磨着手上的钢笔盖，道，“我上次见到他们说了两句，他们就绕着我走了……你先别生气，我说，下次你见到他们也劝劝。”</p>
+<p>  卡维闻言一愣，脑子轰得一声响。“为什么说他们？难道提纳里你也和那帮奴才一样……”</p>
+<p>  这话说得刺耳，植物学家皱了皱眉。“当然不是。但现在上头的人在查这件事，说要挨个记下名字，领头的退学，所有参与的都记处分。而且据塞塔蕾说，学生这边有人反水，已经把他们的计划全部呈递上去，到时候这些学生不仅可能要挨处分，这封请书还可能根本就走不出校门。现在老师这边风平浪静的，不知道学生有没有听到风声。父母辛辛苦苦攒钱供他们读书，因为热血上头被退学，不值当。”</p>
+<p>  卡维沉默了一会儿。“处分”一词的威严他也心中有数。挨了处分的学生，不仅无缘一切资助，毕业后再寻出路，还可能成为履历的污点。但难道就要因为上层的懦弱和迂腐，就眼睁睁看着几百年的塔林毁于一旦么？有一份热发一份光，绝不能坐以待毙，退一万步说，能叫上头的人知道民心所向也是好的。</p>
+<p>  提纳里听完卡维的辩驳，叹了口气，“现在你也是老师了，考虑问题不能再这么孩子气。我听赛诺说，进塔林这件事好像和王存芳的什么扩兵的计划有关系，总之不是学生按按手指、喊几句口号就能解决的问题。而且，话说回来，我虽然不支持校方的行为，也不打算为校长阿扎尔的立场辩解，但从现实情况来看，要是真的有学生冲到将军府交什么倡议书，表什么民心，那可不是退学就能搞定的。理想是好的，但现实往往残酷。无论如何，还是让学生保全自己要紧。”</p>
+<p>  提纳里盯着他。他性格温和，但行事极有魄力，他看着卡维时，除了是朋友的关心、同僚的体谅，无疑还有为人师表的督促和审视。卡维知道他是对的，但一阵冷风从手指间渗进去，引起一阵绝望的鸡皮疙瘩来。他心绪回环曲折、正处于天人交战的境地，他踱了几转，“对……你说的对……其实学生本不该去冒这个险。这种事本来就应该由我们老师出面……或许我们写倡议书……亦或者找些渠道……”</p>
+<p>  “卡维。”提纳里道，“如果你的意思是按手指印的话，难道换我们按手指印就有用了？”</p>
+<p>  卡维不吭声了。其实他们同学生一样是拿不得真刀真枪，只能操笔杆子的读书人，出于教师的责任不忍见学生以卵击石，但反观自身又硬几分？无非是一并“不可为而为之”地自我欺骗，拿三寸不烂之舌去堵子弹罢了。更何况其他老师都拖家带口，为一日三餐奔忙。塔林哪怕有千钧之重，能有饭碗重吗？两人心里都和明镜似的，沉默在短短的桌面上扩散着，于两端低垂的眉眼间穿梭、下沉，抵到脚面。空气安静了许久，忽然，卡维道，“……不用按手指印。我有办法了。”</p>
+<p>  提纳里狐疑地看着他，“什么办法？”</p>
+<p>  卡维把自己的计划告诉了他。既然直接拿倡议书不仅会挨处分，去堵将军府可能会被当成造反，想通过学校的层面呼吁，又要和那帮歪屁股的老古董周旋，那要是能绕过层层上达的程序，直接以私人的身份面见将军，发挥大学教授智囊的作用，晓以厉害，动之以情，是不是概率就会大一点呢？</p>
+<p>  提纳里闻言思索了一会儿。“……想法是好的。不过你打算怎么面见将军？去他府上递拜帖吗？……”</p>
+<p>  “吓！不必！”卡维神秘兮兮地笑道，“我认识一个手眼通天的人，他一定会有办法的。”</p>
+<br>
+<br>
+<p>  “什么？八千元？”卡维从凳子上跳了起来，“见一个面要这么多钱，我是要去见如来佛吗？！”</p>
+<p>  “哎呀……兹事体大，不同情况有不同价格的嘛~”</p>
+<p>  坐在提纳里和卡维对面的身材娇小的女性，便是卡维口中“手眼通天”的那位。她嘴里叼着烟斗，戴着一双晶莹剔透的玳瑁眼镜，锐利的视线从镜片上射出，扫着周围经过的人。她眯眼应付，眼里但却没有笑意。她浑身有着这样一股气质：仿佛只要被她望一眼，自己数十年的人生就会被剥皮拆骨，哪段哪片值几斤几两，都会被肢解好列成一排，标好价格。提纳里敏锐地察觉到了这种气质背后的意味，皱着眉头。但卡维却好像浑然不觉，给自己猛灌了几大杯水做心理建设，低声下气，“……这件事情很重要，多莉……塔林有五百年历史，里面供奉着七尊顶骨，一百零八颗舍利子……半数以上有塔铭，保存相当完好……如果这座塔林毁了，那么后人研究佛教的石砖艺术的材料恐怕会少三分之一……多莉……”</p>
+<p>  “哎呀呀。”多莉满不在乎地看自己戴满戒指的手，“那不正说明了值八千吗？八千还算便宜的呢！”</p>
+<p>  “……”卡维弱弱地说，“我没有那么多钱。”</p>
+<p>  提纳里轻轻在下面拉卡维的袖子。多莉扫了他们一眼，“那卡维先生，你预期的价格是多少呢？”</p>
+<p>  “两、两千……”</p>
+<p>  提纳里扶额。多莉呵呵笑道，“五千，不能更少了。”</p>
+<p>  卡维已经毫无气势，“五千我也给不起……我一个月工资也就六百，手上的项目还没做完……这五千我得存到猴年马月啊！到时候别说塔林，长城都推了！”</p>
+<p>  多莉上下地观察着卡维，似乎在估量着什么。提纳里张口想告辞拉着卡维走，多莉适时开口，“……那么，三千五，我可以先记着。另外，我还要获得一次无条件要求你帮忙的权利。”</p>
+<p>  听到数字的一瞬间卡维眼睛一亮，点头就想答应。提纳里横插一句嘴道，“……多莉小姐，恕我冒昧，请问有什么忙非得是我们‘这样的学者’才能帮的呢？”</p>
+<p>  多莉轻轻觑了提纳里一眼，笑道，“我一向是很欣赏卡维先生这样的艺术家的。像卡维先生这种享誉寰宇的学者和建筑师，能帮多莉的忙可多得很。比如替多莉建一座漂亮的宅子，或者是给多莉推荐合适的家具和地址，哪怕是给多莉送一本亲手写的笔记……呵呵，提纳里先生，千万不要小看自己，‘你们这样的学者’的价值，可是很多人望尘莫及呢！”</p>
+<p>  提纳里正欲再说，卡维连忙拦下，“好不容易多莉小姐才愿意给我们一个实惠的价格，我力所能及地帮多莉小姐一点，也是应该的。”</p>
+<p>  多莉呵呵一笑，“卡维先生果然爽快，我最喜欢和你这样的人做生意了。别人都说多莉贪财，但钱谁不爱？但一样爱钱，多莉识人的本事，可是谁都比不上的。我可从不吝啬于在有价值的人身上投资。”</p>
+<p>  “把钱砸在地里，最多长出一地瓜菜；扔进矿里，最多出来一车石头。但砸到人身上，好处可是无穷无尽的哟。卡维先生是我的朋友，我愿意买朋友这个好处。提纳里先生若是也愿意成为多莉的朋友，自然也会知道多莉的好处的。呵呵。”</p>
+<p>  谈妥了不久两人就从西菜馆里出来。提纳里竖着眉毛，“我劝你小心点。”</p>
+<p>  “什么？”</p>
+<p>  “多莉那种人，只怕把你卖了你还得给她算账的。钱倒还不是问题，她要你帮的那个语焉不详的忙，你可得长个心眼。”</p>
+<p>  “钱怎么不是问题……我好几个月的粮呢，怎么就不是问题……她之前也叫我帮过忙，无非是从国外寄点东西，给她写点文章之类的……虽然繁琐，但也没叫我做什么太出格的事。虽然爱钱，但她也很识大体。”看着提纳里满脸写着怀疑，卡维一把抱住了他的肩膀，“不说那个了，这个才是重点——”</p>
+<p>  他得意洋洋地挥舞手上的纸，上面写了一行地址，“我们居然花半价的钱买到了军贼头子的地址！还插队约到了见面！这算不算成功的一大步？”</p>
+<p>  提纳里瞥了他眉飞色舞的同伴一眼，叹了口气，敷衍道，“是，是。”</p>
+<p>  “今晚回去喝酒！”</p>
+<p>  “你上次倒在屋里还是我抬回去的，你还敢喝？”</p>
+<p>  “别这样嘛老妈子~痛饮三大白，不醉不归！”</p>
+<p>  两个长衫缠在路上，路人纷纷侧目。卡维的尾音刚落，路上的街灯便啪一声亮了起来。昏昏的紫夜自边缘落白，放工放学的路人的喧声慢慢盈满街道。提纳里预感到自己这位缺心眼友人的命运自走出菜馆就势不可挡摧枯拉朽地向前狂抡；吓！虽然本就不是一盏省油的灯！</p>
+<p>  他抬头望着高天的星宿，心想：希望卡维能够平平安安地从那帮兵的手里回来。</p>
+<br>
+<br>
+<p>  艾尔海森正在确认自己的行程表。</p>
+<p>  早上七点到九点是锻炼时间。九点到十二点在将军府开会。十二点到下午一点是午休时间。</p>
+<p>  一点到三点整理公文。三点到五点听下属汇报。五点之后是饭局，晚上十一点结束返回。</p>
+<p>  每段时间还细化成数个小任务，齐齐整整地列在长线旁边。饭局的人员有变动，也根据变动的时间清晰地在表上标示出来。他用笔尖轻轻点了点上面的名字，又翻上数页比对记录，如是沉吟着。有敲门声，艾尔海森皱了皱眉，“什么事？”</p>
+<p>  “先生，有自称是拉赫曼先生介绍过来的人，正在大厅等您。”</p>
+<p>  拉赫曼，他的人的确有优先的特权。艾尔海森看了眼时间，起身披上大衣，走出房间。来客正正坐在红木椅上，听到脚步声连忙站起来。他有一头非常漂亮的浅金色头发，相当讲究地梳得整整齐齐，一缕一缕细致地挑起来，红色的眼睛水润润的，上挑的眼尾显得凌厉，但瞪大眼睛的神情弱化了他的攻击性，使之转为一种钝感的特别的可爱。秋天天气转凉，他穿着洋装，浅色长风衣里面搭配着熨帖的衬衫，配了一条红色镶金线的领带，与面部构成精致的考究感。艾尔海森迅速地扫了他一眼，在心里作了个简单的判断，道，“你不是拉赫曼的人。找我有什么事。”</p>
+<p>  他揣着手，一幅无意寒暄的样子，让正打算进行热情的自我介绍的卡维尴尬不已。他心里暗骂军贼的架子，只听眼前高大的男人用皮靴点了两下地板，亮出自己的手表：“现在是十二点四十二分，你还有十八分钟时间。如果三十秒之内你不能把你的来意说清楚，那么你就可以回去了。”</p>
+<p>  卡维闻言一愣。他鲜少遇见这么不客气的人，隐隐觉得被冒犯了，心里有些不快，但想起自己的三千五和亟待拯救的舍利塔，强行把怒气压了下去，“……今天来叨扰上将，实不相瞒，是为了塔林的事……”</p>
+<p>  “十秒。”</p>
+<p>  在他面前好像所有的八面玲珑的社交辞令都全无用处。卡维心里急，嘴一快，“我希望你们能放过塔林。”</p>
+<p>  放过，我居然用了放过这个词。这个词的感情色彩是不是太明显了？卡维在心里合计着。我本来是打算婉转地用“高抬贵手”或者“放它一马”之类的词语，抑或是扩写出前因后果，“请求”麟军在“深思熟虑”之后，做出放弃“开启”塔林的“英明决定”。完蛋了，军贼会不会一枪把我毙了。要毙应该不会在家里毙吧，那他家岂不是成凶宅了。不对，军贼应该不会怕死人吧。他不会掏枪吧。都是因为他催我，不催我我就能客客气气的了。难道我的时间不宝贵吗？永恒的艺术创作的单位时间价值难道不比军贼的单位时间价值高吗？所以到底这个人在嚣张什么？</p>
+<p>  “理由呢？”</p>
+<p>  “啊？”</p>
+<p>  “理由。你既然费尽心思到这里来提出你的要求，就应该提前想好了说服我的理由吧。”</p>
+<p>  “啊……那当然……理由还用说吗？”卡维清了清嗓子，“塔林最早的舍利塔建造时间是元朝元至年间，至今已经有近六百年历史，上面的铭文仍然清晰。七尊顶骨都有明确的标识，而且佛塔完好，这是非常惊人的。当然，更为重要的是里面的建筑样式之多，可以称为塔林的百科全书，单层单檐塔、单层密檐塔、印度窣堵坡塔等样式齐全，其中妙心大师塔的浮雕中一百零八佛与三千比丘尼的浮雕手法细腻，装饰丰富，无论是对建筑学还是历史学来说都是非常重要的文化遗产，如果站在砖石结构保护的角度来说，更是一批无价的学术资料……”</p>
+<p>  “然后呢？”</p>
+<p>  “然后？呃……塔林还有其他重要的意义。首先，它是数百位高僧的安息之地，其中有数十位有典籍可考的事迹，甚至影响了本土的民歌和故事。塔林已经成为了本地风物的灵魂所在。其次，对于附近的居民、大乘佛教的信徒乃至全体国人而言，塔林无疑是一种重要的精神寄托。它所在的金明寺……”</p>
+<p>  “行了，停。”艾尔海森说，“我想你恐怕没有理解我的意思。我需要的是，‘说服我的理由’。”</p>
+<p>  “啊？我刚刚说的都是理由啊？”</p>
+<p>  “是啊。”灰色头发的成年男性有深色的绿色虹膜，搭配中间深红色的瞳孔边缘，就像一块藏着一滴心血的绿宝石，有一种让人心悸的俊秀。脸上没什么表情，让人无法揣测他的想法，身量又高，那双眼睛俯视时犹如睥睨和轻蔑。他换了只脚受力，手仍揣进长长的墨绿色大衣中，绒毛拥簇在他脖颈四周，面容如刀削般冷酷。“可是你说的和我有什么关系呢？”</p>
+<p>  卡维一愣，“保护文化遗产不是应该是国人理所应当的责任吗？”</p>
+<p>  “理所应当。”似乎在咀嚼着这个词，艾尔海森挑眉，“理所应当能够换钱吗？”</p>
+<p>  “你……”卡维听见如此大逆不道的话，怒火攻心。他似乎没有想到对方会给出一个如此“厚颜无耻”的答案，脑海里飞速闪过无数个词汇，他咬牙切齿吐出两个他觉得最狠毒的：“……鼠目寸光！自私自利！”</p>
+<p>  但艾尔海森丝毫不为所动。“如果你来这里只是为了对我做人格评价的话，那可以免了。”他冷冷地觑着卡维由红转白的脸，“我好心奉劝你一句，不要试图用你不了解的规则来达成你的目的，特别是在你看不起这套规则的情况下。也不要自以为是地认为你的价值标准适合所有人。”</p>
+<p>  “你什么意思？”</p>
+<p>  “我以为我已经说得很清楚了。还是说，教授只能听得懂和建筑考古有关的词，别的中文一窍不通？”</p>
+<p>  “你说我看不起规则……我、我……”卡维咬牙切齿，“我他妈花了三千五！”</p>
+<p>  “哦？是吗？”艾尔海森挑眉，“那就是你要交的学费。”</p>
+<p>  “送客！”</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>JuusanYomitsuru</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="https://juusanyomitsuru.github.io/2023/03/25/ba297f378fb2/">https://juusanyomitsuru.github.io/2023/03/25/ba297f378fb2/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2023/03/25/de5e7b5fc165/">天街如水（其二）</a>
+            
+            
+            <a class="next" rel="next" href="/2023/02/14/939b55408ae2/">test_my_site</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<span class="site-uv">
+    总访客量:
+    <i class="busuanzi-value" id="busuanzi_value_site_uv"></i>
+</span>&nbsp;
+
+
+<span class="site-pv">
+    总访问量:
+    <i class="busuanzi-value" id="busuanzi_value_site_pv"></i>
+</span>
+
+
+
+    <div class="copyright">
+        <span>© JuusanYomitsuru | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>

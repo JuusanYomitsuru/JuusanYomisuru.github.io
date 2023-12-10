@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="JuusanYomitsuru">
+
+
+
+
+
+<title>想见你（其一） | Hexo</title>
+
+
+
+    <link rel="icon" href="/yumaobi.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">JuusanYomitsuru&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">JuusanYomitsuru&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6; // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function() {
+            tocbot.refresh(obj_merge(tocbot_default_config, {
+                hasInnerContainers: true
+            }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function() {
+        tocbot.init(obj_merge(tocbot_default_config, {
+            collapseDepth: 1
+        }));
+    });
+
+    function expand_toc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, {
+            collapseDepth: expanded ? 1 : DEPTH_MAX
+        }));
+        b.innerText = expanded ? 'Expand all' : 'Collapse all';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">想见你（其一）</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">JuusanYomitsuru</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">June 21, 2023&nbsp;&nbsp;17:24:30</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E6%83%B3%E8%A7%81%E4%BD%A0/">想见你</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h4 id="阅读之前……">阅读之前……</h4>
+<ul>
+<li>本文为企划《知妙24h放映厅》活动文（<a target="_blank" rel="noopener" href="https://miao5611.lofter.com/post/1f87a097_2b938f7c8">企划终宣链接</a>）</li>
+<li>有一方死亡、分手情节，但结局为HE。</li>
+<li>据《想见你》原著情节与知妙剧情延伸创作，仅为个人理解，求同存异，不喜勿喷。</li>
+<li>全文在4w左右，共9章，内容较长，可酌情观看。</li>
+<li>欢迎收看晚间狗血八点档～</li>
+</ul>
+<h4 id="正文">正文</h4>
+<br>
+<br>
+<p>“大地是华美的毯子，恋人在这一面用金线编织了花纹；另一面却有另外的图案，人只能在梦中窥见。</p>
+<p>大地的另一面是梦中的世界；我们则在那个世界的梦中。<sup>1</sup>”</p>
+<br>
+<br>
+<p><strong>第一章 总是在闭上眼的时候，才会看到你</strong></p>
+<p>  艾尔海森打开冰箱，从过期两年又七十五天的脱脂罐装牛奶、两年又四十三天的玫瑰形酒心巧克力、两年又九十二天从未开封的蓝莓果酱中间，抽出一条仍在保质期内的精品冷萃咖啡液，关上冰箱门。撕开咖啡液的包装，倒进纯黑色不锈钢随行杯。早上七点钟烧开的水，到现在水温恰好，细长的壶口一倾，水流灌进，浓稠的啡黑便被冲出小小的旋。盖上杯盖，伸出左手，数字报到八点三十。起身揭下嘎巴甸风衣，镜前站立三秒，确定今日日程。开门，门背后贴着春日地铁樱景的日历被撞得晃了几晃，“纪念日！”几个大字闪闪发亮地醒目，下头画着一个可爱又写实的怒脸，衬在“敢忘掉你就死定了”的小字旁边。日历买得尺寸不合，推拉门把都容易撞歪，艾尔海森顺手把它扶正，关上门。</p>
+<p>  关上门。</p>
+<p>  日历又斜着掉下去，最下方的日期抵在门把上。2020年3月25日。</p>
+<p>  卡维的忌日。</p>
+<br>
+<br>
+&emsp;&emsp;卡维伸手按掉闹钟，鸟鸣的白噪音戛然而止。这已经是他早晨的第三个响铃，约等于谈判破裂的“最后通牒”，预示着他非起来不可的宿命。划开手机屏幕，壁纸是他很喜欢的微博上看到的小狗，用手指搓了搓显示棕色毛发的玻璃，小狗的笑容也跟着动了动。他盯着屏幕笑了一会儿，放下手机，伸了个懒腰，踩上毛乎乎的拖鞋，揉揉眼睛，踢踏踢踏进去洗漱。
+<p>  工作室项目进入收尾阶段，他必须得抖擞精神，才能从紧张的气氛里苟活下来。更何况，他个性不容许在专业上得过且过，而想做到尽善尽美，状态本领运气缺一不可。他站在镜子前面，咕噜咕噜吐出泡沫，这次的牙膏味道很好，像刚刷了一口新鲜的奶油草莓，让人心情愉快。左看看右看看，皮肤状态，过关。精气神，尚可。姿态仪容，没有疏漏。</p>
+<p>  昨晚加了大班，今天气色竟然不错，脸上甚至还泛粉光，不得不说是一种奇迹。卡维心里正感叹着，侧脸给自己勾上耳环，忽然想到了什么，他的手一顿，耳垂以肉眼而见的速度红了起来。</p>
+<p>  ……是了，是因为一场好梦。</p>
+<p>  场景在市中心遍布各国菜系的商业街，一个男人同他并排走在街上，来来往往都是年轻情侣，他戴着一条红色的针织围巾，下半张脸埋进绒毛里，悄悄把呼出来的暖气藏进去，一只手从兜里钻出来，蹿进另一个人的口袋里，别人的手暖热，他拿小指偷偷去勾，对方也以小指回缠，怎么的无名指也跟上来，不知不觉便十指交握。那男人的另一只手替他温着一杯黑糖珍奶，梦里他并不饿，但也许暧昧惹人骄矜，开口便是怪他把好不容易买到的奶茶藏着掖着，不让他喝。那男人说需要提醒你吗？这是我买的。他说是吗？好像这是把他精心挑选的大马士革玫瑰养得乱七八糟的赔礼吧。男人哦了一声，说他可不记得他对那些水土不服的娇贵植物负有什么责任，手一伸，珍奶在嘴里就消了小半，他嗔怪地“喂”，吸管凑到他的眼前，他转头说可我不想和你间接接吻。</p>
+<p>  人行通道在他们脚前亮了黄灯，一台越野车在马路上呼啸而过，黑灰车骨遮过他们面容的五秒，那男人微微转头，两人的嘴唇便自然地黏了一瞬。有人点的味道太甜了。他听见对方说，还缺乏运动，昼夜颠倒。如果你不想过早诱发基础疾病，最好改改你的生活习惯。要你管，他听见自己说，但又偷偷捏紧了藏在口袋里的手，摸到的骨节匀称修长，管中窥豹地俊秀。确实太甜了，他想，下次半糖就很足够。</p>
+<p>  ……铃声响了好久，他都不愿醒来。梦里的亲密太真实太熨帖，睁眼时好像刚刚从漫长的粘腻的约会回家，历经了楼下拐角没灯处深吻，嘴唇还是热的。但半分钟之后理智便会告诉自己其实根本没有过什么约会，也从未有什么英俊的恋人，离出门死线还有二十分钟，工作室有一大堆图表等着整理——刷了刷微信，置顶的也只有工作信息。三点一线，没有一个缝隙插得进梦中的那种爱情。</p>
+<p>  更要命的是，这个梦还是一个系列。这个他不认识的男人，已经在他的“春梦”里与他纠缠了八百个来回。昨天晚上是商业街约会，前天晚上是挤他最爱去的那家面馆，熟识的阿叔给他们端上馄饨的时候，他在那个陌生男人的手里悄悄写字。再之前是一场天崩地裂的争吵，内容是什么来着——关于他泛滥的同情心会不会影响工作的讨论，吵到最后他觉得对方其实并不在意他的真实想法，生了好一会儿气，甚至跑出去喝闷酒，一边喝一边掉眼泪。但能够为争吵流泪其实也是一种奢侈，更何况对方在梦里其实非常爱他，他自己也知道。那个男人提着一杯解酒的果汁推进酒吧的玻璃门的一瞬间，他就原谅了他——还有两个人一起去宜家挑家具，结果他被里头的毛绒玩具迷了眼，抱着一米长的大鲨鱼不肯松手，挑床垫也要先把鲨鱼放上去，“看鲨鱼喜不喜欢”。鲨鱼的白牙横在标识的“颈部区”，他跟着躺，这是床垫里最软的一张，支撑力也足够，好像眠入一朵晒了半天的浓云一样。对方居然也跟着一起上来，位置精准对应标识，两个人一平一侧，中间隔一条龇牙鲨鱼，仿佛那里不是商店，而是他们还未领到钥匙的家。他说这样睡大概连梦也甜美，对方说你比较应该担心你过劳的脊椎。真煞风景，他说，鲨鲨咬他！两个人离开的时候在楼下买了双拼味道的甜筒，界限分明，他先尝果味的那边，对方也轻轻侧脸，去碰绵软的巧克力；他看着对方睫毛轻轻颤动，瞳孔里头全是自己的倒影。冰淇淋承担了一个温柔的吻，明明早就是恋人，心跳居然加速，一定是奶油的缘故。</p>
+<p>  还有再之前，再再之前……美梦是恩赐还是西西弗斯的酷刑，他也已经无法苦恼，反正总会如期降临。房间里衣柜对面的白墙，本来主体是一副挂画，而如今已经变成了数幅水彩与素描的天下，上头绘了如穿着风衣挺拔的剪影，修长的如钢琴家般的手，紧抿的嘴唇，梦中人所钟爱的苏格兰威士忌，还有一只边缘锋利的，上挑的，时时刻刻如斜睨的，绿色眼睛。这一版面简直可以被称作是“卡维春梦具象展”，每一块碎片都是一个夜晚的注脚，一片躁动而无法停息的心。</p>
+<p>  上次偶然刷到某地区电视台的玄学节目，已经过了年关，时间不咸不淡，要吸引客源难免开始危言耸听。穿着大红旗袍的肥胖中年女人翘着二郎腿，镜头移到她挥舞的手与嘴唇，“梦既是梦，也非是梦。如果你梦一样事梦得太多，那么它就是真实的，总在某个地方发生过……”这位大师据说很灵，但卡维既信，又不敢全信。梦于他而言是一片无人知晓的自留地，就像爱丽丝的兔子洞，满山乱跑的移动城堡，带着一种童话性质。他唯抱着天真的侥幸心理，温养这只薛定谔的猫咪。</p>
+<p>  从衣柜里抽出衬衫之前，视线只是偶然掠过白墙上的彩绘，又为上头苍翠的绿光吸引，第八十三次盯着那只水彩眼睛入定。</p>
+<p>  ……叮铃铃铃，离出门死线还有五分钟。猛然惊醒，他回过神，赶忙把衬衫裤子套上，从首饰铁盒里翻项链，拽过包，最后看一眼镜子里头发有没有乱，奔出家门。工作室还处于上升期，他住的是老旧居民小区，环境虽然灰败，胜在地段还行。啪嗒啪嗒跑下楼梯，刷卡的青锈铁门哗啦一开，步子刚要往外迈，迎面便落了一片粉。</p>
+<p>  地上已有数点花片，随风掀着边，小孩子跑过，花瓣跟着飞起来的脚步打着小旋。小区的樱花一夜之间竟然全开了，小心不踩到纤细的落英，卡维拍了拍玻璃，让瞪着手机打斗地主的小区保安给他开门，车闸缓缓升起的一瞬，映入眼帘的是街心公园那棵据说有三百年的樱花树，花头压着花头，重重叠叠有如天梯，每一苞怒张地锦簇，一递又一递地把氧气氢气氮气统统晕染成淡粉，遍天地都是它与它的重子重孙。</p>
+<p>  浩大的樱季摧枯拉朽，横扫整片天地。</p>
+<p>  ……怎么不知不觉就到了春天。</p>
+<p>  他站立在蓬勃的春跟前，一时失语，拿出手机，调好焦拍了一张。又看时间确实告急，恋恋不舍地同樱花树挥手，提了提包带，向街角的咖啡店飞奔去。</p>
+<p>  那家咖啡店的芝士博物馆般自由的三明治组合搭配在学生时代就是他当仁不让的最爱，现在这里的咖啡又几乎成了他的生命之源。熟悉的棕色色调与粉笔写着的花体菜单让他长抒了一口气，推进门，代理店长兼知名咖啡师恩忒卡还在为别的客人制作餐品，转过身便变出一杯贴好标签的冰美式，他停在柜台，等恩忒卡露出她标志性的笑容，说，“老样子。”</p>
+<p>  店主与客人的缘分太长就变成朋友，照顾着心照不宣的喜好，恩忒卡很老道地说好。面前还有几杯，要等五分钟左右，这家店的每一个角落他都熟悉，但偶尔也会有新鲜的意外，比如恩忒卡一个星期就会换一件不同花色的围裙，放在一进门的桌上的装饰花也是时令，柜台上放着一个小铁盒，贴着四个大字“樱花自取”。咖啡豆的香气浓郁，水流的滋声爽利，有闲暇的上班族都坐堂享用早餐。他听着嘈杂的轻噪音，跟着黒沢薫的《Groovin’》在木柜台上打节拍，到“このまま 离さない 君となら”，代理店长终于为他勾出了一杯漂亮的拿铁。卡维接过，暖热的咖啡在手里熨帖。好香，他笑起来，“谢谢……”</p>
+<p>  就在那一瞬间，一片黑色的衣角擦过他的视线。</p>
+<p>  “！”</p>
+<p>  一片片向四周而轻轻弯折、层层叠叠的灰色头发，翘起的一根绿色摇晃，森海塞尔头戴式耳机耳机线绕过脖颈，白色衣领与长款涤纶黑色风衣，双肩包只用一边斜挂，左手袖进口袋，右手捧着咖啡杯。运动鞋。</p>
+<p>  “等……！”</p>
+<p>  那人转过弯，沿着人行道往前走。咖啡馆通顶的玻璃窗看外头的光景清晰，挺拔的鼻线，抿紧的嘴唇。一双犹如湖水的苍碧眼睛。</p>
+<p>  “慢……！”</p>
+<p>  卡维捏着纸杯追出门，那个人走得很快，三两步就走出了咖啡馆的视线，又拐进了一个街角。再往前就是地铁站，早高峰时间如放鱼入海，他赶忙把手机塞进袋子里，小跑着往前赶。本来最近就老是加班，缺乏运动，跑也跑不太快，更何况这时候越靠近地铁口人流越多，他也不知道自己到底撞上了谁，一边说“对不起”一边追，眼里那个男人却好像在旷野里穿行，稳步走得越来越远，终于卡维面前走了一对爷爷奶奶，推着菜车聊着闲话不疾不徐地晃悠，他向左走也不是向右走也不是，斑马线上倒计时够了绿色小人跳成红色，他不得不停步，伸长了头焦躁地眺望，而那个男人在那一瞬间闪进地铁站的墙面，彻底消失不见。</p>
+<br>
+<br>
+<p>  【你觉得这种事情在生物学上可能吗，提纳里？】卡维侧躺着，拇指翻飞， 【就是……量子纠缠？心灵感应？之类的。】</p>
+<p>  【卡维。】新消息很快弹出来， 【负责支配人对梦的感知的，是人大脑中的前额叶部分。人受到生理机能的影响，一般来说，对现实生活有“梦中看过”的真实感，要么就是曾经你见过那个场景却忘记了，要么就是你在看到那个场景的瞬间大脑自动匹配，欺骗你说你曾梦到过。】</p>
+<p>  【……】</p>
+<p>  【但我还是觉得说不通。】</p>
+<p>  满墙画纸的照片*1。</p>
+<p>  【这是我醒过来的时候，根据梦里的印象画的。身高、长相，分毫不差，就连背的那个包，我也在梦里见过。】</p>
+<p>  圈红的画纸照片*1。</p>
+<p>  【你看这一张……衣帽架上挂的那个包，卡其色的，就是他今天背的。虽然在梦里已经有点旧了，但是款式还是一样的。从逻辑上来说说不通吧？如果按照你说的“见过但是我忘记了”，谁会忘记一个知道他大量细节的人呢？如果说我只是“看到了以为自己曾经梦过”，那这些以前画的画又是怎么回事？】</p>
+<p>  对方正在输入中……</p>
+<p>  【嗯……说得有道理。这幅画画的是什么？】</p>
+<p>  卡维咬着嘴唇。【这是我和他的家】删去。【这是梦里我和他一起租的公寓】删去。【这应该是他住的地方。】发送。</p>
+<p>  对方正在输入中……</p>
+<p>  【卡维。/沉思/你确定你没有梦游或者人格分裂症状吗？】</p>
+<p>  【什么意思啊！/生气//生气//生气//抓狂//抓狂//抓狂/你想说我偷偷跟踪或者偷窥人家但是我自己却不知道吗？然后根据这个印象编造出我和他恋爱的情节？！】</p>
+<p>  【/安抚猫猫.gif/你先冷静一下……毕竟和完全陌生的人在梦中恋爱长跑五年这种事，在学术上的可能性比产生幻觉低得多。……有没有可能是因为你太累了，所以急着给自己找一个精神寄托？】</p>
+<p>  【……】</p>
+<p>  卡维翻过身，把手机放在胸前。回忆起梦里人潮中秘密而轻盈的吻，心脏自然而然地发烫。这好几个月里，沉入深眠去与不存在的人相会，的确是他生活里最大的期许，好像和那个人牵手，自己便躲进了避风港与温柔乡，不必再考虑清醒时躲不过的人际关系、上司命令和甲方条例。他拿起手机，盯着“精神寄托”那几个字发呆。输入，【我不需要什么精神寄托，虽然累但我正在为了梦想稳步前进，我觉得挺……】</p>
+<p>  【当然，还有一个办法。】</p>
+<p>  消息弹出，卡维顿住手，停在拼音输入法里的“hao”字。对方正在输入中，他点开表情栏，手指徘徊了一会儿，最终点出了一个/竖起耳朵听/的表情。</p>
+<p>  【你可以尝试联系他。】</p>
+<p>  【毕竟如果你真的“和他恋爱”，那他应该也有“感应”才对。如果只有你一个人在做这种梦，就说明这件事和你所说的“命中注定”没有关系了吧？】</p>
+<p>  【……】</p>
+<p>  卡维的手指轻轻摩挲着手机壳边。</p>
+<p>  【如果他说根本没有这件事，那你真的可能要去看看医生了，卡维……最近这段时间你的精神状态都不太对。是不是压力太大了？】</p>
+<p>  他翻过身，手机塞到枕头下面，自然地息了屏。小夜灯柔柔地照着床头柜上一方木纹，他眨了眨眼，盯着上头的一本诗集发呆。</p>
+<p>  提纳里说的其实有道理。一直梦一个人其实根本不符合逻辑，毕竟对方又不是什么给自己造成深刻伤痛的对象，只是一个甲乙丙丁，自己为什么对他这么执着？先前觉得那不过是梦，收归独家珍藏，谁也不妨碍谁；但现在知道原来梦的对象确有其人，本来旖旎的梦境忽然叫人胆战心惊。自己到底和那个人有什么关系？会不会正如提纳里所说，其实现实里两个人已经有过交集？如果有，是伤害还是好的回忆？如果没有，那自己又为什么没法从同一种梦境里逃脱？</p>
+<p>  他深吸一口气，摸回手机，摁亮屏幕。提纳里在聊天框发了一个疑问歪头的表情，似乎在等着他的回应。他回了一个“嗯，我知道了”，想了一会儿，又补打了一句“太困了，先睡了。晚安”。对方发来一个微笑gif，卡维的嘴也咧了咧，回了一个睡觉的emoji，按下home键，看着屏幕上摇尾巴的小狗出神。</p>
+<p>  其实有点害怕。</p>
+<p>  因为在梦里太亲密了。他孤单一人入睡，梦里却在他的臂弯里面醒来，因为鸡毛蒜皮的小事生气，接吻，一起刷牙，喝同一杯水，拿错对方的钥匙，或者顺手拿的领带其实是家里另一个人喜欢的款式。对方往往挑眉看他，卡维佯怒，他却眉眼舒展。一颦一笑都好鲜活。</p>
+<p>  但咖啡厅见到的人神色冷峻，面无表情，他们之间没有共享嬉笑怒骂的回忆，没有不言自明的暗语，没有并排的毛巾、吉他和水杯，就好像梦与现实的轮换自然为他们划了一道厚障壁，他砸着透明玻璃朝里喊，拿着冰美式的青年一句话都不会听见。也许在现实的对方眼里他根本就是无关紧要的一个路人，更糟糕的是，还对自己产生各种离奇而羞赧的幻想。面对他这样逾矩的陌生人，那个绿眼睛的青年，又会怎么办？</p>
+<p>  ……好了，打住。不要再想了。</p>
+<p>  不要再想了。明天还要上班。等会儿还要……</p>
+<p>  等会儿还要做梦。<br>
+<br></p>
+<p>[1]. 改编自陈春成《尺波》</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>JuusanYomitsuru</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="https://juusanyomitsuru.github.io/2023/06/21/44fbaa868e40/">https://juusanyomitsuru.github.io/2023/06/21/44fbaa868e40/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2023/06/21/693a9e8a1460/">想见你（其二）</a>
+            
+            
+            <a class="next" rel="next" href="/2023/06/21/0a9e0b2a4de8/">性启蒙（其三）</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<span class="site-uv">
+    总访客量:
+    <i class="busuanzi-value" id="busuanzi_value_site_uv"></i>
+</span>&nbsp;
+
+
+<span class="site-pv">
+    总访问量:
+    <i class="busuanzi-value" id="busuanzi_value_site_pv"></i>
+</span>
+
+
+
+    <div class="copyright">
+        <span>© JuusanYomitsuru | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>

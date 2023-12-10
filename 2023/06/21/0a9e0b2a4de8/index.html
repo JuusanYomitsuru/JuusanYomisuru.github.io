@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="JuusanYomitsuru">
+
+
+
+
+
+<title>性启蒙（其三） | Hexo</title>
+
+
+
+    <link rel="icon" href="/yumaobi.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">JuusanYomitsuru&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">JuusanYomitsuru&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6; // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function() {
+            tocbot.refresh(obj_merge(tocbot_default_config, {
+                hasInnerContainers: true
+            }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function() {
+        tocbot.init(obj_merge(tocbot_default_config, {
+            collapseDepth: 1
+        }));
+    });
+
+    function expand_toc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, {
+            collapseDepth: expanded ? 1 : DEPTH_MAX
+        }));
+        b.innerText = expanded ? 'Expand all' : 'Collapse all';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">性启蒙（其三）</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">JuusanYomitsuru</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">June 21, 2023&nbsp;&nbsp;12:39:39</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E6%80%A7%E5%90%AF%E8%92%99/">性启蒙</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h4 id="阅读之前……">阅读之前……</h4>
+<ul>
+<li>来一场永远慌乱、永不落幕的青春电影</li>
+<li>现代ABO，时间线可推溯类上世纪九十年代末。</li>
+<li>系列前文请点击右上角<a href="https://juusanyomitsuru.github.io/category/">Categories</a> 。<br>
+<br></li>
+</ul>
+<h4 id="正文">正文</h4>
+<h5 id="5">5.</h5>
+<p>  下课铃响前两分钟，教室开始升起小小狼烟。讲台上老师执着粉笔讲从句，that 是合上练习册，where是背包拉链扯到底，which是转头密谋的气音，why是——why是像风一样涌进来的嘈杂，小小的盒子跑出许许多多热烈的呼喊，所有人开始躁动。老师清了清喉咙，“下课”的“e”还在舌底，教室里已经空了一半。卡维一把捞过帆布包，发现老师站在空旷的教室里视线落无可落，在他起身的那一瞬间随机地掉在这边，他报以笑容，转头和隔桌使了个眼色。两个人挥手和老师说了再见，迅速汇入涌向饭堂的人流。</p>
+<p>  “吃什么。”</p>
+<p>  “吃小炒。”</p>
+<p>  “猜你要吃杏鲍菇炒肉。”</p>
+<p>  “杏鲍菇炒肉。”</p>
+<p>  两人同时说出。击了个掌。</p>
+<p>  “然后再去买杯香香甜甜的酸奶。”卡维打了个响指，“完美的计划。”</p>
+<p>  “但你也别喝太多。”提纳里说，“酸奶没有你想象的那么好消化。”</p>
+<p>  “知道了，未来医生。”两个人紧赶慢赶，躲进屋檐里人流只到饭堂一半，“运气真不错！人不算多。走吧走吧！”</p>
+<p>  生物竞赛选手，被誉为天才的提纳里，看着朋友兼同班同学卡维，排队排得气色红润，饱满得像吸足了水的蘑菇，又像一只心情愉快的猫咪，每一根毛发都舒得蓬松，伸了一个长长的懒腰。他忍不住问，“卡维。你看起来心情好像很好。”</p>
+<p>  “是吗？”被问的还在哼新出的流行音乐，“感觉不是和平时一样？”</p>
+<p>  “那倒不是。你平时虽然也不算愁眉苦脸，但好像心里总是有事。现在感觉你好像浑身轻松。”小提眉眼弯弯，“遇到什么好事了？”</p>
+<p>  “嘶——”卡维抵着下巴，作思考状，“好事……好像也没什么特别的。如果非要说有什么变化的话——”手指在半空一转，“那应该是我最近遇到了一个有趣的人吧。”</p>
+<p>  “有趣的人？”卡维念了个菜名，提纳里跟着打了饭卡，“什么样的人？”</p>
+<p>  “一个有点酷的，有点怪的聪明学弟。和人总是保持微妙的距离感，有一套特别的人际关系理论。”两人拿着菜找位置，提纳里问，</p>
+<p>  “是Omega？”</p>
+<p>  “……Beta吧。我没闻到味道。”</p>
+<p>  “也有可能没分化。有的人发育晚，高一没分化也正常。”</p>
+<p>  提纳里把勺子分给他。卡维道了声谢，他想了想，咬着勺子道，“那怎么能判断到底是没分化还是Beta？那万一有人发育得够晚，做了好久Beta，结果突然有一天——砰一声分化了，才知道自己原来是Omega或者Alpha。”皱了皱眉，“要是Alpha不是很亏？少做了几年大爷。”</p>
+<p>  “说什么呢。”性教育更完善的提纳里听得眉毛都快拧一块去了，差点没用勺子敲他的脑袋，“一般人最晚是十八岁！再晚几率就很低了。大多数人都是十四五岁分化，我就是十五岁分化的……重点是，我是说，你不能因为闻不到他的味道，就轻易地放下戒心。……啊——嚏！”他揉了揉鼻子，“谁的信息素是胡椒味……啊——嚏！”</p>
+<p>  本来Omega的嗅觉便比常人敏锐，小提又是其中殊为敏感的类型。可见学校的除臭剂普及是多么糟糕，他连打了几个喷嚏，一抬头却看到卡维的眼睛直直地盯着他身后的某处。他跟着向后看，便听到对面的友人简短地说了句“我见到那个学弟了，我等会儿回来”，匆匆忙忙地放下包起身，追了出去。</p>
+<p>  虽然说受基因的影响，同学们的发色也乱七八糟的，但卡维带着渐棕的金发处于其间，仍然好像用放大镜凝成的一点光源，借了太阳的丰实，依然非常亮眼。他在熙熙攘攘的学生之间像鱼一样灵活地穿行，精确地搭到了一个男孩子的肩膀——那男孩子个头矮些，头发一片一片很有层次地堆叠，看起来柔软又蓬松，头顶一根翘起来的呆毛，背面居然是奇特的灰绿色。被卡维拦住，他摘下耳机，动嘴唇说了什么；提纳里看着卡维叉腰，再说两句，耳边的两缕发就向上翘——他情绪一激动就容易炸毛，果然没过一会儿，他就头一扭回来了。学弟的视线跟着他，等卡维气呼呼的脸在自己跟前放大，也戴上耳机走了。提纳里道，“怎么了？气球似的。”</p>
+<p>  “你都不知道——这家伙只吃面包，说吃饭堂的饭不方便读书。怎么会有这样的人？就一分钟也放不下他的书吗？”卡维一屁股坐下来，恶狠狠地戳着杏鲍菇。提纳里看情况不对，“你也消消气……好学是好事，你不也经常做比赛的事情做得忘记吃饭吗？”</p>
+<p>  “不一样……！这家伙分明是有饭不吃。”卡维嘟囔道，“我当然知道好学是好事，但身体坏了怎么办呢！而且他本来就是走读，干嘛不回家吃。……不行。”勺子一叉，“咱们等会儿买点东西给他。反正他是脑袋饱了完事大吉的类型，肯定想不到这一层。”</p>
+<p>  提纳里正想张嘴，却被卡维打断，“哼。照顾低年级同学本来就是高年级的责任。”他自顾自地说，往嘴里塞了一大口饭。看他的神情，提纳里便知道没有再劝的必要，于是叹了口气，专心对付杏鲍菇了。</p>
+<br>
+<br>
+<p>  艾尔海森估算好时间，六点二十离开家，六点四十抵达学校图书馆门口。干道两侧的乔木绿得旺盛，他手里捏着借书卡，MP3放着音乐，轻点的手指暗暗数着节拍。默念到120下，干道树荫的另一头果然闪出一个金色的身影，对方拎着包一路小跑，几乎扑到他身上；运动过后的喘息很热，熏得艾尔海森脖子也有点红，他提了提手上的书，不动声色，“迟了。”</p>
+<p>  “我知道……”卡维撑着膝盖，还在努力和心肺系统战斗，他楷了揩面上的薄汗，“我舍友……洗澡太慢了……呼！但是赶上了！”</p>
+<p>  “还以为你不会来。”</p>
+<p>  “怎么会！我什么时候爽约过？”</p>
+<p>  他张开手，现出那枚塑封好的借阅证，脸上露出笑容，“你看！……”</p>
+<p>  走吧。</p>
+<p>  一进门还是那个像肥猫一样的图书管理员敲着二郎腿瘫坐在红木桌后面，棱形堆叠的深色瓷砖从中央延伸到宇宙万端，右手边是公共借阅室，有几个学生就在门边，他们对视一眼，踮着脚尖偷偷绕上楼梯，从已经见怪不怪的图书管理员的眼皮底下进去，穿进一排一排直达天听的书架之间。艾尔海森和卡维的书叠在一起存进柜子，他们在小矮桌上你一本我一本地分了半天，好不容易分干净，两个人捧着厚厚的两沓，坐在窗边的实木吧台边。在那个位置，他们离分散月色的湖面只隔了一层玻璃，凝神一看，依稀还能看到红鲤的影子。清幽的月是太阳的倒影，而倒影、倒影、倒影之倒影，温柔地跳在他们眉间。</p>
+<p>  艾尔海森坐定便拿起笔，一只手却从旁侧抚上耳朵。他下意识一闪，“干什么？”</p>
+<p>  “在听什么？总是神神秘秘的。” 他们之间落着一盏小小的莲花罩台灯，昏黄照得卡维的眼睛熠熠，“我可以听吗？”</p>
+<p>  学弟看着他。一边耳机连着线，稍微一碰便松动，轻轻落了下来，从手心放在手心。</p>
+<p>  卡维一挽头发。</p>
+<p>  “哦？”他做出了一个小小的惊讶表情，“还以为你这家伙会听什么很高深的东西呢。”</p>
+<p>  “我的确有。”</p>
+<p>  “敬谢不敏。”</p>
+<p>  音乐就此接通，他们共享着一段平和的曲，一个做着题目研读数学公式，一个翻着辞典扫着天书字母，绕在他们身边的只有纸笔相触的沙沙声，页面鼓动空气，像蝴蝶扇动翅膀，字句也变得轻盈。</p>
+<p>  卡维习惯念题，嘴唇无声开合，数字与字母被他嚼进去，在指尖流成一道道色彩缤纷的水迹。“目标状态的确定……由于有两个空格，所以任何两个瓷砖铺放方案都能通过有限次的移动相互转换，因而最好预先确定目标铺放方案，这样可以使得搜索沿即定的方向进行……”<sup>1</sup></p>
+<p>  艾尔海森思考时面容严肃，唇线紧抿，视线移动迅速，“Videtur quod fatum nihil sit. Dicit enim Gregorius, in homilia Epiphaniae, absit a fidelium cordibus ut fatum esse aliquid dicant.……quod non est, non definitur. Sed Boetius, in IV de Consol., definit fatum, dicens quod fatum est inhaerens rebus mobilibus dispositio, per quam providentia suis quaeque nectit ordinibus. Ergo fatum aliquid est.”[ “It would seem that fate is nothing. For Gregory says in a homily for the Epiphany (Hom. x in Evang.): Far be it from the hearts of the faithful to think that fate is anything real.……What does not exist cannot be defined. But Boethius (De Consol. iv) defines fate thus: Fate is a disposition inherent to changeable things, by which Providence connects each one with its proper order.” <sup>2</sup></p>
+<p>  右边的学长眼睛盯着题，伸手去摸笔，结果摸到了一手温热的皮肤。吓得迅速抽回手，抬起头，艾尔海森也在看他。他偏爱的颜色繁多绚烂的中性笔，与旁边艾尔海森的黑色钢笔一齐藏在学弟手心，喧闹对沉默，繁复对璞实，好像一组精巧的二分，某个宏大世界的隐喻。</p>
+<p>  左撇子和右撇子，不自觉地指尖便会碰在一起。艾尔海森没说什么，卡维却觉得舌头有点打结。他这学弟一直以冷淡的面貌行走于人群之中，但手却很热，还有一点细茧。对方取走他要的笔，卡维也连忙把整排花花绿绿的笔码到书前。带的颜色有些多，你挤我我挤你地乱滚，为了节约一点空间，学长突发奇想，把它们搭成一个小小的金字塔倚在窗前；不幸的是玻璃恰好颤动，三角形随之坍塌，他茫然地抬眼，只见噼噼啪啪，水珠敲着窗户，把透明的膜面裂成无数暧昧的小圆。</p>
+<p>  下雨了。</p>
+<p>  面前的湖被打出密密的涟漪，水和青草的气味从窗的缝隙飘进来。卡维望着雨点发呆了好久，突然说了一句，“艾尔海森，你的随身听能不能听电台。”</p>
+<p>  话问得没头没脑，艾尔海森皱了皱眉头。“可以。怎么。”</p>
+<p>  卡维伸出一只手。洁白莹润的手心向着他，“我想起一件很重要的事。”</p>
+<p>  学弟将信将疑。对方转头看他，棕色的发像尾羽随动作翻飞，红宝石清明如候鸟落地，“连学长的话都不相信？”</p>
+<p>  答案显然是否定。但卡维似乎不打算善罢甘休，于是只好把随身听放在桌面，主客交换，右耳随之涌进调试电台的电流声，卡维一格一格地切，男声女声响了又灭，直到一个轻柔的成年女音，像棉絮一样轻轻挠进两人的耳廓里，</p>
+<p>  “刚过谷雨，春走到了末尾，夏天刚刚开始，今天要给大家带来的，是一个潮湿的故事。欢迎来到二十四节气电台，在春夏秋冬，看爱怒贪嗔，读难舍难分。”</p>
+<p>  接着的便是一段舒缓的流行音乐。艾尔海森道，“你所说的很重要的事，就是听伤痛情感电台？”</p>
+<p>  卡维“嘘”了一声。</p>
+<p>  “酒流进嘴里，爱却满溢眼上。这是便是我们在衰老前，明白的所有真相。<sup>3</sup>D小姐和E先生约定的会面地点，便是在一家街角的清吧。一到晚上八点，门口的挂灯点起，相熟的酒客便知道，在城市里流浪的男男女女，又有了落脚的地方……D小姐轻轻藏着那封写着地址的书信，推开了酒吧的门。去见一个知道他爱喝什么酒、喜欢读什么诗、每天会怎样准备三明治的熟悉的人，对于安静、内向的D小姐来说，慢慢变得像喝水一样，自然地行进了无数次。”</p>
+<p>  “一般来说，这种场合是诈骗高发地，特别酒精会影响负责情感和逻辑的前额皮质，受害者更加容易上当受骗。而且一个人要是把什么无关轻重的事情都往信里写，只能说明他真的很闲。”</p>
+<p>  卡维瞪了他一眼。</p>
+<p>  “……D小姐对他笑了笑。他们在已经无比亲密，触碰到了现实的空气，竟有被羞怯灼伤的感觉。他们聊了很久很久，从喜欢的乐队到清晨的咖啡，从读过的小说到绿植的品味，她还是惊喜地发现，他们总是在生活的每一个细节，都契合得恰恰好。但或许月满则亏，到了酒馆打烊的末尾，E先生却和她说，</p>
+<p>  ‘对不起，D。我今天来，是想告诉你，我很快就要到国外去工作了。’</p>
+<p>  同一个邮局递、同一个邮局收，一个城市里的爱情，要拉长成飞机的十二个小时，时间的七百二十分钟，漫长的一万公里。D小姐有些惊讶，又有些怔然。E说，他想了很久，才鼓起勇气过来见她。他说，她愿意继续做他的女朋友吗，今天这杯酒，作为那段漫长的、以字句缠绕的岁月的结尾，又或是，属于他们两个人的新的开始。”</p>
+<p>  “啊……”卡维叹息道，“可是很难吧。这么远，见不到面，信息又不通。”</p>
+<p>  “他们可以打卫星电话，实在不行拨号上网。但我认为都不如寄希望于早日发展电子宠物。”</p>
+<p>  “……什么啊！”</p>
+<p>  “D小姐想，这也许是她人生中最疯狂的一个决定。</p>
+<p>  第二天E飞走了，传真发过来他新的地址，全然陌生的名字。他们还是给对方寄信，拨公用电话，只是往往一个在傍晚，一个在黎明，一个刚刚回到家躺倒在床上，一个却洗漱完，拿着咖啡推动门铃。他们明明在一个地球，却落于两个颠倒世界，在D看来，E好像好不容易落到手心的一只小鸟，倏忽间又展翅飞去，她只能不停地眺望、眺望，直到候鸟又徘徊到温带季风，落于她的窗沿。她也想过放弃，但每每想起他说过的未来，两个人会有小家，养一只蓝色的鸟，清晨他推开窗，两人应当交换早安吻。她还是无法放弃心头的热，忍不住想，一世只有一人，也是一种英雄的罗曼蒂克。”</p>
+<p>  “鸟的肠子很短。”</p>
+<p>  “确实。……等一下！你干嘛让我想到这个……”</p>
+<p>  “但有时也实在无法忍耐。当E的信上全是她不认识的名字，当回忆已经说得味同嚼蜡，当她承担了太多的工作，回去却看着空空荡荡的家，爱人只是一封信，横撇竖捺，大段天真的异国场景，她也犹豫继续是否还值得。理智与情感总是像潮水与海岸，潮水上涌冲刷砾石，光天化日下热闹又安稳，但月亮用魔力引诱海浪，深夜里总是浸润最高的注石。寂寞，对城市里的独身闯荡的Beta来说，是一个非常残忍的词语。</p>
+<p>  而偏偏在这个时候，从外地调来了一个新同事H。他不像E那么率真开朗，但细腻温柔，总是会照顾身边人的感受。不知为何，D好像感觉，H好像对她有一种和对其他人不同的用心。那天晚上他们一起走到车站，H问她说，她在外国的男朋友什么时候回来。她说快了，H说，千里之外的恋爱，能够抚平迫在眉睫的心吗。”</p>
+<p>  “……”</p>
+<p>  “别说话！”卡维道，“我能猜到你要说什么。”</p>
+<p>  “那你应该也能知道，”艾尔海森道，“接下来就要陈述没完没了的荷尔蒙活动了吧。”</p>
+<p>  “什么叫没完没了的荷尔蒙活动。三角恋是一个恒久的命题，你没看过拉辛的《费德尔》吗？不然《半生缘》？《纯真年代》？不同人格之间因为命运的牵扯而交叉缠绕在一起，在失落和获得之间流连，不是很美吗？而且你也必须得承认，电台里说的那种因为和恋人分隔两地而忍不住寻找慰藉的心并不少见吧。虽然我并不会那样，但是把人的一切纠结、喜爱、犹疑和惊颤都归类于简单的‘荷尔蒙’三个字，不是太不解风情了吗？”</p>
+<p>  “我没有否认说泛滥的感情活动是普遍的。”艾尔海森有条不紊，“三角恋题材的文艺作品我也接触过，我并不否认它们的艺术价值。但是对于大多数个体而言，或者用正在眼前的例子，这位D小姐，终极目标是拥有稳定的生活，那么无论是E还是H，对于她而言都是自寻烦恼。如果跳出所谓情感电台的语境，运用自制和理性，就会发现对于这位D小姐来说，保持单身才是最正确的选择。”</p>
+<p>  “这么说未免太武断了！”</p>
+<p>  “不然呢。你觉得明知道要异地还向女友道德绑架的男友，和趁对方伴侣不在便打算趁虚而入的同事，哪个值得信任？”</p>
+<p>  “这个世界哪里有绝对正确的选择？人总是不可避免地被情感所影响。即便D知道E其实就是想把她绑在身边，即便她就是知道H在道义上不名正言顺，多巴胺的安抚作用一视同仁地生效，她又怎么能抵抗对爱的渴望呢。你对人的要求太苛刻，有时候人不可避免地会做出一些非理性的举动。我认为是人类本真性的体现，没有人可以幸免。”</p>
+<p>  “我不认为。”</p>
+<p>  “你很难否认。”</p>
+<p>  “如果话题回到了个体和经验，那我也不妨说说我自己的看法。如果我是D，一开始就不会让E出国。如果无法阻止，那便寻找替代方案，而不是徘徊在E和H中间进行徒劳的心理消耗。”</p>
+<p>  “谁又能做出完美的预测方案？”</p>
+<p>  “重点不在于方案是否完美，而在于做决策的人不能什么都不愿意牺牲又什么都想要。贪婪是痛苦的根源，即便用华丽的辞藻去粉饰，也不能掩盖其脆弱的事实。”他顿了顿，“但总有善心过头的人愿意去跟着流眼泪，以为靠外力的填补就能拯救所谓关系。但真相是空心的是内里，再涂抹墙皮也没有意义。”</p>
+<p>  “你怎么能保证，你日后不会因为感情动摇？”</p>
+<p>  “如果你说我的个人情况的话，不会。因为感情是主观因素，可以被感知与调整，真正应当被控制的是客观因素，也就是影响对象。换而言之，如果觉得什么东西影响了你，大可以把这件东西据为己有。只要保证你能够完全预料到对方的行动，自然就没有必要再担忧了。”</p>
+<p>  “……”卡维瞠目结舌，“你怎么能这么轻而易举地说出这种话……”</p>
+<p>  “很奇怪吗。是你问我的。”艾尔海森轻描淡写，“我只是实话实说。”</p>
+<p>  两个人坐看窗外淅淅沥沥的落雨，半晌没有说话。</p>
+<p>  “为什么非要听情感电台不可。”学弟道，“很难想象这和图书馆的关联性。”</p>
+<p>  “因为下雨了啊。细蒙蒙的雨，周围又这么安静。”学长理所当然，“很适合听故事。虽然你肯定不这么觉得。”</p>
+<p>  “很高兴你发现了。”学弟点头，“我只会觉得很适合什么都不干。”</p>
+<p>  “睡觉？还是发呆。”</p>
+<p>  “总之不会是修辞过度的情感电台。”</p>
+<p>  又陷入了一阵微妙的沉默。卡维忽然说，声音轻轻的，</p>
+<p>  “……刚刚你说的话，我不是不能理解。但我和你不一样。我不觉得爱像一块漂亮橡皮，喜欢就可以带走。人有自己无法抵抗的命运。”</p>
+<p>  “人和人之间不同很正常，我并不意外。同样的，我也不迷信命运。”</p>
+<p>  电台播到尾声。最后D没有和H在一起，E也没有回来。正如艾尔海森所说，徘徊在两人之间的人，最终哪一边都失去了。卡维的表情有些惘然，他数着窗上的雨滴，“等会儿回去的时候，不知道雨停了没有。我好像没有带伞。”</p>
+<p>  艾尔海森接着说，“我以为没有特殊癖好的话，出门带伞是基本常识。”</p>
+<p>  “你还要回家，要是雨下大了，带伞也没有用。”</p>
+<p>  “如果你还知道你在说什么的话，就应该知道这会被归为诡辩。”</p>
+<p>  “……”</p>
+<p>  卡维又说。“我好像明白你这家伙最在意什么了。”</p>
+<p>  “这不是很显然吗。”</p>
+<p>  “啊？”</p>
+<p>  “在意应该在意的。”</p>
+<p>  “……什么啊，在戏弄我吗。”</p>
+<p>  “实话实说而已。”</p>
+<p>  ……少年人的对话里总有许许多多的空白等着填满。有时候材料是玻璃纸屑，有时候是天蓝色的照片，有时候是一个揉得皱巴巴的纸团。但此刻他们齐齐抬眼，坐在自头顶投下的冷光中间，从白色衣领到白色衣领，漫过来的只有无穷无尽无边无际的雨。湿漉漉的春天。</p>
+<p>  <br></p>
+<p>  [1]. 97 信息学竞赛题 P7</p>
+<p>  [2]. “It would seem that fate is nothing. For Gregory says in a homily for the Epiphany (Hom. x in Evang.): Far be it from the hearts of the faithful to think that fate is anything real.……What does not exist cannot be defined. But Boethius (De Consol. iv) defines fate thus: Fate is a disposition inherent to changeable things, by which Providence connects each one with its proper order.” 《神学大典》Question 116，fate</p>
+<p>  [3]. 参考黄新渠译.英美抒情诗选萃.P113页，叶芝《饮酒歌》，本篇有修改</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>JuusanYomitsuru</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="https://juusanyomitsuru.github.io/2023/06/21/0a9e0b2a4de8/">https://juusanyomitsuru.github.io/2023/06/21/0a9e0b2a4de8/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2023/06/21/44fbaa868e40/">想见你（其一）</a>
+            
+            
+            <a class="next" rel="next" href="/2023/05/25/a7b048b4abad/">天街如水（番外一）贺新禧</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<span class="site-uv">
+    总访客量:
+    <i class="busuanzi-value" id="busuanzi_value_site_uv"></i>
+</span>&nbsp;
+
+
+<span class="site-pv">
+    总访问量:
+    <i class="busuanzi-value" id="busuanzi_value_site_pv"></i>
+</span>
+
+
+
+    <div class="copyright">
+        <span>© JuusanYomitsuru | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>

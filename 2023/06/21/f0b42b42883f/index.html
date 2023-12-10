@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="JuusanYomitsuru">
+
+
+
+
+
+<title>想见你（其五） | Hexo</title>
+
+
+
+    <link rel="icon" href="/yumaobi.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">JuusanYomitsuru&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">JuusanYomitsuru&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6; // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function() {
+            tocbot.refresh(obj_merge(tocbot_default_config, {
+                hasInnerContainers: true
+            }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function() {
+        tocbot.init(obj_merge(tocbot_default_config, {
+            collapseDepth: 1
+        }));
+    });
+
+    function expand_toc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, {
+            collapseDepth: expanded ? 1 : DEPTH_MAX
+        }));
+        b.innerText = expanded ? 'Expand all' : 'Collapse all';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">想见你（其五）</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">JuusanYomitsuru</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">June 21, 2023&nbsp;&nbsp;17:47:03</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E6%83%B3%E8%A7%81%E4%BD%A0/">想见你</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h4 id="阅读之前……">阅读之前……</h4>
+<ul>
+<li>本文为企划《知妙24h放映厅》活动文（<a target="_blank" rel="noopener" href="https://miao5611.lofter.com/post/1f87a097_2b938f7c8">企划终宣链接</a>）</li>
+<li>有一方死亡、分手情节，但结局为HE。</li>
+<li>据《想见你》原著情节与知妙剧情延伸创作，仅为个人理解，求同存异，不喜勿喷。</li>
+<li>全文在4w左右，共9章，内容较长，可酌情观看。</li>
+<li>欢迎收看晚间狗血八点档。</li>
+</ul>
+<h4 id="正文">正文</h4>
+<p><strong>第五章 你的笑重重叠叠，仿佛从未离开过我的世界</strong></p>
+<p>  艾尔海森正在等待程序响应。</p>
+<p>  日记本的内容他已经都大致翻阅过。旁边的白板上已经密密麻麻写满了字，红色的问号与蓝色的注释紧密地缠在一起，写无可写，许多字被边缘割得只剩一半，仍然顽固地充盈，直至烙印般风干。被猜测、疑问、陈述、反驳所包围的，是一个清晰的“∞”符号，一张被仔细地覆膜，清晰可辨、力透纸背的A4纸。无穷的风暴从这一笔不断的两个纠缠的圆圈向外延伸，卷至整个房间都似乎向这“infinity”塌陷，扭曲，延展。</p>
+<p>  许多事情已经推到水落石出，只差一个关键。</p>
+<p>  在日记本的最后两页被锁上了。密码是四个数字，并不复杂的设计，但每天只有一次的尝试机会，之后就会被直接锁定。大概观察其中结构，侧面似乎附有墨囊，如果暴力拆卸的话，墨囊破裂，里面的笔记就会随之销毁。结构精巧，越显示主人良苦用心；但越是苦心经营，便越说明关窍就在这里，艾尔海森易地而处，能明白笔记主人的心思：</p>
+<p>  宁可从头再来，亦不可泄露窥探。</p>
+<p>  他心里已经有了想法，藏在轻轻点在桌面的指尖上。最小的齿轮成全笨重的运转，破碎的玻璃直见天日只欠一颗小石的飞临。徐徐图之，也等待灵光一闪。挖出来的东西，没法直接查看的还有硬盘：也许是放置的时间太长，又常常使用，磨损难以逆转，打开的时候总是跳出来文件损毁的提醒，但再进一步操作，数据又分明没有消失。毕竟按照日记本的说法，这是来自“未来”的东西；2020年逆推到2016年，四年的差距，在信息爆炸的时代，是数以亿计的迭代更替，一个微小的变动也可能让程序报错，稍有不慎也许还会让文件直接销毁。他必须小心谨慎。</p>
+<p>  虽然家里就有一个广泛涉猎机器学习、通晓计算机原理的高材生在，但目前接触到的信息，让他和日记本得出了同样的结论：最好不要让卡维参与。不如说，也正因为卡维的天赋，艾尔海森必须更加警惕，不让对方察觉。毕竟数据、代码、符号的差异，对于深谙此道的卡维而言，可能意味着更多东西。他看着跳出来的错误序号，在纸上又画了一条横线——</p>
+<p>  不是这个解决方法。下一个。</p>
+<p>  叮铃，QQ头像闪动，有人给他发来消息。艾尔海森沉了一口气，点开消息提醒，是他认识的一个发烧友，本科学的是陶艺，后来觉得计算机才是人类的未来，手上泥巴一甩，转身投入二进制的怀抱中去。虽然没经过系统学习，专业知识完全是半瓶子晃荡，但人缘奇广，靠着一腔热血和惊人的直觉成为圈内的万事通，没有他挖不出来的资讯。这段时间艾尔海森混进不少这些人的群，在其中搜集信息，这位发烧友便是听闻他名校毕业，最为热心的一位。</p>
+<p>  很自然地，也成为了他的消息来源。</p>
+<p>  【Hello/二次元美少女伸头/海哥海哥，(꒪ˊ꒳ˋ꒪)在吗？】</p>
+<p>  蓝绿色长马尾美少女眼睛大而水润，在屏幕里抬头看他。很难想象网线另一端是一个160斤的粗胡子壮汉，艾尔海森手指起落利索，</p>
+<p>  【找到了？】</p>
+<p>  【嗯嗯~(ᕑᗢᓫ∗)功夫不负有心人，终于找到了！/啾咪/我有渠道说最近有一个特别新特别好用的修复软件，制作者用了一些黑科技，无论多残损的数据都能自动修复。】</p>
+<p>  超好用的数据修复助手.zip下载中。</p>
+<p>  【听说是在很偏门的小网站上上传的，作者拿来练手，能找到纯属运气。我朋友说超级好用。(//̀Д/́/)看看是不是你需要的？/美少女星星眼/】</p>
+<p>  【可以。】</p>
+<p>  【不用谢~/美少女比心/】</p>
+<p>  艾尔海森给他转了账。等那个灰色圆圈填充到百分之一百，解包到电脑里，先查一遍代码。为了滴水不漏地把硬盘还原，这段时间他一直在苦心钻研相关知识，练手的工具也写了好几个，但毕竟还未和他的专业一样，到随心所欲的程度。从头到尾地排查，确定没有病毒软件亦没有窃取信息的风险，他凝着眉，把信息加载进去。</p>
+<p>  加载条弹出来。</p>
+<p>  这些日子他见了无数个加载条。圆圈的、长条的、方块的，快的慢的，灰的彩的，千人千面地在桌面运转，从0%灌到100%，却又在他倒一杯咖啡又欠身坐下的无数个瞬间，无一例外地显示“无法打开”。如果把他这些日子叠起来，一帧一帧地覆盖，那么屏幕中央薄如蝉翼的错误报告，亦能够堆成小山。</p>
+<p>  年岁的磨损难以逆转。任是天才如艾尔海森，也必须屏息凝神，在暗潮汹涌的时间洪流里，等一个机会。</p>
+<p>  【恭喜你，困扰你的问题解开啦！】</p>
+<p>  弹出的提示框带了一个黄豆笑脸，用的居然是西里尔字母。艾尔海森快速地略一眼，点击确认。</p>
+<p>  白底的文件夹打开，鼠标的尖口旁边，蓝色的圆圈开始转动。一个、一个、一个，封面各异的文件慢慢自左而右弹出，像用氯化钴撰写的藏信，跟着火舌熏显出它的秘密。文件持续加载，他先点开第一个。屏幕凝滞了一会儿，新的窗口弹出来。</p>
+<p>  是一段视频。</p>
+<p>  “喂艾尔海森！”占据屏幕的是一双漂亮的大眼睛。丰盈，明亮，晶莹剔透像赤色的碧玺，灵得叫人心惊。然后是小巧的鼻尖，水润的唇，大概是刚吃完红心火龙果，还有一点糖汁沾着，像上了薄薄一层紫红的油彩。里面的人儿瞪着他，叉着腰，“你见着我的笔记本了吗？”</p>
+<p>  “什么？”他听见屏幕里的声音，经过电子的转化，和经由颅骨内耳传入脑海的话语相比，有几分失真。但他对对方的身份确信无疑，并非他故，只因为这样的神情、这样的场景，他早已见过许多许多遍。</p>
+<p>  卡维。</p>
+<p>  “哦，你说我的礼物吗？”屏幕里的他说，“已经提前收取了。”</p>
+<p>  “你这家伙……！”</p>
+<p>  一直觉得他的伴侣很像一只兔子，尤其是因为一些小事情生气的时候，圆咕隆咚的眼睛尾端上挑，腮帮子也跟着鼓起来，明明做出了咬牙切齿的表情，却让人觉得毛绒绒的。伶牙俐齿地反驳人，也像一蹦、一蹦地耍脾气。那个“艾尔海森”说，“反正迟早都是要给我的，早收晚收也是一样。”</p>
+<p>  “你这家伙一点仪式感都没有，亏我还准备好漂亮的包装纸——哼！”卡维在屏幕里一扭头，“算了！给你了你肯定也是胡乱拆了。这可是我们工作室第一批纪念品，有重大意义的，你可要好好保管。”</p>
+<p>  “建议拿保险箱锁起来，或者干脆做成木乃伊。”</p>
+<p>  “你！……我好不容易才留下来一本，有的是人想要呢！不要就还回来！”</p>
+<p>  镜头对准一只摊开的手掌。细粉的皮肤，因为常年画图，起了一层薄薄的茧。掌纹清晰，透着青色的血管，是创造的生命力。他听见“他”说，</p>
+<p>  “我说了不要吗？既然已经送给我，那就是我的所有物。要拿回去，按照正价购买。”</p>
+<p>  “你这家伙！……”</p>
+<p>  视频到了末尾，落入一阵黑。他在屏幕的倒映里，看到自己平和的眉眼。划开手机，合上微信置顶的工作群，下头第一个便是备注为“室友”的卡维。他看着那个抱着猫咪、笑得灿烂的头像，手指在手机屏幕上悬了一会儿，到底是没有点开聊天框。这时候他大概还在加班吧。艾尔海森按下息屏，长舒了一口气，在电脑上点击“继续播放”的按键。</p>
+<p>  涌进音箱的是嘈杂的人声。屏幕里是卡维的后脑勺，发梢被汗湿了一截，麻花辫吹得有些乱，上面歪歪地又夹上几个发卡，是主人大战夏天游乐场湿热狂风的徒劳挣扎。手上的塑料扇子被他挥出了残影，他呼着热气，道，“有这种秘密通道，你怎么不早说？”</p>
+<p>  “很难想象居然真的会有人在30度的高温下排两个小时队伍去坐彩绘塑料车。听起来不像是二十多岁的成年人会做的事，大建筑师认为呢？”</p>
+<p>  “什么叫彩绘塑料车……人家是旋转木马！旋转木马！每一个图标都有一百年历史的旋转木马！来游乐场必玩的项目之一！”卡维没好气地说，“难道成年人的风范就是花几百块门票进来，结果在咖啡厅坐了五个小时？我们的语言学家？”</p>
+<p>  “说得很好。但至少我不会差点中暑。”</p>
+<p>  “你！……哼！下一个转转杯，你要陪我一起去。”</p>
+<p>  “想不通其中的理由。你自己能想到吗？”</p>
+<p>  “因为这是纪念日约会。”他的恋人一扭头，神色是不自觉的骄矜，“难道你要拒绝吗？”</p>
+<p>  下一个场景是卡维的正脸。“艾尔海森”的剪辑颇为粗糙，实用主义的态度贯彻到底，连滤镜也不加一个。暗影打在对面人的身上，把那张汗津津的脸蒙得暧昧。但忽然背景一转，那个不停旋转着的茶杯，把他们甩进阳光底下。眩目的明亮让镜头一时失焦，过曝般发白，模糊中却看见那张明媚的、秀气的脸，笑容灿烂像向日葵般，又像咕噜咕噜冒着气泡的橙子汽水，欢呼声和笑声是柠檬和冰块，透心的清甜。视频里他喊艾尔海森——你的头发完全乱了哎——那双漂亮的红色眼睛带着笑纹，轻轻歪着看他。有这么高兴吗？艾尔海森想。“他”回喊先看看你自己吧——卡维笑得前仰后合，视频里他也跟着嗤笑一声。</p>
+<p>  但屏幕外自己的嘴唇，也不知不觉地上扬起来。</p>
+<p>  ……最后一个。</p>
+<p>  “艾尔海森。”</p>
+<p>  蜡烛是小小的烟花，卡维的脸被星星的精灵亲吻，如梦似幻，光影驳杂。连金黄色的刘海好像也落了星点，在蛋糕的另一边、跳动的烛火后面催促他许愿。里头的艾尔海森说，“只有那些无可救药的理想主义者才会盼望石蜡能够替人满足愿望。”</p>
+<p>  不出意料地又被瞪了。“你每年都这样。我生日也这么说，你生日也这么说。不烦吗？”</p>
+<p>  “但有人屡教不改。”</p>
+<p>  “愿望是创造力和想象力的象征，也是非常珍贵的生命体验。尼采说梦是白天失却的快乐和美感的补偿，弗洛伊德说它是渴望满足的愿望，偶尔回归本能和信仰有什么不好，干嘛总是紧绷绷的？客观和理性又不是一切。……哎说了这么久话蜡烛都要熄了！你这家伙！你不想许愿就闭眼，我帮你许！”</p>
+<p>  他知道那个“艾尔海森”大概是闭眼了，因为有时卡维会对一些细节异常执拗，比如建筑的美感，比如人体悟的生存空间，也比如纪念日和小小的许愿。但屏幕这边的艾尔海森没有，他看见卡维合着手，嘴里念念有词，说到第三个，又抿嘴不说。过了一会儿卡维说，“你猜猜我给你许了什么？”</p>
+<p>  “想必又是身体健康、事业进步。”正在过生日的艾尔海森道，“大建筑师的愿望没有什么新意，每一年都是一样的。”</p>
+<p>  细长的眉毛一挑，“那你可猜错了。今年我许的愿望是：希望艾尔海森每次看完书记得放回书架，少吃点肉，多关心室友。”</p>
+<p>  “我倒希望你下次不要再按照书脊颜色和大小排列书本。另外：我认为对你，我已经表达了足够的关心。”</p>
+<p>  “如果是能让我少生点气的那种更好！”</p>
+<p>  “我还以为因为一点小事生气已经变成了你的生活情趣和爱好。”</p>
+<p>  “你！……”</p>
+<p>  第一视角，他开始自顾自地切起蛋糕。屏幕内外的艾尔海森心照不宣地知道，卡维絮絮叨叨的在意总能让他们生出隐秘的愉快；言语就像慢慢升温的水，是一种诱引与圈套，而在水中沉浮跌宕的小鸟，早已伏入金丝锁着的巢。</p>
+<p>  艾尔海森信奉一种均衡的哲学。他希望的“平静”并非是“空虚”，而是波动着“相抵”。智识、能力、眼界、野心，都应当势均力敌，相互制约，而后才能如天秤稳定，绝不倾斜。他一向有非常清晰的自我认知，卡维的智慧是当初决定交往的关键因素，再到后来陷入爱的普遍困境，从深谋远虑简化成本能亲近，则又是后话。他始终认为，世界上的人如果都能坚守理性，主动地选择他们的人生，不为虚无和贪婪诱惑，大概庸人自扰，为生活窘迫的概率也会大大降低。生活的必需品十分有限，大部分人割舍不下的事情，都会随着时间的更迭消弭。</p>
+<p>  但卡维许的第三个愿望，没有出声，嘴唇却不自觉地泄露秘密。</p>
+<p>  双唇、舌尖、后阻、圆唇。</p>
+<p>  “白头偕老。”</p>
+<p>  ……</p>
+<p>  硬盘里尽是卡维。</p>
+<p>  姿态各异的卡维。笑着的、生气的、别扭的、急切的，甚至还有蹲在墙角、像鸵鸟一样把自己卷成一团，默默流泪的卡维。视频里的艾尔海森与卡维互动，看他嬉笑怒骂贪嗔痴的面容，好像虚构了很多场、很多场二进制的美梦。</p>
+<p>  时间标记从2013年到2018年的都有。他心里很清楚地明白，这些视频是珍藏也是警戒，是湮灭在风尘里的那无数个艾尔海森的注视。他们是同一个人，共享着同一套逻辑与价值观念，因此也能共鸣般意识到，这个硬盘意味着什么。</p>
+<p>  滑动到底端，电脑缓慢加载出一个文件夹；点击属性，最后的修改时间，显示为2017年12月。2015年的艾尔海森点开，跳出密码窗口；他思索一会儿，输入一串乱码。</p>
+<p>  根据键盘排列方式设计的对称编码，只要现行键盘方位不变，只需记忆编码方式，就能够高效、简易地打出一串复杂的密码。对于艾尔海森而言，是应用于重要文件的编码方式，即便是卡维也未曾得知；假如这个硬盘是“艾尔海森”的作品，他们共享一个大脑，应该对彼此习惯心知肚明。</p>
+<p>  果然，打开了。</p>
+<p>  这回文件里没有花花绿绿的视频，只有一个PPT。打开只有一面。</p>
+<p>  和纸片一模一样的莫比乌斯环，标注日期和节点，正如现在艾尔海森白板的中央；不同的是，下方写了一行算式。等式简短，随意，初中难度，却让他嗤笑一声。</p>
+<p align="center">2.11+7.9=10.01。</p>
+<p>  【绝对对称】</p>
+<p>  像命运开的一个玩笑。既不是复杂的暗语，也不是纠缠的概念，近在眼前的他们生日合起来的数字，扎在莫比乌斯环的两边。曾经降临在前人身上的真相，也已经抚上他的发端，他沉默着，抽过笔记本，转动数轮。</p>
+<p>  “The ploughman homeward plods his weary way, And leaves the world to darkness and to me.<sup>1</sup>”</p>
+<p>  “2018.3.17 坠亡。（1）</p>
+<p>  2018.3.23 溺毙。”（3）</p>
+<p>  是他的字迹。上提的钩边落了猩红的黑点，下一行的空白是留给他的。</p>
+<p>  他的卡维的死期。</p>
+<p>  于是莫比乌斯环的两端终于被填满：一切混乱的发生，起点与终点原是两人交替的死亡。</p>
+<br>
+<p>[1]. 耕地人累了，回家走，脚步踉跄，把整个世界留给了黄昏与我。</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>JuusanYomitsuru</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="https://juusanyomitsuru.github.io/2023/06/21/f0b42b42883f/">https://juusanyomitsuru.github.io/2023/06/21/f0b42b42883f/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2023/06/21/d5c525eb9b42/">想见你（其六）</a>
+            
+            
+            <a class="next" rel="next" href="/2023/06/21/2d2252997224/">想见你（其四）</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<span class="site-uv">
+    总访客量:
+    <i class="busuanzi-value" id="busuanzi_value_site_uv"></i>
+</span>&nbsp;
+
+
+<span class="site-pv">
+    总访问量:
+    <i class="busuanzi-value" id="busuanzi_value_site_pv"></i>
+</span>
+
+
+
+    <div class="copyright">
+        <span>© JuusanYomitsuru | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>
